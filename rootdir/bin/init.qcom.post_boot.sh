@@ -101,9 +101,10 @@ configure_zram_parameters() {
         let zRamSizeMB=4096
     fi
 
-    if [ "$low_ram" == "true" ]; then
-        echo lz4 > /sys/block/zram0/comp_algorithm
-    fi
+    # Setup zram options
+    echo lz4 > /sys/block/zram0/comp_algorithm
+    echo 4   > /sys/block/zram0/max_comp_streams
+    echo 0   > /proc/sys/vm/page-cluster
 
     if [ -f /sys/block/zram0/disksize ]; then
         if [ -f /sys/block/zram0/use_dedup ]; then
