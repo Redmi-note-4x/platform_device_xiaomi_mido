@@ -55,6 +55,13 @@
     echo -6 >  /sys/devices/system/cpu/cpu5/sched_load_boost
     echo -6 >  /sys/devices/system/cpu/cpu6/sched_load_boost
     echo -6 >  /sys/devices/system/cpu/cpu7/sched_load_boost
+
+    # Disable retention
+    echo N > /sys/module/lpm_levels/system/pwr/pwr-l2-gdhs/idle_enabled
+    echo N > /sys/module/lpm_levels/system/pwr/pwr-l2-gdhs/suspend_enabled
+    echo N > /sys/module/lpm_levels/system/perf/perf-l2-gdhs/idle_enabled
+    echo N > /sys/module/lpm_levels/system/perf/perf-l2-gdhs/suspend_enabled
+
 }
 
 target=`getprop ro.board.platform`
