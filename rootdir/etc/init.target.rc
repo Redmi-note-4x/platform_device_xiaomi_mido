@@ -27,6 +27,7 @@
 #
 #
 on early-init
+    # Enable sched_boost
     write /proc/sys/kernel/sched_boost 1
 
 on fs

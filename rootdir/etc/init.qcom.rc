@@ -303,8 +303,11 @@ on property:sys.boot_completed=1
     #Reinit lmkd to reconfigure lmkd properties
     setprop lmkd.reinit 1
 
-    #Starting perf properly
-    setprop vendor.post_boot.parsed 1
+    # Disable sched_boost
+    write /proc/sys/kernel/sched_boost 0
+
+    # Enable PowerHAL hint processing
+    setprop vendor.powerhal.init 1
 
 on property:persist.vendor.radio.atfwd.start=false
     stop vendor.atfwd
@@ -317,9 +320,6 @@ service qcom-c_main-sh /vendor/bin/init.class_main.sh
     user root
     group root system
     oneshot
-
-    # Enable PowerHAL hint processing
-    setprop vendor.powerhal.init 1
 
 on property:vold.decrypt=trigger_restart_framework
     restart vendor.camera-provider-2-4
@@ -424,6 +424,8 @@ service vendor.msm_irqbalance /vendor/bin/msm_irqbalance -f /vendor/etc/msm_irqb
 
 on charger
     start vendor.qcom-post-boot
+    # Disable sched_boost
+    write /proc/sys/kernel/sched_boost 0
 
 service vendor.audio-hal /vendor/bin/hw/android.hardware.audio.service
     override
