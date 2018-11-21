@@ -2239,6 +2239,10 @@ case "$target" in
                 echo 85 > /proc/sys/kernel/sched_upmigrate
                 echo 85 > /proc/sys/kernel/sched_downmigrate
 
+                # Virtual memory tweaks
+                echo 10 > /proc/sys/vm/swappiness
+                echo 10 > /proc/sys/vm/dirty_background_ratio
+
                 # Set Memory parameters
                 configure_memory_parameters
             ;;
