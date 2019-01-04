@@ -296,6 +296,11 @@ on property:sys.boot_completed=1
     #Starting perf properly
     setprop vendor.post_boot.parsed 1
 
+    # Wakeup fix
+    chown system system /sys/devices/soc/qpnp-smbcharger-18/power_supply/battery/subsystem/bms/hi_power
+    chmod 0664 /sys/devices/soc/qpnp-smbcharger-18/power_supply/battery/subsystem/bms/hi_power
+    write /sys/devices/soc/qpnp-smbcharger-18/power_supply/battery/subsystem/bms/hi_power 1
+
 on property:persist.vendor.radio.atfwd.start=false
     stop vendor.atfwd
 
