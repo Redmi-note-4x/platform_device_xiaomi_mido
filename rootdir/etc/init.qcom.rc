@@ -58,6 +58,10 @@ on init
     # Loading kernel modules in background
     start insmod_sh
 
+    # Set boottime stune value
+    write /dev/stune/schedtune.prefer_idle 1
+    write /dev/stune/schedtune.boost 100
+
     # Create cgroup mount point for memory
     mkdir /sys/fs/cgroup/memory/bg 0750 root system
     write /sys/fs/cgroup/memory/bg/memory.swappiness 140
@@ -306,6 +310,10 @@ on property:sys.boot_completed=1
     # Disable sched_boost
     write /proc/sys/kernel/sched_boost 0
 
+    # Set runtime stune value
+    write /dev/stune/schedtune.prefer_idle 0
+    write /dev/stune/schedtune.boost 0
+
     # Enable PowerHAL hint processing
     setprop vendor.powerhal.init 1
 
@@ -426,6 +434,9 @@ on charger
     start vendor.qcom-post-boot
     # Disable sched_boost
     write /proc/sys/kernel/sched_boost 0
+    # Set runtime stune value
+    write /dev/stune/schedtune.prefer_idle 0
+    write /dev/stune/schedtune.boost 0
 
 service vendor.audio-hal /vendor/bin/hw/android.hardware.audio.service
     override
