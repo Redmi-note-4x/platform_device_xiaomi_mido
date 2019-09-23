@@ -71,3 +71,8 @@ LOCAL_CFLAGS                  := $(common_flags) -DLOG_TAG=\"grallocutils\" -Wno
 LOCAL_ADDITIONAL_DEPENDENCIES := $(common_deps) $(kernel_deps)
 LOCAL_SRC_FILES               := gr_utils.cpp gr_adreno_info.cpp
 include $(BUILD_SHARED_LIBRARY)
+
+ifeq ($(TARGET_USES_YCRCB_CAMERA_PREVIEW),true)
+    LOCAL_CFLAGS              += -DUSE_YCRCB_CAMERA_PREVIEW
+endif
+
