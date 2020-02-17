@@ -65,6 +65,13 @@ on init
     chown root system /sys/fs/cgroup/memory/bg/tasks
     write /sys/kernel/icnss/wpss_boot 1
     chmod 0660 /sys/fs/cgroup/memory/bg/tasks
+    
+    # Setup all the sub-system as related
+    write /sys/bus/msm_subsys/devices/subsys0/restart_level RELATED
+    write /sys/bus/msm_subsys/devices/subsys1/restart_level RELATED
+    write /sys/bus/msm_subsys/devices/subsys2/restart_level RELATED
+    write /sys/bus/msm_subsys/devices/subsys3/restart_level RELATED
+    write /sys/bus/msm_subsys/devices/subsys4/restart_level RELATED
 
 on post-fs
     # Set RLIMIT_MEMLOCK to 64MB
