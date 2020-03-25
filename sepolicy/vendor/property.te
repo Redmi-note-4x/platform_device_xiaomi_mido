@@ -9,3 +9,6 @@ type vendor_dolby_loglevel_prop, property_type;
 
 # Insmod
 type vendor_device_prop, property_type;
+
+# Power HAL
+type vendor_power_propg, property_type;

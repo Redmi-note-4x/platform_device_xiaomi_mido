@@ -8,7 +8,10 @@ type fpc_sysfs, fs_type, sysfs_type;
 type gx_fpd_data_file, file_type, data_file_type, core_data_file_type;
 
 # Power
+type debugfs_sched_features, debugfs_type, fs_type;
 type proc_sysctl_autogroup, proc_type, fs_type;
+type proc_sysctl_schedboost, proc_type, fs_type;
+type sysfs_msm_subsys, sysfs_type, fs_type;
 
 # /proc
 type proc_swap, fs_type;

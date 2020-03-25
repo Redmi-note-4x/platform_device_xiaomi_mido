@@ -8,3 +8,6 @@ persist.vendor.dolby.loglevel                 u:object_r:vendor_dolby_loglevel_p
 
 # Insmod
 vendor.all.devices.ready        u:object_r:vendor_device_prop:s0
+
+# Power Hal
+vendor.powerhal.				u:object_r:vendor_power_propg:s0
