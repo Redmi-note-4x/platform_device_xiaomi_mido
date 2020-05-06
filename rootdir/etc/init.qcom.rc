@@ -80,7 +80,9 @@ on early-boot
 
     # Graphics
     chown system graphics /sys/class/graphics/fb0/idle_time
+    chown system graphics /sys/class/graphics/fb0/idle_state
     chmod 0664 /sys/class/graphics/fb0/idle_time
+    chmod 0444 /sys/class/graphics/fb0/idle_state
     chown system graphics /sys/class/graphics/fb0/dynamic_fps
     chmod 0664 /sys/class/graphics/fb0/dynamic_fps
     chown system graphics /sys/class/graphics/fb0/dyn_pu
@@ -91,6 +93,8 @@ on early-boot
     chmod 0664 /sys/class/graphics/fb0/mode
     chown system graphics /sys/class/graphics/fb0/msm_cmd_autorefresh_en
     chmod 0664 /sys/class/graphics/fb0/msm_cmd_autorefresh_en
+
+    write /sys/class/graphics/fb0/idle_time 100
 
 on boot
     chown system system /sys/bus/i2c/devices/3-0038/set_cover_mode
