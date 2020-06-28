@@ -368,10 +368,10 @@ do
     do
         echo 250 > $cpu_up_scale
     done
-    for cpu_min_freq in /sys/class/devfreq/soc:qcom,cpubw/min_freq
-    do
-        echo 1611 > $cpu_min_freq
-    done
+    #for cpu_min_freq in /sys/class/devfreq/soc:qcom,cpubw/min_freq
+    #do
+    #    echo 1611 > $cpu_min_freq
+    #done
 done
 
 # disable thermal & BCL core_control to update interactive gov settings
