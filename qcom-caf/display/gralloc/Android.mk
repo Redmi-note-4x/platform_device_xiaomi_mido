@@ -70,6 +70,12 @@ LOCAL_SHARED_LIBRARIES        := $(common_libs) libqdMetaData libdl android.hard
 LOCAL_CFLAGS                  := $(common_flags) -DLOG_TAG=\"grallocutils\" -Wno-sign-conversion -Wno-enum-enum-conversion
 LOCAL_ADDITIONAL_DEPENDENCIES := $(common_deps) $(kernel_deps)
 
+ifeq ($(TARGET_USES_ALIGNED_YCRCB_HEIGHT),true)
+    LOCAL_CFLAGS              += -DUSE_ALIGNED_YCRCB_HEIGHT
+endif
+ifeq ($(TARGET_USES_ALIGNED_YCBCR_HEIGHT),true)
+    LOCAL_CFLAGS              += -DUSE_ALIGNED_YCBCR_HEIGHT
+endif
 ifeq ($(TARGET_USES_UNALIGNED_NV21_ZSL),true)
     LOCAL_CFLAGS              += -DUSE_UNALIGNED_NV21_ZSL
 endif
