@@ -220,7 +220,12 @@ persist.vendor.recovery_update=false
 # SurfaceFlinger
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.surface_flinger.force_hwc_copy_for_virtual_displays=true \
-ro.surface_flinger.max_virtual_display_dimension=4096
+ro.surface_flinger.max_virtual_display_dimension=4096 \
+debug.sf.early_phase_offset_ns=11600000 \
+debug.sf.early_app_phase_offset_ns=11600000 \
+debug.sf.early_gl_phase_offset_ns=3000000 \
+debug.sf.early_gl_app_phase_offset_ns=15000000 \
+debug.sf.phase_offset_threshold_for_next_vsync_ns=11600000
 
 # Time Services
 PRODUCT_PROPERTY_OVERRIDES += \
