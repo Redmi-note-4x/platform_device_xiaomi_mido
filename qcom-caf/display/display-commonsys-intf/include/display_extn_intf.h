@@ -33,6 +33,7 @@
 #define EARLY_WAKEUP_FEATURE 1
 #define DYNAMIC_EARLY_WAKEUP_CONFIG 1
 #define PASS_COMPOSITOR_PID 1
+#define SMART_DISPLAY_CONFIG 1
 
 namespace composer {
 
@@ -46,6 +47,8 @@ class DisplayExtnIntf {
   virtual int NotifyDisplayEarlyWakeUp(uint32_t display_id) = 0;
   virtual int SetEarlyWakeUpConfig(uint32_t display_id, bool enable) = 0;
   virtual void SendCompositorPid() = 0;
+  virtual bool IsSmartDisplayConfig(uint32_t display_id) = 0;
+
  protected:
   virtual ~DisplayExtnIntf() { }
 };
