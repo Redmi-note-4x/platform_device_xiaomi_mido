@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory android:title="@string/audio_category">
+
+        <com.xiaomi.parts.preferences.SecureSettingSwitchPreference
+            android:defaultValue="false"
+            android:key="dirac_enabled"
+            android:summary="@string/dirac_summary"
+            android:title="@string/dirac_title"
+            android:icon="@drawable/ic_dirac" />
+
+        <com.xiaomi.parts.preferences.SecureSettingListPreference
+            android:defaultValue="0"
+            android:dependency="dirac_enabled"
+            android:entries="@array/dirac_headset_pref_entries"
+            android:entryValues="@array/dirac_headset_pref_values"
+            android:key="dirac_headset_pref"
+            android:summary="%s"
+            android:title="@string/dirac_headset_title"
+            android:icon="@drawable/ic_headphones" />
+
+        <com.xiaomi.parts.preferences.SecureSettingListPreference
+            android:defaultValue="0,0,0,0,0,0,0"
+            android:dependency="dirac_enabled"
+            android:entries="@array/dirac_preset_pref_entries"
+            android:entryValues="@array/dirac_preset_pref_values"
+            android:key="dirac_preset_pref"
+            android:summary="%s"
+            android:title="@string/dirac_preset_title"
+            android:icon="@drawable/ic_preset" />
+    </PreferenceCategory>
+	
+    <PreferenceCategory android:title="@string/display_category">
+
+        <SwitchPreference
+            android:key="fps_info"
+            android:icon="@drawable/ic_fps_info"
+            android:title="@string/fps_info_title"
+            android:summary="@string/fps_info_summary"
+            android:persistent="true" />
+
+        <Preference
+            android:key="device_kcal"
+            android:persistent="false"
+            android:icon="@drawable/ic_kcal"
+            android:title="@string/device_kcal_title"
+            android:summary="@string/device_kcal_summary" >
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetClass="com.xiaomi.parts.kcal.KCalSettingsActivity"
+                android:targetPackage="com.xiaomi.parts.kcal"/>
+        </Preference>
+        <PreferenceScreen
+            android:key="ambient_display_gestures"
+            android:fragment="com.xiaomi.parts.ambient.AmbientGesturePreferenceActivity"
+            android:summary="@string/ambient_display_gestures_summary"
+            android:icon="@drawable/ic_doze"
+            android:title="@string/ambient_display_gestures_title" />
+	</PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/vibration_category">
+        <com.xiaomi.parts.preferences.SecureSettingSwitchPreference
+            android:key="vmax_override"
+            android:icon="@drawable/ic_vibrate_override"
+            android:title="@string/vibration_override_title"
+            android:visibility="gone"
+            android:persistent="false" />
+
+        <com.xiaomi.parts.preferences.VibrationSeekBarPreference
+            android:defaultValue="13"
+            android:key="vibration_system"
+            android:max="100"
+            android:title="@string/vibration_system_title"
+            android:icon="@drawable/ic_vibrate"
+            app:min="1"
+            app:units="%"/>
+
+         <com.xiaomi.parts.preferences.VibrationSeekBarPreference
+            android:defaultValue="100"
+            android:key="vibration_notification"
+            android:max="100"
+            android:title="@string/vibration_notification_title"
+            android:icon="@drawable/ic_vibrate_notif"
+            app:min="1"
+            app:units="%"/> 
+
+         <com.xiaomi.parts.preferences.VibrationSeekBarPreference
+            android:defaultValue="100"
+            android:key="vibration_call"                
+            android:max="100"
+            android:title="@string/vibration_call_title"
+            android:icon="@drawable/ic_vibrate_call"
+            app:min="1"
+            app:units="%"/>
+   	 </PreferenceCategory>
+
+    	<PreferenceCategory android:title="@string/torch_category">
+       
+        <com.xiaomi.parts.preferences.CustomSeekBarPreference
+            android:defaultValue="100"
+            android:key="yellow_torch_brightness"
+            android:max="100"
+            app:min="1"
+            android:icon="@drawable/ic_torch"
+            android:title="@string/torch_yellow_brightness_title" />
+   	 </PreferenceCategory>
+   	 
+   	 <PreferenceCategory
+        android:title="@string/other_category" >
+    <com.xiaomi.parts.preferences.SecureSettingSwitchPreference
+        android:defaultValue="true"
+        android:key="set_on_boot"
+        android:title="@string/set_on_boot"
+	android:icon="@drawable/ic_boot"
+	android:summary="@string/set_on_boot_summary" />
+        <SwitchPreference
+            android:key="fastcharge"
+            android:defaultValue="1"
+            android:title="@string/fastcharge_title"
+            android:icon="@drawable/ic_fastcharge"
+            android:summary="@string/fastcharge_summary" />
+    </PreferenceCategory>
+   	 
+   	 
+	<PreferenceCategory
+        android:key="selinux"
+        android:title="@string/selinux_category">
+
+        <Preference
+            android:key="selinux_explanation"
+            android:summary="@string/selinux_explanation_summary"
+            android:selectable="false"/>
+
+        <SwitchPreference
+            android:key="selinux_mode"
+            android:icon="@drawable/ic_selinux"
+            android:title="@string/selinux_mode_title"
+            android:summaryOn="@string/selinux_enforcing_summary"
+            android:summaryOff="@string/selinux_permissive_summary"
+            android:selectable="true" />
+
+        <SwitchPreference
+            android:key="selinux_persistence"
+            android:icon="@drawable/ic_selinux_persistence"
+            android:title="@string/selinux_persistence_title"
+            android:summary="@string/selinux_persistence_summary"
+            android:defaultValue="true" 
+            android:selectable="true"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
