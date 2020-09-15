@@ -3,3 +3,23 @@ set_prop(system_app, fm_prop)
 
 # zram
 r_dir_file(system_app sysfs_zram)
+
+# XiaomiParts
+allow system_app kcal_dev:dir search;
+allow system_app kcal_dev:file rw_file_perms;
+allow system_app sysfs_vibrator:dir search;
+allow system_app sysfs_vibrator:file { read write };
+allow system_app sysfs_vibrator:file open;
+allow system_app sysfs_vibrator:file getattr;
+allow system_app sysfs_headgain:dir search;
+allow system_app sysfs_fpsinfo:file rw_file_perms;
+allow system_app sysfs_fpsinfo:dir search;
+allow system_app sysfs_headgain:dir search;
+allow system_app sysfs_headgain:file rw_file_perms;
+allow system_app sysfs_micgain:dir search;
+allow system_app sysfs_micgain:file rw_file_perms;
+allow system_app sysfs_torch:dir search;
+allow system_app sysfs_torch:file rw_file_perms;
+allow system_app sysfs_leds:file rw_file_perms;
+allow system_app sysfs_leds:dir rw_file_perms;
+allow system_app sysfs_fps:file rw_file_perms;

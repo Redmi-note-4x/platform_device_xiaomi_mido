@@ -25,3 +25,14 @@ type vendor_sysfs_slab_zspage_storeuser, fs_type, sysfs_type;
 
 # Touchscreen
 type proc_touchpanel, fs_type, sysfs_type, proc_type;
+
+# FPS Info
+type sysfs_fps, sysfs_type, fs_type;
+
+# XiaomiParts
+type kcal_dev, sysfs_type, fs_type;
+type sysfs_fpsinfo, sysfs_type, fs_type;
+type sysfs_torch, sysfs_type, fs_type;
+type sysfs_fastcharge, sysfs_type, fs_type;
+type sysfs_headgain, sysfs_type, fs_type;
+type sysfs_micgain, sysfs_type, fs_type;

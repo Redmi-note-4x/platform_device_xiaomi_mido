@@ -53,3 +53,27 @@
 
 # Thermal
 /vendor/bin/hw/android\.hardware\.thermal@2\.0-service\.qti      u:object_r:hal_thermal_default_exec:s0
+
+# FPS Info
+/sys/devices/virtual/graphics/fb0/measured_fps           u:object_r:sysfs_fps:s0
+
+# XiaomiParts
+/sys/devices/platform/kcal_ctrl.0(/.*)?                      u:object_r:kcal_dev:s0
+/sys/bus/platform/drivers/kcal_ctrl(/.*)?                    u:object_r:kcal_dev:s0
+/sys/class/graphics/fb0/measured_fps                         u:object_r:sysfs_fpsinfo:s0
+/sys/kernel/fast_charge/force_fast_charge                    u:object_r:sysfs_fastcharge:s0
+/sys/kernel/sound_control/headphone_gain                     u:object_r:sysfs_headgain:s0
+/sys/kernel/sound_control/mic_gain                           u:object_r:sysfs_micgain:s0
+
+# Flashlight
+/sys/devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,leds@d300/leds/led:torch_1/max_brightness            u:object_r:sysfs_torch:s0
+/sys/class/leds/led:torch_1/max_brightness                   u:object_r:sysfs_torch:s0
+
+# Vibration
+/sys/class/leds/vibrator/vmax_override               u:object_r:sysfs_vibrator:s0
+/sys/class/leds/vibrator/vmax_mv_user                u:object_r:sysfs_vibrator:s0
+/sys/class/leds/vibrator/vmax_mv_call                u:object_r:sysfs_vibrator:s0
+/sys/class/leds/vibrator/vmax_mv_strong              u:object_r:sysfs_vibrator:s0
+/sys/class/timed_output/vibrator/vmax_mv             u:object_r:sysfs_vibrator:s0
+/sys/class/timed_output/vibrator/vtg_level           u:object_r:sysfs_vibrator:s0
+/sys/devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,haptics@c000/leds/vibrator(/.*)?              u:object_r:sysfs_vibrator:s0
