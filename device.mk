@@ -442,3 +442,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BOOT_JARS += \
     WfdCommon
+
+# SimpleDeviceConfigOverlay
+PRODUCT_PACKAGES += \
+    SimpleDeviceConfigOverlay
