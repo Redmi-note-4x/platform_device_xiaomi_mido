@@ -55,6 +55,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 vendor.qcom.bluetooth.soc=smd \
 ro.bluetooth.hfp.ver=1.7
 
+# BPF
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.kernel.ebpf.supported=true
+
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
 media.camera.ts.monotonic=1 \
