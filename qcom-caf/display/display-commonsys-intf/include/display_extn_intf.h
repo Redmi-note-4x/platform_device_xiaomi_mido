@@ -30,12 +30,44 @@
 #ifndef __DISP_EXTN_INTF_H__
 #define __DISP_EXTN_INTF_H__
 
+#include <vector>
+#include <list>
+#include <ui/Fence.h>
+
 #define EARLY_WAKEUP_FEATURE 1
 #define DYNAMIC_EARLY_WAKEUP_CONFIG 1
 #define PASS_COMPOSITOR_PID 1
 #define SMART_DISPLAY_CONFIG 1
 
 namespace composer {
+
+struct LayerFlags {
+  bool secure_camera = false;
+  bool secure_video = false;
+  bool secure_ui = false;
+  bool compatible = false;
+};
+
+struct FBTLayerInfo {
+  int32_t width = 0;
+  int32_t height = 0;
+  int32_t dataspace = 0;
+  int32_t max_buffer_count = 3;
+  bool secure = false;
+
+  bool operator != (FBTLayerInfo  &f) {
+    return (width != f.width ||
+            height != f.height ||
+            dataspace != f.dataspace ||
+            secure != f.secure);
+  }
+};
+
+struct FBTSlotInfo {
+  int index = -1;
+  android::sp<android::Fence> fence = android::Fence::NO_FENCE;
+  bool predicted = false;
+};
 
 class DisplayExtnIntf {
  public:
@@ -46,6 +78,11 @@ class DisplayExtnIntf {
   virtual int NotifyEarlyWakeUp(bool gpu, bool display) = 0;
   virtual int NotifyDisplayEarlyWakeUp(uint32_t display_id) = 0;
   virtual int SetEarlyWakeUpConfig(uint32_t display_id, bool enable) = 0;
+  virtual int TryUnifiedDraw(uint32_t display_id, int32_t max_frameBuffer) = 0;
+  virtual int BeginDraw(uint32_t display_id, std::vector<LayerFlags> &layers,
+                        const FBTLayerInfo fbt_info, const FBTSlotInfo &fbt_current,
+                        FBTSlotInfo &fbt_future) = 0;
+  virtual int EndDraw(uint32_t display_id, const FBTSlotInfo &fbt_current) = 0;
   virtual void SendCompositorPid() = 0;
   virtual bool IsSmartDisplayConfig(uint32_t display_id) = 0;
 
