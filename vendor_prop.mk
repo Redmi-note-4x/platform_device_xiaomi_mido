@@ -252,7 +252,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.audio.soundfx.dirac=true \
     persist.audio.dirac.speaker=true
-
-# Zygote
-PRODUCT_PROPERTY_OVERRIDES += \
-persist.device_config.runtime_native.usap_pool_enabled=true
