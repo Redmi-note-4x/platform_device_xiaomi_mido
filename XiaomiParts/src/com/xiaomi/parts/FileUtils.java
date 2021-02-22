@@ -144,6 +144,14 @@ public class FileUtils {
         return defValue;
     }
 
+    static void setintProp(String prop, int value) {
+        SystemProperties.set(prop, String.valueOf(value));
+    }
+
+    static int getintProp(String prop, int defaultValue) {
+        return SystemProperties.getInt(prop, defaultValue);
+    }
+
     public static boolean isPackageInstalled(Context context, String pkg, boolean ignoreState) {
         if (pkg != null) {
             try {

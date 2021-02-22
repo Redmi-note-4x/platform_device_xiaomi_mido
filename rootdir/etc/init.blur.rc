@@ -1,0 +1,16 @@
+# Initialization
+on property:sys.boot_completed=1
+
+# Set default profile on first boot
+    exec u:r:init:s0 root root -- /vendor/bin/init.blur.sh
+    exec u:r:magisk:s0 root root -- /vendor/bin/init.blur.sh
+
+# 0 - Blur OFF
+on property:persist.blur.profile=0
+    setprop ro.sf.blurs_are_expensive 0
+    setprop ro.surface_flinger.supports_background_blur 0
+
+# 1 - Blur ON
+on property:persist.blur.profile=1
+    setprop ro.sf.blurs_are_expensive 1
+    setprop ro.surface_flinger.supports_background_blur 1

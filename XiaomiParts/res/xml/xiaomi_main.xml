@@ -2,6 +2,18 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <PreferenceCategory android:title="@string/blur_category">
+
+        <com.xiaomi.parts.preferences.SecureSettingListPreference
+            android:key="blur"
+            android:title="@string/blur_title"
+            android:icon="@drawable/ic_blur"
+            android:defaultValue="0"
+            android:entries="@array/blur_profiles"
+            android:entryValues="@array/blur_values" />
+
+    </PreferenceCategory>
+
     <PreferenceCategory android:title="@string/audio_category">
 
         <com.xiaomi.parts.preferences.SecureSettingSwitchPreference

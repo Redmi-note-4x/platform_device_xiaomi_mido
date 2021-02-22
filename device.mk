@@ -334,7 +334,9 @@ PRODUCT_PACKAGES += \
     init.qcom.sh \
     init.qcom.usb.rc \
     init.target.rc \
-    ueventd.qcom.rc
+    ueventd.qcom.rc \
+    init.blur.rc \
+    init.blur.sh
 
 # RCS
 PRODUCT_PACKAGES += \

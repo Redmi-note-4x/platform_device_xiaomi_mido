@@ -209,4 +209,9 @@
     <string name="selinux_enforcing_toast_title">Selinux set to enforcing!</string>
     <string name="selinux_unrooted_summary">Couldn\'t detect root. You must have root to use these switches</string>
 
+    <!-- Blur  -->
+    <string name="blur_category">Blur</string>
+    <string name="blur_title">QS Blur</string>
+    <string name="blur_on">On</string>
+    <string name="blur_off">Off</string>
 </resources>

@@ -44,6 +44,9 @@ private static final String AMBIENT_DISPLAY = "ambient_display_gestures";
     public static final String VIBRATION_NOTIFICATION_PATH = "/sys/devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,haptics@c000/leds/vibrator/vmax_mv_strong";
     public static final String VIBRATION_CALL_PATH = "/sys/devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,haptics@c000/leds/vibrator/vmax_mv_call";
 
+    public static final String PREF_BLUR = "blur";
+    public static final String BLUR_SYSTEM_PROPERTY = "persist.blur.profile";
+
     // value of vtg_min and vtg_max
     public static final int MIN_VIBRATION = 116;
     public static final int MAX_VIBRATION = 3596;
@@ -70,7 +73,7 @@ private static final String AMBIENT_DISPLAY = "ambient_display_gestures";
     private static Context mContext;
     private SwitchPreference mSelinuxMode;
     private SwitchPreference mSelinuxPersistence;
-
+    private SecureSettingListPreference mBlur;
     private CustomSeekBarPreference mSpeakerGain;
     private CustomSeekBarPreference mEarpieceGain;
 
@@ -141,6 +144,11 @@ private static final String AMBIENT_DISPLAY = "ambient_display_gestures";
             startActivity(intent);
             return true;
         });
+
+        // Blur
+        mBlur = (SecureSettingListPreference) findPreference(PREF_BLUR);
+        mBlur.setValue(FileUtils.getStringProp(BLUR_SYSTEM_PROPERTY, "0"));
+        mBlur.setOnPreferenceChangeListener(this);
 
         // SELinux
         Preference selinuxCategory = findPreference(SELINUX_CATEGORY);
@@ -241,6 +249,10 @@ private static final String AMBIENT_DISPLAY = "ambient_display_gestures";
                 break;
             case PREF_SELINUX_PERSISTENCE:
                 setSelinuxEnabled(mSelinuxMode.isChecked(), (Boolean) value);
+                break;
+            case PREF_BLUR:
+                mBlur.setValue((String) value);
+                FileUtils.setStringProp(BLUR_SYSTEM_PROPERTY, (String) value);
                 break;
         }
         return true;
