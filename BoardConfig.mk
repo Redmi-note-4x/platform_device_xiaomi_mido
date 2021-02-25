@@ -73,11 +73,6 @@ TARGET_TS_MAKEUP := true
 TARGET_USES_QTI_CAMERA_DEVICE := true
 MALLOC_SVELTE_FOR_LIBC32 := true
 
-# API Override
-TARGET_PROCESS_SDK_VERSION_OVERRIDE := \
-    /vendor/bin/mm-qcamera-daemon=27 \
-    /system/vendor/bin/mm-qcamera-daemon=27 \
-
 # Crypto
 TARGET_HW_DISK_ENCRYPTION := true
 
