@@ -112,7 +112,10 @@ vendor.gralloc.enable_fb_ubwc=1
 
 # DPM
 PRODUCT_PROPERTY_OVERRIDES += \
-persist.vendor.dpm.feature=0
+persist.vendor.dpm.feature=11 \
+persist.vendor.dpm.loglevel=0 \
+persist.vendor.dpm.nsrm.bkg.evt=3955 \
+persist.vendor.dpmhalservice.enable=1
 
 # DRM
 PRODUCT_PROPERTY_OVERRIDES += \
