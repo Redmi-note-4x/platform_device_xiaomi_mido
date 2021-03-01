@@ -110,7 +110,8 @@
     <string name="dirac_preset_country">Country</string>
     <string name="dirac_preset_dance">Dance</string>
     <string name="dirac_preset_metal">Metal</string>
-    
+    <string name="dirac_preset_bass_booster">Bass Booster</string> 
+   
     <!-- Ambient gesture haptic feedback -->
     <string name="ambient_gesture_haptic_feedback">Haptic feedback</string>
     <string name="ambient_gesture_haptic_feedback_summary">Vibrate when a Ambient gesture is detected</string>
