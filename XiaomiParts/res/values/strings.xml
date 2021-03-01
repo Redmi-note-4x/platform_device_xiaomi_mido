@@ -2,8 +2,8 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <!-- Head Title -->
-    <string name="xiaomi_parts_title">Xiaomi Parts</string>
-    <string name="xiaomi_parts_settings_summary">Device Specific Customizations</string>
+    <string name="xiaomi_parts_title">Device Settings</string>
+    <string name="xiaomi_parts_settings_summary">Device Specific Features</string>
 
     <!-- Category Title -->
     <string name="audio_category">Audio</string>
