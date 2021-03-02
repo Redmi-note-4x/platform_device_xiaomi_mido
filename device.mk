@@ -89,11 +89,11 @@ PRODUCT_PACKAGES += \
 
 # Audio
 PRODUCT_PACKAGES += \
-    android.hardware.audio@6.0-impl:32 \
-    android.hardware.audio.effect@6.0-impl:32 \
+    android.hardware.audio@6.0-impl \
+    android.hardware.audio.effect@6.0-impl \
     android.hardware.audio.service \
-    android.hardware.bluetooth.audio@2.0-impl:32 \
-    android.hardware.soundtrigger@2.2-impl:32 \
+    android.hardware.bluetooth.audio@2.0-impl \
+    android.hardware.soundtrigger@2.2-impl \
     audio.a2dp.default \
     audio.bluetooth.default \
     audio.primary.msm8953 \
@@ -138,7 +138,7 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.device@3.4:64 \
     android.hardware.camera.device@3.5:64 \
     android.hardware.camera.provider@2.4 \
-    android.hardware.camera.provider@2.4-impl:32 \
+    android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service \
     android.hardware.camera.provider@2.5:64 \
     android.hardware.camera.provider@2.6:64 \
@@ -158,9 +158,9 @@ PRODUCT_PACKAGES += \
 
 # Display
 PRODUCT_PACKAGES += \
-    android.hardware.graphics.allocator@2.0-impl:64 \
+    android.hardware.graphics.allocator@2.0-impl \
     android.hardware.graphics.allocator@2.0-service \
-    android.hardware.graphics.composer@2.1-impl:64 \
+    android.hardware.graphics.composer@2.1-impl \
     android.hardware.graphics.composer@2.1-service \
     android.hardware.graphics.mapper@2.0-impl-2.1 \
     android.hardware.memtrack@1.0-impl \
@@ -182,7 +182,7 @@ PRODUCT_PACKAGES += \
 
 # DRM
 PRODUCT_PACKAGES += \
-    android.hardware.drm@1.0-impl:64 \
+    android.hardware.drm@1.0-impl \
     android.hardware.drm@1.0-service-lazy \
     android.hardware.drm@1.3-service.clearkey
 
@@ -204,7 +204,7 @@ PRODUCT_PACKAGES += \
 
 # Gatekeeper HAL
 PRODUCT_PACKAGES += \
-    android.hardware.gatekeeper@1.0-impl:64 \
+    android.hardware.gatekeeper@1.0-impl \
     android.hardware.gatekeeper@1.0-service
 
 # GPS
@@ -263,7 +263,7 @@ PRODUCT_COPY_FILES += \
 
 # Keymaster HAL
 PRODUCT_PACKAGES += \
-    android.hardware.keymaster@3.0-impl:64 \
+    android.hardware.keymaster@3.0-impl \
     android.hardware.keymaster@3.0-service
 
 # Libnbaio
@@ -363,7 +363,7 @@ PRODUCT_BOOT_JARS += \
 
 # Sensors
 PRODUCT_PACKAGES += \
-    android.hardware.sensors@1.0-impl:64 \
+    android.hardware.sensors@1.0-impl \
     android.hardware.sensors@1.0-service \
     libsensorndkbridge
 
