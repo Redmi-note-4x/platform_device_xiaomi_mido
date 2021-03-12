@@ -153,7 +153,6 @@ vendor.video.disable.ubwc=1
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.vendor.extension_library=libqti-perfd-client.so \
 ro.vendor.qti.sys.fw.bservice_enable=true \
-persist.sys.fflag.override.settings_fuse=false
 
 # Netmgrd
 PRODUCT_PROPERTY_OVERRIDES += \

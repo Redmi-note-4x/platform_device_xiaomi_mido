@@ -194,3 +194,6 @@ on boot
    write /sys/class/leds/vibrator/vmax_override 1
    chown root system /sys/class/timed_output/vibrator/vtg_level
    chmod 0660 /sys/class/timed_output/vibrator/vtg_level
+
+on property:ro.crypto.state=unencrypted
+    setprop persist.sys.fflag.override.settings_fuse "false"
