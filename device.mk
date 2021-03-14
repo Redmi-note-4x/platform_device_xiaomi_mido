@@ -323,7 +323,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.perf@2.0.vendor \
     vendor.qti.hardware.perf@2.1.vendor \
     vendor.qti.hardware.perf@2.2.vendor \
-    android.hardware.power@1.3-service.mido-libperfmgr \
+    android.hardware.power-service.mido-libperfmgr \
     powerhint.json
 
 PRODUCT_COPY_FILES += \
