@@ -29,3 +29,5 @@ type sysfs_torch, sysfs_type, fs_type;
 type sysfs_fastcharge, sysfs_type, fs_type;
 type sysfs_headgain, sysfs_type, fs_type;
 type sysfs_micgain, sysfs_type, fs_type;
+
+type pps_socket, file_type;
