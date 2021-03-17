@@ -267,6 +267,8 @@ case "$target" in
                 setprop vendor.opengles.version 196608
                 setprop persist.graphics.vulkan.disable true
                 setprop vendor.gralloc.disable_ahardware_buffer 1
+                # Disable adsprpcd_sensorspd daemon
+                setprop vendor.fastrpc.disable.adsprpcd_sensorspd.daemon 1
                 ;;
             *)
                 setprop vendor.opengles.version 196608
