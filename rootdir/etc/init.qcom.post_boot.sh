@@ -3984,7 +3984,7 @@ case "$target" in
 
         # Scuba perf/power tunings
         case "$soc_id" in
-             "441" | "473" | "474" )
+             "441" | "471" | "473" | "474" )
 
             # Quad-core device. disable core_ctl
             echo 0 > /sys/devices/system/cpu/cpu0/core_ctl/enable
@@ -4041,18 +4041,10 @@ case "$target" in
                    echo 1600 > $cpubw/bw_hwmon/idle_mbps
                 done
 
-                for memlat in $device/*cpu*-lat/devfreq/*cpu*-lat
-                do
-                    echo "mem_latency" > $memlat/governor
-                    echo 10 > $memlat/polling_interval
-                    echo 400 > $memlat/mem_latency/ratio_ceil
-                done
+                # memlat specific settings are moved to seperate file under
+                # device/target specific folder
+                setprop vendor.dcvs.prop 1
 
-                for latfloor in $device/*cpu*-ddr-latfloor*/devfreq/*cpu-ddr-latfloor*
-                do
-                    echo "compute" > $latfloor/governor
-                    echo 10 > $latfloor/polling_interval
-                done
             done
 
             # Disable low power modes. Enable it after LPM stable
