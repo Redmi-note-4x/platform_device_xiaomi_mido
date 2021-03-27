@@ -182,9 +182,6 @@
     <string name="earpiece_gain">Earpiece gain (Calls)</string>
     <string name="speaker_gain">Speaker gain</string>
 
-    <!-- Torch -->
-    <string name="torch_yellow_brightness_title">Yellow flashlight</string>
-
     <!-- Vibrator -->
     <string name="vibration_category">Vibration</string>
     <string name="vibration_override_title">Override System Vibration</string>
@@ -209,4 +206,8 @@
     <string name="selinux_enforcing_toast_title">Selinux set to enforcing!</string>
     <string name="selinux_unrooted_summary">Couldn\'t detect root. You must have root to use these switches</string>
 
+    <!-- Touchboost -->
+    <string name="boost_title">Boost</string>
+    <string name="touchboost_title">Enable Touchboost</string>
+    <string name="touchboost_summary">Boost CPU when touch detected for smooth experience</string>
 </resources>

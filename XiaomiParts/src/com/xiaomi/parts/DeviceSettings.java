@@ -48,6 +48,9 @@ private static final String AMBIENT_DISPLAY = "ambient_display_gestures";
     public static final int MIN_VIBRATION = 116;
     public static final int MAX_VIBRATION = 3596;
 
+    public static final String PREF_MSM_TOUCHBOOST = "touchboost";
+    public static final String MSM_TOUCHBOOST_PATH = "/sys/module/msm_performance/parameters/touchboost";
+
     public static final String PREF_KEY_FPS_INFO = "fps_info";
 
     private static final String SELINUX_CATEGORY = "selinux";
@@ -60,9 +63,6 @@ private static final String AMBIENT_DISPLAY = "ambient_display_gestures";
     public static final  String SPEAKER_GAIN_PATH = "/sys/kernel/sound_control/speaker_gain";
     public static final  String EARPIECE_GAIN_PATH = "/sys/kernel/sound_control/earpiece_gain";
 
-    public static final  String PERF_YELLOW_TORCH_BRIGHTNESS = "yellow_torch_brightness";
-    public static final  String TORCH_YELLOW_BRIGHTNESS_PATH = "/sys/class/leds/led:torch_1/max_brightness";
-
     private static final String PREF_ENABLE_DIRAC = "dirac_enabled";
     private static final String PREF_HEADSET = "dirac_headset_pref";
     private static final String PREF_PRESET = "dirac_preset_pref";
@@ -73,6 +73,8 @@ private static final String AMBIENT_DISPLAY = "ambient_display_gestures";
 
     private CustomSeekBarPreference mSpeakerGain;
     private CustomSeekBarPreference mEarpieceGain;
+
+    private SecureSettingSwitchPreference mTouchboost;
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
@@ -102,13 +104,18 @@ private static final String AMBIENT_DISPLAY = "ambient_display_gestures";
         vibrationCallStrength.setEnabled(FileUtils.fileWritable(VIBRATION_CALL_PATH));
         vibrationCallStrength.setOnPreferenceChangeListener(this);
 
-        CustomSeekBarPreference torch_yellow = (CustomSeekBarPreference) findPreference(PERF_YELLOW_TORCH_BRIGHTNESS);
-        torch_yellow.setEnabled(FileUtils.fileWritable(TORCH_YELLOW_BRIGHTNESS_PATH));
-        torch_yellow.setOnPreferenceChangeListener(this);
-
         SwitchPreference fpsInfo = (SwitchPreference) findPreference(PREF_KEY_FPS_INFO);
         fpsInfo.setChecked(prefs.getBoolean(PREF_KEY_FPS_INFO, false));
         fpsInfo.setOnPreferenceChangeListener(this);
+
+        if (FileUtils.fileWritable(MSM_TOUCHBOOST_PATH)) {
+            mTouchboost = (SecureSettingSwitchPreference) findPreference(PREF_MSM_TOUCHBOOST);
+            mTouchboost.setEnabled(Touchboost.isSupported());
+            mTouchboost.setChecked(Touchboost.isCurrentlyEnabled(this.getContext()));
+            mTouchboost.setOnPreferenceChangeListener(new Touchboost(getContext()));
+        } else {
+            getPreferenceScreen().removePreference(findPreference(PREF_MSM_TOUCHBOOST));
+        }
 
         boolean enhancerEnabled;
         try {
@@ -171,10 +178,6 @@ private static final String AMBIENT_DISPLAY = "ambient_display_gestures";
     public boolean onPreferenceChange(Preference preference, Object value) {
         final String key = preference.getKey();
         switch (key) {
-            case PERF_YELLOW_TORCH_BRIGHTNESS:
-                FileUtils.setValue(TORCH_YELLOW_BRIGHTNESS_PATH, (int) value);
-                break;
-
             case PREF_VIBRATION_SYSTEM_STRENGTH:
                 double VibrationSystemValue = (int) value / 100.0 * (MAX_VIBRATION - MIN_VIBRATION) + MIN_VIBRATION;
                 FileUtils.setValue(VIBRATION_SYSTEM_PATH, VibrationSystemValue);
