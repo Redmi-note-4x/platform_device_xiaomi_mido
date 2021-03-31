@@ -433,7 +433,7 @@ case "$target" in
                  KernelVersionB=${KernelVersionS%.*}
 
                  if [ $KernelVersionA -ge 4 ] && [ $KernelVersionB -ge 14 ]; then
-                     setprop init.qcom.qrtrns.enable 1
+                     setprop ctl.vendor.qrtrns_enable 1
                  fi
                  ;;
            esac
