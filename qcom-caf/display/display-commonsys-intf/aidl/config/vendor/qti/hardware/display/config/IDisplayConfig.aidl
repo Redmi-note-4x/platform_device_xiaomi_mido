@@ -41,6 +41,7 @@ import vendor.qti.hardware.display.config.PowerMode;
 import vendor.qti.hardware.display.config.QsyncMode;
 import vendor.qti.hardware.display.config.Rect;
 import vendor.qti.hardware.display.config.TUIEventType;
+import vendor.qti.hardware.display.config.CameraSmoothOp;
 
 @VintfStability
 interface IDisplayConfig {
@@ -514,4 +515,36 @@ interface IDisplayConfig {
      * @return display type
      */
     DisplayType getDisplayType(in long physicalDispId);
+
+    /*
+     * Set the camera smooth info
+     *
+     * @param op enable or disable camera smooth
+     * @param fps camera fps
+     *
+     * @return error is NONE upon success
+     */
+    void setCameraSmoothInfo(in CameraSmoothOp op, in int fps);
+
+    /**
+     * Register a callback for any display config info.
+     *
+     * Registering a new callback must not unregister the old one; the old
+     * callback remains registered until one of the following happens:
+     * - A client explicitly calls {@link unregisterCallback} to unregister it.
+     * - The client process that hosts the callback dies.
+     *
+     * @param callback the callback to register.
+     * @return: returns callback handle if successful.
+     */
+    long registerCallback(in IDisplayConfigCallback callback);
+
+    /**
+     * Explicitly unregister a callback that is previously registered through
+     * {@link registerCallback}.
+     *
+     * @param handle the callback handle to unregister
+     * @return: returns ok if successful.
+     */
+    void unRegisterCallback(in long handle);
 }

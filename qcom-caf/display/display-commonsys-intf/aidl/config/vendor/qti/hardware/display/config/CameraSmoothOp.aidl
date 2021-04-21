@@ -29,41 +29,9 @@
 
 package vendor.qti.hardware.display.config;
 
-import android.hardware.common.NativeHandle;
-import vendor.qti.hardware.display.config.CameraSmoothOp;
-
 @VintfStability
-interface IDisplayConfigCallback {
-    /*
-     * Send notification when concurrent writeback process completes.
-     *
-     * @param error result of the CWB process
-     * @param buffer buffer for concurrent writeback
-     */
-    oneway void notifyCWBBufferDone(in int error, in NativeHandle buffer);
-
-    /*
-     * Send notification when there are changes on the Qsync.
-     *
-     * @param qsyncEnabled Qsync status
-     * @param refreshRate refresh rate
-     * @param qsyncRefreshRate Qsync refresh rate
-     */
-    oneway void notifyQsyncChange(in boolean qsyncEnabled, in int refreshRate,
-                                  in int qsyncRefreshRate);
-
-    /*
-     * Send notification whether the device is in idle state.
-     *
-     * @param isIdle idle status
-     */
-    oneway void notifyIdleStatus(in boolean isIdle);
-
-    /*
-     * Send notification about camera smooth info.
-     *
-     * @param op enable or disable camera smooth feature
-     * @param fps camera frame rate
-     */
-    oneway void notifyCameraSmoothInfo(in CameraSmoothOp op, in int fps);
+@Backing(type="int")
+enum CameraSmoothOp {
+    OFF = 0,
+    ON = 1,
 }
