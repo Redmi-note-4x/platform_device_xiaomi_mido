@@ -1262,11 +1262,17 @@ vendor/lib64/libsensor_user_cal.so|9493f9495f170ab043b0ea9fec8d0bba0cd7b9d9
 vendor/lib64/sensor_calibrate.so|219ee0b1bdcc6a3f0b9261f6fc31838916856c99
 vendor/lib64/sensors.ssc.so|863de4d737c389c059670d8e1592bba58ae33de3
 
-# Thermal - from Onclite PKQ1.181021.001/V10.2.5.0.PFLCNXM
-vendor/bin/thermal-engine|562035759ae60b3c5267a01293f1aeaa3f40c44b
--vendor/lib/libthermalclient.so|241d1e751b3a96c67ac5b618ef38bb39d2a94fa7
--vendor/lib64/libthermalclient.so|54121e31e4a5170f8c50e36ddb57685b6c538a21
-vendor/lib64/libthermalfeature.so|829b2fc0aa8c863d4b4b331e0a2c00663e01efe6
+# Thermal - from olive user 10 QKQ1.191014.001 V12.0.2.0.QCNINXM release-keys
+vendor/bin/thermal-engine|633b9cff05ba176a18101bdfc03ecacc98e1e0f0
+vendor/etc/thermal-engine-camera.conf|365fb62ac0892e5b2aa1e293d926824520cf5f77
+vendor/etc/thermal-engine-map.conf|952fa325f760f821b7a3fe64ca0222fbcea68326
+vendor/etc/thermal-engine-sgame.conf|f2dbf8c2c6ce954a2517f5743b97a5a9c78f9e4e
+vendor/etc/thermal-engine-high.conf|468135cfcb272f24649774dcf4d689644f5064e1
+vendor/etc/thermal-engine-nolimits.conf|d265737374c7c87f89c36ca64755955d7cd658e4
+vendor/etc/thermal-engine-normal.conf|bc42b3a6293454220ceca58135f792345d1d95fe
+-vendor/lib/libthermalclient.so|8837ba9f8f43d4cfbec00d8055fef4c9a7434931
+-vendor/lib64/libthermalclient.so|148421212c4b2d3bcb37cb08f9542d3286f008c1
+vendor/lib64/libthermalfeature.so|1c408911610e5b6a11853aff1900860f9e9a861f
 
 # Thermal (legacy) - from LA.UM.8.6.2.r1-08400-89xx.0
 vendor/lib64/hw/thermal.msm8953.so|0bdee03ca7bd39691e44f6ebe1bcbeed9b9aca66
