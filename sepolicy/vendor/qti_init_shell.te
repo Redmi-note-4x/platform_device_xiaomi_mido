@@ -8,8 +8,4 @@ allow qti_init_shell proc_swap:file { open write };
 
 # Postboot
 allow qti_init_shell sysfs:file { write setattr };
-
-# slub debug options
-allow vendor_qti_init_shell vendor_sysfs_slab_zshandle_storeuser:file w_file_perms;
-allow vendor_qti_init_shell vendor_sysfs_slab_zspage_storeuser:file w_file_perms;
 allow qti_init_shell sysfs_leds:file { getattr setattr write };
