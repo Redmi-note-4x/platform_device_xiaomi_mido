@@ -61,6 +61,7 @@
     <string name="dirac_qs_tile_title">Dirac sound</string>
 
     <string name="advanced_settings">Audio Amplification</string>
+    <string name="sound_settings_summary">Adjust volume for speaker, headphone and mircophone</string>
 
     <!-- Audio amplification -->
     <string name="headphone_gain">Headphone gain</string>
