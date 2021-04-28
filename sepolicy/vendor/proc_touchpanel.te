@@ -1,0 +1,2 @@
+#============= proc_touchpanel ==============
+allow proc_touchpanel proc:filesystem { associate };
