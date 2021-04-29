@@ -1,2 +1,3 @@
 #============= bluetooth ==============
 get_prop(bluetooth, incremental_prop);
+get_prop(bluetooth, vendor_bluetooth_prop);
