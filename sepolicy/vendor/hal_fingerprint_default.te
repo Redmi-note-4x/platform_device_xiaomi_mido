@@ -1,5 +1,11 @@
 typeattribute hal_fingerprint_default binder_in_vendor_violators;
 
+# Allow access to the HALs
+hal_client_domain(hal_fingerprint_default, hal_power)
+
+# Allow binder communication with hal_power_default
+binder_call(hal_fingerprint_default, hal_power_default)
+
 # Allow Binder communication
 vndbinder_use(hal_fingerprint_default)
 binder_call(hal_fingerprint_default, gx_fpd)
