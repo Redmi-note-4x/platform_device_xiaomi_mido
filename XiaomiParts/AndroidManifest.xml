@@ -73,6 +73,17 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".soundcontrol.SoundControlSettingsActivity"
+            android:exported="false"
+            android:excludeFromRecents="true"
+            android:label="@string/sound_settings">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
         <service
             android:name=".xiaomiPartsTile"
             android:enabled="true"

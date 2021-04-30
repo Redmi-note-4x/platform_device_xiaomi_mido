@@ -5,7 +5,7 @@
     <PreferenceCategory android:title="@string/torch_category">
 
         <com.xiaomi.parts.preferences.CustomSeekBarPreference
-            android:defaultValue="100"
+            android:defaultValue="255"
             android:key="white_torch_brightness"
             android:max="255"
             app:min="0"
@@ -13,7 +13,7 @@
             android:title="@string/torch_white_brightness_title" />
 
         <com.xiaomi.parts.preferences.CustomSeekBarPreference
-            android:defaultValue="100"
+            android:defaultValue="255"
             android:key="yellow_torch_brightness"
             android:max="255"
             app:min="0"
@@ -22,6 +22,18 @@
     </PreferenceCategory>
 
     <PreferenceCategory android:title="@string/audio_category">
+
+        <Preference
+            android:key="audio"
+            android:persistent="false"
+            android:title="@string/sound_settings"
+            android:summary="@string/sound_settings_summary"
+            android:icon="@drawable/ic_speaker" >
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetClass="com.xiaomi.parts.SoundControlSettingsActivity"
+                android:targetPackage="com.xiaomi.parts.soundcontrol"/>
+        </Preference>
 
         <com.xiaomi.parts.preferences.SecureSettingSwitchPreference
             android:defaultValue="false"
@@ -71,6 +83,7 @@
                 android:targetClass="com.xiaomi.parts.kcal.KCalSettingsActivity"
                 android:targetPackage="com.xiaomi.parts.kcal"/>
         </Preference>
+
         <PreferenceScreen
             android:key="ambient_display_gestures"
             android:fragment="com.xiaomi.parts.ambient.AmbientGesturePreferenceActivity"

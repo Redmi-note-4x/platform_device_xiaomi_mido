@@ -10,6 +10,8 @@ import android.content.SharedPreferences;
 import com.xiaomi.parts.ambient.SensorsDozeService;
 import com.xiaomi.parts.fps.FPSInfoService;
 import com.xiaomi.parts.kcal.Utils;
+import com.xiaomi.parts.soundcontrol.SoundControlSettings;
+import com.xiaomi.parts.soundcontrol.SoundControlFileUtils;
 
 public class BootReceiver extends BroadcastReceiver implements Utils {
 
@@ -43,17 +45,12 @@ public class BootReceiver extends BroadcastReceiver implements Utils {
                     PREF_HUE, HUE_DEFAULT));
         }
 
-        FileUtils.setValue(DeviceSettings.EARPIECE_GAIN_PATH, Settings.Secure.getInt(context.getContentResolver(),
-                DeviceSettings.PREF_EARPIECE_GAIN, 0));
-        FileUtils.setValue(DeviceSettings.SPEAKER_GAIN_PATH, Settings.Secure.getInt(context.getContentResolver(),
-                DeviceSettings.PREF_SPEAKER_GAIN, 0));
-
         FileUtils.setValue(DeviceSettings.TORCH_1_BRIGHTNESS_PATH,
                 Settings.Secure.getInt(context.getContentResolver(),
-                        DeviceSettings.KEY_WHITE_TORCH_BRIGHTNESS, 100));
+                        DeviceSettings.KEY_WHITE_TORCH_BRIGHTNESS, 255));
         FileUtils.setValue(DeviceSettings.TORCH_2_BRIGHTNESS_PATH,
                 Settings.Secure.getInt(context.getContentResolver(),
-                        DeviceSettings.KEY_YELLOW_TORCH_BRIGHTNESS, 100));
+                        DeviceSettings.KEY_YELLOW_TORCH_BRIGHTNESS, 255));
 
         //Vibration
 	FileUtils.setValue(DeviceSettings.PREF_VIBRATION_PATH, Settings.Secure.getInt(context.getContentResolver(),
@@ -68,6 +65,15 @@ public class BootReceiver extends BroadcastReceiver implements Utils {
         //TouchBoost
         FileUtils.setValue(DeviceSettings.MSM_TOUCHBOOST_PATH, Settings.Secure.getInt(context.getContentResolver(),
                 DeviceSettings.PREF_MSM_TOUCHBOOST, 0));
+
+	// Sound Control
+        int gain = Settings.Secure.getInt(context.getContentResolver(),
+                SoundControlSettings.PREF_HEADPHONE_GAIN, 4);
+        SoundControlFileUtils.setValue(SoundControlSettings.HEADPHONE_GAIN_PATH, gain + " " + gain);
+        SoundControlFileUtils.setValue(SoundControlSettings.MICROPHONE_GAIN_PATH, Settings.Secure.getInt(context.getContentResolver(),
+                SoundControlSettings.PREF_MICROPHONE_GAIN, 0));
+        SoundControlFileUtils.setValue(SoundControlSettings.SPEAKER_GAIN_PATH, Settings.Secure.getInt(context.getContentResolver(),
+                SoundControlSettings.PREF_SPEAKER_GAIN, 0));
 
 	//Dirac
         context.startService(new Intent(context, DiracService.class));

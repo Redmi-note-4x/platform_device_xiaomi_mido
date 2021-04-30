@@ -179,7 +179,10 @@
     <string name="set_on_boot_summary">Restore your modifications on each reboot</string>
 
     <!-- Audio amplification -->
-    <string name="earpiece_gain">Earpiece gain (Calls)</string>
+    <string name="sound_settings">Audio Amplification</string>
+    <string name="sound_settings_summary">Adjust volume for speaker, headphone and mircophone</string>
+    <string name="headphone_gain">Headphone gain</string>
+    <string name="microphone_gain">Microphone gain</string>
     <string name="speaker_gain">Speaker gain</string>
 
     <!-- Vibrator -->

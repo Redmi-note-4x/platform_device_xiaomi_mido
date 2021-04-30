@@ -14,6 +14,7 @@ import androidx.preference.TwoStatePreference;
 
 import com.xiaomi.parts.fps.FPSInfoService;
 import com.xiaomi.parts.kcal.KCalSettingsActivity;
+import com.xiaomi.parts.soundcontrol.SoundControlSettingsActivity;
 import com.xiaomi.parts.preferences.SecureSettingListPreference;
 import com.xiaomi.parts.preferences.SecureSettingSwitchPreference;
 import com.xiaomi.parts.preferences.VibrationSeekBarPreference;
@@ -31,6 +32,7 @@ public class DeviceSettings extends PreferenceFragment implements
     private static final String TAG = "DeviceSettings";
 
     private static final String PREF_DEVICE_KCAL = "device_kcal";
+    private static final String PREF_SOUNDCONTROL = "audio";
     private static final String AMBIENT_DISPLAY = "ambient_display_gestures";
 
     public static final  String KEY_YELLOW_TORCH_BRIGHTNESS = "yellow_torch_brightness";
@@ -62,11 +64,6 @@ public class DeviceSettings extends PreferenceFragment implements
     private static final String SELINUX_EXPLANATION = "selinux_explanation";
     private static final String PREF_SELINUX_MODE = "selinux_mode";
     private static final String PREF_SELINUX_PERSISTENCE = "selinux_persistence";
-
-    public static final  String PREF_SPEAKER_GAIN = "speaker_gain";
-    public static final  String PREF_EARPIECE_GAIN = "earpiece_gain";
-    public static final  String SPEAKER_GAIN_PATH = "/sys/kernel/sound_control/speaker_gain";
-    public static final  String EARPIECE_GAIN_PATH = "/sys/kernel/sound_control/earpiece_gain";
 
     private static final String PREF_ENABLE_DIRAC = "dirac_enabled";
     private static final String PREF_HEADSET = "dirac_headset_pref";
@@ -165,6 +162,13 @@ public class DeviceSettings extends PreferenceFragment implements
             return true;
         });
 
+        Preference Soundcontrol = findPreference(PREF_SOUNDCONTROL);
+        Soundcontrol.setOnPreferenceClickListener(preference -> {
+            Intent intent = new Intent(getActivity().getApplicationContext(), SoundControlSettingsActivity.class);
+            startActivity(intent);
+            return true;
+        });
+
         // SELinux
         Preference selinuxCategory = findPreference(SELINUX_CATEGORY);
         Preference selinuxExp = findPreference(SELINUX_EXPLANATION);
@@ -216,13 +220,6 @@ public class DeviceSettings extends PreferenceFragment implements
                 double VibrationCallValue = (int) value / 100.0 * (MAX_VIBRATION - MIN_VIBRATION) + MIN_VIBRATION;
                 FileUtils.setValue(VIBRATION_CALL_PATH, VibrationCallValue);
                 break;
-
-            case PREF_SPEAKER_GAIN:
-                 FileUtils.setValue(SPEAKER_GAIN_PATH, (int) value);
-                break;
-
-            case PREF_EARPIECE_GAIN:
-                FileUtils.setValue(EARPIECE_GAIN_PATH, (int) value);
 
             case PREF_ENABLE_DIRAC:
                 try {
