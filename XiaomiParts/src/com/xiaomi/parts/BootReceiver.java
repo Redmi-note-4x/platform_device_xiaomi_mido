@@ -48,6 +48,13 @@ public class BootReceiver extends BroadcastReceiver implements Utils {
         FileUtils.setValue(DeviceSettings.SPEAKER_GAIN_PATH, Settings.Secure.getInt(context.getContentResolver(),
                 DeviceSettings.PREF_SPEAKER_GAIN, 0));
 
+        FileUtils.setValue(DeviceSettings.TORCH_1_BRIGHTNESS_PATH,
+                Settings.Secure.getInt(context.getContentResolver(),
+                        DeviceSettings.KEY_WHITE_TORCH_BRIGHTNESS, 100));
+        FileUtils.setValue(DeviceSettings.TORCH_2_BRIGHTNESS_PATH,
+                Settings.Secure.getInt(context.getContentResolver(),
+                        DeviceSettings.KEY_YELLOW_TORCH_BRIGHTNESS, 100));
+
         //Vibration
 	FileUtils.setValue(DeviceSettings.PREF_VIBRATION_PATH, Settings.Secure.getInt(context.getContentResolver(),
                 DeviceSettings.PREF_VIBRATION_OVERRIDE, 0));

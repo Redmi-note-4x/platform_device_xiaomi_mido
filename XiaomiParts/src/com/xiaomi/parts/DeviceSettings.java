@@ -31,7 +31,12 @@ public class DeviceSettings extends PreferenceFragment implements
     private static final String TAG = "DeviceSettings";
 
     private static final String PREF_DEVICE_KCAL = "device_kcal";
-private static final String AMBIENT_DISPLAY = "ambient_display_gestures";
+    private static final String AMBIENT_DISPLAY = "ambient_display_gestures";
+
+    public static final  String KEY_YELLOW_TORCH_BRIGHTNESS = "yellow_torch_brightness";
+    public static final  String TORCH_2_BRIGHTNESS_PATH = "/sys/devices/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,leds@d300/leds/led:torch_1/max_brightness";
+    public static final  String KEY_WHITE_TORCH_BRIGHTNESS = "white_torch_brightness";
+    public static final  String TORCH_1_BRIGHTNESS_PATH = "/sys/devices/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,leds@d300/leds/led:torch_0/max_brightness";
 
     // Vibration override will use bool instead of integer
     public static final String PREF_VIBRATION_OVERRIDE = "vmax_override";
@@ -68,6 +73,9 @@ private static final String AMBIENT_DISPLAY = "ambient_display_gestures";
     private static final String PREF_PRESET = "dirac_preset_pref";
 
     private static Context mContext;
+    private CustomSeekBarPreference mWhiteTorchBrightness;
+    private CustomSeekBarPreference mYellowTorchBrightness;
+
     private SwitchPreference mSelinuxMode;
     private SwitchPreference mSelinuxPersistence;
 
@@ -103,6 +111,14 @@ private static final String AMBIENT_DISPLAY = "ambient_display_gestures";
         VibrationSeekBarPreference vibrationCallStrength = (VibrationSeekBarPreference) findPreference(PREF_VIBRATION_CALL_STRENGTH);
         vibrationCallStrength.setEnabled(FileUtils.fileWritable(VIBRATION_CALL_PATH));
         vibrationCallStrength.setOnPreferenceChangeListener(this);
+
+        mWhiteTorchBrightness = (CustomSeekBarPreference) findPreference(KEY_WHITE_TORCH_BRIGHTNESS);
+        mWhiteTorchBrightness.setEnabled(FileUtils.fileWritable(TORCH_1_BRIGHTNESS_PATH));
+        mWhiteTorchBrightness.setOnPreferenceChangeListener(this);
+
+        mYellowTorchBrightness = (CustomSeekBarPreference) findPreference(KEY_YELLOW_TORCH_BRIGHTNESS);
+        mYellowTorchBrightness.setEnabled(FileUtils.fileWritable(TORCH_2_BRIGHTNESS_PATH));
+        mYellowTorchBrightness.setOnPreferenceChangeListener(this);
 
         SwitchPreference fpsInfo = (SwitchPreference) findPreference(PREF_KEY_FPS_INFO);
         fpsInfo.setChecked(prefs.getBoolean(PREF_KEY_FPS_INFO, false));
@@ -178,6 +194,14 @@ private static final String AMBIENT_DISPLAY = "ambient_display_gestures";
     public boolean onPreferenceChange(Preference preference, Object value) {
         final String key = preference.getKey();
         switch (key) {
+            case KEY_WHITE_TORCH_BRIGHTNESS:
+                FileUtils.setValue(TORCH_1_BRIGHTNESS_PATH, (int) value);
+                break;
+
+            case KEY_YELLOW_TORCH_BRIGHTNESS:
+                FileUtils.setValue(TORCH_2_BRIGHTNESS_PATH, (int) value);
+                break;
+
             case PREF_VIBRATION_SYSTEM_STRENGTH:
                 double VibrationSystemValue = (int) value / 100.0 * (MAX_VIBRATION - MIN_VIBRATION) + MIN_VIBRATION;
                 FileUtils.setValue(VIBRATION_SYSTEM_PATH, VibrationSystemValue);

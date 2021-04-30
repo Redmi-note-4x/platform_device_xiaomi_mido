@@ -2,6 +2,25 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <PreferenceCategory android:title="@string/torch_category">
+
+        <com.xiaomi.parts.preferences.CustomSeekBarPreference
+            android:defaultValue="100"
+            android:key="white_torch_brightness"
+            android:max="255"
+            app:min="0"
+            android:icon="@drawable/ic_torch"
+            android:title="@string/torch_white_brightness_title" />
+
+        <com.xiaomi.parts.preferences.CustomSeekBarPreference
+            android:defaultValue="100"
+            android:key="yellow_torch_brightness"
+            android:max="255"
+            app:min="0"
+            android:icon="@drawable/ic_torch"
+            android:title="@string/torch_yellow_brightness_title" />
+    </PreferenceCategory>
+
     <PreferenceCategory android:title="@string/audio_category">
 
         <com.xiaomi.parts.preferences.SecureSettingSwitchPreference

@@ -23,6 +23,10 @@ allow system_app sysfs_headgain:file rw_file_perms;
 allow system_app sysfs_micgain:dir search;
 allow system_app sysfs_micgain:file rw_file_perms;
 allow system_app sysfs_fps:file rw_file_perms;
+allow system_app sysfs_torch:dir search;
+allow system_app sysfs_torch:file rw_file_perms;
+#allow system_app sysfs_leds:file rw_file_perms;
+#allow system_app sysfs_leds:dir rw_file_perms;
 
 # Touchboost
 allow system_app sysfs_touchboost:file { open read getattr write };

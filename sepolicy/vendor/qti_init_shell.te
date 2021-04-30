@@ -21,3 +21,5 @@ allow qti_init_shell sysfs_vibrator:dir search;
 allow qti_init_shell sysfs_vibrator:file rw_file_perms;
 allow qti_init_shell sysfs_fpsinfo:dir search;
 allow qti_init_shell sysfs_fpsinfo:file rw_file_perms;
+allow qti_init_shell sysfs_torch:dir search;
+allow qti_init_shell sysfs_torch:file rw_file_perms;

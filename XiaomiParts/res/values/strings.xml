@@ -210,4 +210,8 @@
     <string name="boost_title">Boost</string>
     <string name="touchboost_title">Enable Touchboost</string>
     <string name="touchboost_summary">Boost CPU when touch detected for smooth experience</string>
+
+    <!-- Torch -->
+    <string name="torch_yellow_brightness_title">Yellow Torch</string>
+    <string name="torch_white_brightness_title">White Torch</string>
 </resources>
