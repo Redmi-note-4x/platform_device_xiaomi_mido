@@ -69,6 +69,9 @@ public class DeviceSettings extends PreferenceFragment implements
     private static final String PREF_HEADSET = "dirac_headset_pref";
     private static final String PREF_PRESET = "dirac_preset_pref";
 
+    public static final String GLOVE_MODE = "glove_mode";
+    public static final String GLOVE_PATH = "/sys/devices/virtual/tp_glove/device/glove_enable";
+
     private static Context mContext;
     private CustomSeekBarPreference mWhiteTorchBrightness;
     private CustomSeekBarPreference mYellowTorchBrightness;
@@ -79,7 +82,9 @@ public class DeviceSettings extends PreferenceFragment implements
     private CustomSeekBarPreference mSpeakerGain;
     private CustomSeekBarPreference mEarpieceGain;
 
+    private SecureSettingSwitchPreference mGlove;
     private SecureSettingSwitchPreference mTouchboost;
+
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
@@ -121,6 +126,10 @@ public class DeviceSettings extends PreferenceFragment implements
         fpsInfo.setChecked(prefs.getBoolean(PREF_KEY_FPS_INFO, false));
         fpsInfo.setOnPreferenceChangeListener(this);
 
+        mGlove = (SecureSettingSwitchPreference) findPreference(GLOVE_MODE);
+        mGlove.setEnabled(FileUtils.fileWritable(GLOVE_PATH));
+        mGlove.setOnPreferenceChangeListener(this);
+
         if (FileUtils.fileWritable(MSM_TOUCHBOOST_PATH)) {
             mTouchboost = (SecureSettingSwitchPreference) findPreference(PREF_MSM_TOUCHBOOST);
             mTouchboost.setEnabled(Touchboost.isSupported());
@@ -153,7 +162,6 @@ public class DeviceSettings extends PreferenceFragment implements
 
         SecureSettingListPreference preset = (SecureSettingListPreference) findPreference(PREF_PRESET);
         preset.setOnPreferenceChangeListener(this);
-
 
         Preference kcal = findPreference(PREF_DEVICE_KCAL);
         kcal.setOnPreferenceClickListener(preference -> {
@@ -198,6 +206,9 @@ public class DeviceSettings extends PreferenceFragment implements
     public boolean onPreferenceChange(Preference preference, Object value) {
         final String key = preference.getKey();
         switch (key) {
+            case GLOVE_MODE:
+		FileUtils.setValue(GLOVE_PATH, (boolean) value);
+                break;
             case KEY_WHITE_TORCH_BRIGHTNESS:
                 FileUtils.setValue(TORCH_1_BRIGHTNESS_PATH, (int) value);
                 break;

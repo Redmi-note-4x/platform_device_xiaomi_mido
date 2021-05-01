@@ -217,4 +217,8 @@
     <!-- Torch -->
     <string name="torch_yellow_brightness_title">Yellow Torch</string>
     <string name="torch_white_brightness_title">White Torch</string>
+
+   <!-- Glove Mode -->
+    <string name="glove_title">Glove mode</string>
+    <string name="glove_summary">Increases touch sensivity</string>
 </resources>

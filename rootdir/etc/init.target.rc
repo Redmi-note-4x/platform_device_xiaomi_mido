@@ -170,7 +170,6 @@ on boot
 # Flashlight
     chown root system /sys/class/leds/led:torch_1/max_brightness
     chmod 0660 /sys/class/leds/led:torch_1/max_brightness
-    write /sys/class/leds/led:torch_1/max_brightness 0
 
 # Update cpusets on boot and we want better load balancing
     write /dev/cpuset/top-app/cpus 0-7
@@ -205,3 +204,8 @@ on boot
    write /sys/class/leds/vibrator/vmax_override 1
    chown root system /sys/class/timed_output/vibrator/vtg_level
    chmod 0660 /sys/class/timed_output/vibrator/vtg_level
+
+# Glove Mode
+    chown root system /sys/devices/virtual/tp_glove/device/glove_enable
+    chmod 0660 /sys/devices/virtual/tp_glove/device/glove_enable
+

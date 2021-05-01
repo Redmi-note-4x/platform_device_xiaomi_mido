@@ -66,6 +66,10 @@ public class BootReceiver extends BroadcastReceiver implements Utils {
         FileUtils.setValue(DeviceSettings.MSM_TOUCHBOOST_PATH, Settings.Secure.getInt(context.getContentResolver(),
                 DeviceSettings.PREF_MSM_TOUCHBOOST, 0));
 
+	// Glove Mode
+        boolean GloveEnabled = sharedPrefs.getBoolean(DeviceSettings.GLOVE_MODE, false);
+        FileUtils.setValue(DeviceSettings.GLOVE_PATH, GloveEnabled);
+
 	// Sound Control
         int gain = Settings.Secure.getInt(context.getContentResolver(),
                 SoundControlSettings.PREF_HEADPHONE_GAIN, 4);
@@ -74,7 +78,6 @@ public class BootReceiver extends BroadcastReceiver implements Utils {
                 SoundControlSettings.PREF_MICROPHONE_GAIN, 0));
         SoundControlFileUtils.setValue(SoundControlSettings.SPEAKER_GAIN_PATH, Settings.Secure.getInt(context.getContentResolver(),
                 SoundControlSettings.PREF_SPEAKER_GAIN, 0));
-
 	//Dirac
         context.startService(new Intent(context, DiracService.class));
         context.startService(new Intent(context, SensorsDozeService.class));
