@@ -6,4 +6,4 @@ allow system_server sysfs_battery_supply:file { read open getattr };
 
 # vibrator
 allow system_server sysfs_vibrator:file read;
-allow system_server unlabeled:dir { setattr write };
+allow system_server unlabeled:dir { add_name setattr write };
