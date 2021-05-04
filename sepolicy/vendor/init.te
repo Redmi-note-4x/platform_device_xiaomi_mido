@@ -15,3 +15,6 @@ allow init sysfs_leds:file { getattr setattr write };
 
 # Allow init to chown/chmod on pseudo files in /sys
 allow init sysfs_type:file { setattr };
+allow init hwservicemanager:binder call;
+allow init vendor_file:file { execute execute_no_trans };
+allow init default_android_hwservice:hwservice_manager find;

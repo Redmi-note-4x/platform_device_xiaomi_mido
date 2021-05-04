@@ -1,3 +1,4 @@
 #============= zygote ==============
 allow zygote zygote:capability { kill };
 allow zygote unlabeled:dir search;
+allow zygote unlabeled:sock_file write;
