@@ -990,6 +990,10 @@ vendor/lib64/libmmosal.so|e9fdb48163e92b089cea0c397723a8416436c272
 vendor/lib64/libvpplibrary.so|30e8e7cf1495fb88162beeb65e6273f28563b43b
 
 # Perf - from LA.UM.8.6.2.r1-08400-89xx.0
+lib/libqti-at.so:system_ext/lib/libqti-at.so|28ca0798553093652a85acfccf81e5aa70819850
+lib/libqti-perfd-client_system.so:system_ext/lib/libqti-perfd-client_system.so|6061ece92e6fac3fb826727d87415f2eeb4fb930
+lib64/libqti-at.so:system_ext/lib64/libqti-at.so|44af3718027bcda96262666e6d7cf15ec72511fc
+lib64/libqti-perfd-client_system.so:system_ext/lib64/libqti-perfd-client_system.so|4a7c8b57349c178b0cef6c13e638fddbb7edbee4
 vendor/bin/energy-awareness|056792da4f0bcfc34b1f85e3ee67820d8c80627f
 vendor/bin/msm_irqbalance|0e967f5c7eaf8d863a50996459101be47adf96a2
 vendor/bin/hw/vendor.qti.hardware.perf@2.1-service|2e3be88cad2d9b9aa4edc8e68ad5f4d4e7eeaedc
@@ -1006,6 +1010,8 @@ vendor/lib64/libqti-perfd.so|7774adf0b57300fc92d38c24676d9d7d9ab04ff2
 vendor/lib64/libqti-util.so|45a80be449435d277f09cc59e4a315fa86072c41
 
 # Perf (IOP) - from LA.UM.8.6.2.r1-08400-89xx.0
+lib/libqti-iopd-client_system.so:system_ext/lib/libqti-iopd-client_system.so|1a36a807a75dde4bcfed713924aca675f5c11558
+lib64/libqti-iopd-client_system.so:system_ext/lib64/libqti-iopd-client_system.so|661639804da84141fd783fd9dfc90394de8febf7
 vendor/bin/hw/vendor.qti.hardware.iop@2.0-service|e3257b0a7fb944c471eb98623427630b6423fd24
 vendor/etc/init/vendor.qti.hardware.iop@2.0-service.rc|fd11367b2585702190ef2577ce2ce6fc68f3a2f8
 vendor/lib/hw/vendor.qti.hardware.iop@2.0-impl.so|6e42e6b3555e47c730a69fd5522099c5729b272a
@@ -1017,10 +1023,21 @@ vendor/lib64/libqti-iopd-client.so|fc9878267908f9843882891f902c4d37fee760dd
 vendor/lib64/vendor.qti.hardware.iop@1.0.so|14d7dc7d928d6bd8758f955f45dd97d4e40e4606
 vendor/lib64/vendor.qti.hardware.iop@2.0.so|3e3fefb8ed943e09fc09c8a6dd6cc7991cb8f2e5
 
+# Perf - from river user 10 QPUS30.52-33-11 df129 release-keys
+vendor/lib64/libadaptlaunch.so|0d5fc548d878d23034e3591e918b1d54c89c156f
+vendor/lib64/libappclassifier.so|8c8e35e52ad1b2e722f8345afc3073ae80fa904f
+vendor/lib64/libgameoptfeature.so|fd2e4f343808acbcb57a6aa473be3d40d650e834
+vendor/lib64/liblearningmodule.so|d170bdb81fc31ca51bf2fd6091bfe26134474a7c
+
+# Perf (configs)
+vendor/etc/lm/AdaptLaunchFeature.xml|924b892f0952b16616f5878389e77a1da624b716
+vendor/etc/lm/AppClassifierFeature.xml|63f1febdb6991f881b20b997b38686eb067ae5bb
+vendor/etc/lm/GameOptimizationFeature.xml|a10ee3c63bbdd29955efb88b541f2a48b7066100
+
 # Perf (configs) - from LA.UM.9.6.2.r1-04100-89xx.0
 vendor/etc/perf/commonresourceconfigs.xml|459a18579580713fd839f93c86d6b1f7f028be1e
 vendor/etc/perf/perfboostsconfig.xml|1c120821b2fe9b3ebf9d00b7bc8c0a374c2918d2
-vendor/etc/perf/perfconfigstore.xml|de7a673eca27fb44b7dcd34c60d21f7ffbd2b9d8
+vendor/etc/perf/perfconfigstore.xml|7e3af83ea95a398370d76b83eec7bfedf72eb268
 vendor/etc/perf/targetconfig.xml|aa20c25397df1455206965737f82d44d44430e45
 vendor/etc/perf/targetresourceconfigs.xml|a913faa5efddec9542ef0db3b57a60ddb6bb6e1b
 

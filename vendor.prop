@@ -109,6 +109,7 @@ vendor.vidc.disable.split.mode=1
 
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
+ro.vendor.at_library=libqti-at.so
 ro.vendor.qti.sys.fw.bservice_enable=true
 
 # Radio
