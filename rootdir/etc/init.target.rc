@@ -209,3 +209,6 @@ on boot
     chown root system /sys/devices/virtual/tp_glove/device/glove_enable
     chmod 0660 /sys/devices/virtual/tp_glove/device/glove_enable
 
+# HW Buttons
+    chown root system /sys/devices/soc/78b7000.i2c/i2c-3/3-0038/disable_keys
+    chmod 0660 /sys/devices/soc/78b7000.i2c/i2c-3/3-0038/disable_keys

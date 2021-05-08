@@ -72,6 +72,13 @@
             android:summary="@string/glove_summary"
             android:icon="@drawable/ic_vibrate" />
 
+        <com.xiaomi.parts.preferences.SecureSettingSwitchPreference
+            android:defaultValue="false"
+            android:key="disable"
+            android:title="@string/button"
+            android:summary="@string/button_summary"
+            android:icon="@drawable/ic_vibrate" />
+
         <SwitchPreference
             android:key="fps_info"
             android:icon="@drawable/ic_fps_info"

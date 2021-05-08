@@ -221,4 +221,8 @@
    <!-- Glove Mode -->
     <string name="glove_title">Glove mode</string>
     <string name="glove_summary">Increases touch sensivity</string>
+
+    <!-- HW Buttuons -->
+    <string name="button">Disable HW Buttons</string>
+    <string name="button_summary">Disable Device Buttons</string>
 </resources>

@@ -70,6 +70,10 @@ public class BootReceiver extends BroadcastReceiver implements Utils {
         boolean GloveEnabled = sharedPrefs.getBoolean(DeviceSettings.GLOVE_MODE, false);
         FileUtils.setValue(DeviceSettings.GLOVE_PATH, GloveEnabled);
 
+        // Disable Button
+        boolean ButtonEnabled = sharedPrefs.getBoolean(DeviceSettings.BUTTON_KEY, false);
+        FileUtils.setValue(DeviceSettings.BUTTON_PATH, ButtonEnabled);
+
 	// Sound Control
         int gain = Settings.Secure.getInt(context.getContentResolver(),
                 SoundControlSettings.PREF_HEADPHONE_GAIN, 4);

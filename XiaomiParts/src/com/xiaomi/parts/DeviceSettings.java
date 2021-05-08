@@ -72,6 +72,9 @@ public class DeviceSettings extends PreferenceFragment implements
     public static final String GLOVE_MODE = "glove_mode";
     public static final String GLOVE_PATH = "/sys/devices/virtual/tp_glove/device/glove_enable";
 
+    public static final String BUTTON_KEY = "disable";
+    public static final String BUTTON_PATH = "/sys/devices/soc/78b7000.i2c/i2c-3/3-0038/disable_keys";
+
     private static Context mContext;
     private CustomSeekBarPreference mWhiteTorchBrightness;
     private CustomSeekBarPreference mYellowTorchBrightness;
@@ -82,6 +85,7 @@ public class DeviceSettings extends PreferenceFragment implements
     private CustomSeekBarPreference mSpeakerGain;
     private CustomSeekBarPreference mEarpieceGain;
 
+    private SecureSettingSwitchPreference mButton;
     private SecureSettingSwitchPreference mGlove;
     private SecureSettingSwitchPreference mTouchboost;
 
@@ -129,6 +133,10 @@ public class DeviceSettings extends PreferenceFragment implements
         mGlove = (SecureSettingSwitchPreference) findPreference(GLOVE_MODE);
         mGlove.setEnabled(FileUtils.fileWritable(GLOVE_PATH));
         mGlove.setOnPreferenceChangeListener(this);
+
+        mButton = (SecureSettingSwitchPreference) findPreference(BUTTON_KEY);
+        mButton.setEnabled(FileUtils.fileWritable(BUTTON_PATH));
+        mButton.setOnPreferenceChangeListener(this);
 
         if (FileUtils.fileWritable(MSM_TOUCHBOOST_PATH)) {
             mTouchboost = (SecureSettingSwitchPreference) findPreference(PREF_MSM_TOUCHBOOST);
@@ -208,6 +216,9 @@ public class DeviceSettings extends PreferenceFragment implements
         switch (key) {
             case GLOVE_MODE:
 		FileUtils.setValue(GLOVE_PATH, (boolean) value);
+                break;
+            case BUTTON_KEY:
+                FileUtils.setValue(BUTTON_PATH, (boolean) value);
                 break;
             case KEY_WHITE_TORCH_BRIGHTNESS:
                 FileUtils.setValue(TORCH_1_BRIGHTNESS_PATH, (int) value);
