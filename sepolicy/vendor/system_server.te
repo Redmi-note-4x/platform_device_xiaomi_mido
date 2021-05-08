@@ -9,3 +9,5 @@ allow system_server sysfs_vibrator:file read;
 allow system_server unlabeled:dir { add_name create relabelfrom remove_name rmdir setattr write };
 allow system_server unlabeled:file { append create rename setattr unlink write };
 allow system_server unlabeled:sock_file { create setattr };
+allow system_server system_file:dir write;
+allow system_server vendor_overlay_file:dir write;
