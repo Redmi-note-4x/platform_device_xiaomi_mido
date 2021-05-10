@@ -28,37 +28,69 @@
                 <action android:name="com.android.settings.action.EXTRA_SETTINGS" />
             </intent-filter>
         </receiver>
-        <receiver android:name=".OnBoot"
-            android:enabled="true"
-            android:exported="false">
-            <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED"/>
 
-                <category android:name="android.intent.category.DEFAULT" />
-                <action android:name="com.android.settings.action.EXTRA_SETTINGS" />
-            </intent-filter>
-        </receiver>
         <activity
-            android:name=".DeviceSettingsActivity"
+            android:name=".torch.TorchSettingsActivity"
 	    android:exported="false"
-            android:icon="@drawable/ic_xiaomiparts"
-            android:label="@string/xiaomi_parts_title"
-	    android:launchMode="singleTask">
+            android:label="@string/torch_category">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.DEFAULT" />
-                <action android:name="com.android.settings.action.EXTRA_SETTINGS" />
+                <action android:name="com.android.settings.action.IA_SETTINGS" />
             </intent-filter>
 
-            <meta-data
-                android:name="com.android.settings.dismiss"
-                android:value="9,13,30" />
             <meta-data
                 android:name="com.android.settings.category"
-                android:value="com.android.settings.category.ia.homepage" />
+                android:value="com.android.settings.category.ia.display" />
             <meta-data
                 android:name="com.android.settings.summary"
-                android:resource="@string/xiaomi_parts_settings_summary" />
+                android:resource="@string/torch_summary" />
+        </activity>
+
+        <activity
+            android:name=".touch.TouchSettingsActivity"
+            android:exported="false"
+            android:label="@string/glove_title">
+            <intent-filter>
+                <action android:name="com.android.settings.action.IA_SETTINGS" />
+            </intent-filter>
+
+            <meta-data
+                android:name="com.android.settings.category"
+                android:value="com.android.settings.category.ia.display" />
+            <meta-data
+                android:name="com.android.settings.summary"
+                android:resource="@string/glove_summary" />
+        </activity>
+
+        <activity
+            android:name=".vibration.VibrationSettingsActivity"
+            android:exported="false"
+            android:label="@string/vibration_category" >
+            <intent-filter>
+                <action android:name="com.android.settings.action.IA_SETTINGS" />
+            </intent-filter>
+
+            <meta-data
+                android:name="com.android.settings.category"
+                android:value="com.android.settings.category.ia.sound" />
+            <meta-data
+                android:name="com.android.settings.summary"
+                android:resource="@string/vibration_summary" />
+        </activity>
+
+        <activity
+            android:name=".dirac.DiracSettingsActivity"
+            android:exported="false"
+            android:label="@string/dirac_title" >
+            <intent-filter>
+                <action android:name="com.android.settings.action.IA_SETTINGS" />
+            </intent-filter>
+
+            <meta-data
+                android:name="com.android.settings.category"
+                android:value="com.android.settings.category.ia.sound" />
+            <meta-data
+                android:name="com.android.settings.summary"
+                android:resource="@string/dirac_summary" />
         </activity>
 
         <activity
@@ -68,9 +100,14 @@
             android:theme="@style/CustomOptionsTheme"
             android:label="@string/advanced_settings_kcal">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="com.android.settings.action.IA_SETTINGS" />
             </intent-filter>
+            <meta-data
+                android:name="com.android.settings.category"
+                android:value="com.android.settings.category.ia.display" />
+            <meta-data
+                android:name="com.android.settings.summary"
+                android:resource="@string/device_kcal_summary" />
         </activity>
 
         <activity
@@ -79,39 +116,22 @@
             android:excludeFromRecents="true"
             android:label="@string/sound_settings">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="com.android.settings.action.IA_SETTINGS" />
             </intent-filter>
+            <meta-data
+                android:name="com.android.settings.category"
+                android:value="com.android.settings.category.ia.sound" />
+            <meta-data
+                android:name="com.android.settings.summary"
+                android:resource="@string/sound_summary" />
         </activity>
 
         <service
-            android:name=".xiaomiPartsTile"
-            android:enabled="true"
-            android:icon="@drawable/ic_xiaomiparts"
-            android:label="@string/xiaomi_parts_title"
-            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
-            <intent-filter>
-                <action android:name="android.service.quicksettings.action.QS_TILE"/>
-            </intent-filter>
-        </service>
-
-        <service
-            android:name=".log.LogTile"
-            android:icon="@drawable/ic_qs_log"
-            android:label="@string/quick_settings_log_tile_label"
-            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
-            <intent-filter>
-                <action
-                    android:name="android.service.quicksettings.action.QS_TILE"/>
-            </intent-filter>
-        </service>
-
-        <service
-            android:name=".DiracService"
+            android:name=".dirac.DiracService"
             android:enabled="true"
             android:stopWithTask="false" />
             <service
-            android:name=".DiracTileService"
+            android:name=".dirac.DiracTileService"
             android:icon="@drawable/ic_qs_dirac"
             android:label="@string/dirac_qs_tile_title"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
@@ -120,33 +140,23 @@
             </intent-filter>
         </service>
 
-        <service
-            android:name=".fps.FPSInfoService"
-            android:exported="false">
-        </service>
-
-        <service
-            android:name=".fps.FPSTileService"
-            android:icon="@drawable/ic_fps_tile"
-            android:label="@string/fps_info_title"
-            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
-            <intent-filter>
-                <action
-                    android:name="android.service.quicksettings.action.QS_TILE"/>
-            </intent-filter>
-        </service>
         <service android:name="com.xiaomi.parts.ambient.SensorsDozeService"
                  android:permission="SensorsDozeService">
         </service>
 
         <activity
             android:name="com.xiaomi.parts.ambient.AmbientGesturePreferenceActivity"
-            android:icon="@drawable/ic_doze"
             android:theme="@style/CustomOptionsTheme"
             android:label="@string/ambient_display_gestures_title">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
             </intent-filter>
+            <meta-data
+                android:name="com.android.settings.category"
+                android:value="com.android.settings.category.ia.gestures" />
+            <meta-data
+                android:name="com.android.settings.summary"
+                android:resource="@string/ambient_display_gestures_summary" />
         </activity>
     </application>
 </manifest>

@@ -3,21 +3,11 @@
 
     <!-- Head Title -->
     <string name="xiaomi_parts_title">Xiaomi Parts</string>
-    <string name="xiaomi_parts_settings_summary">Device Specific Customizations</string>
 
     <!-- Category Title -->
     <string name="audio_category">Audio</string>
     <string name="display_category">Display</string>
-    <string name="other_category">Other</string>
     <string name="torch_category">Torch</string>
-
-    <!-- USB fastcharge -->
-    <string name="fastcharge_title">Enable USB Fastcharge</string>
-    <string name="fastcharge_summary">Charge upto 700mA when connected to a computer via USB 3.0 port</string>
-
-    <!-- FPS Info -->
-    <string name="fps_info_title">FPS Info Overlay</string>
-    <string name="fps_info_summary">Show overlay with current frames per second</string>
 
     <!-- KCal -->
     <string name="device_kcal_title">Display Calibration</string>
@@ -180,49 +170,25 @@
 
     <!-- Audio amplification -->
     <string name="sound_settings">Audio Amplification</string>
-    <string name="sound_settings_summary">Adjust volume for speaker, headphone and mircophone</string>
+    <string name="sound_summary">Adjust volume for speaker, headphone and mircophone</string>
     <string name="headphone_gain">Headphone gain</string>
     <string name="microphone_gain">Microphone gain</string>
     <string name="speaker_gain">Speaker gain</string>
 
     <!-- Vibrator -->
     <string name="vibration_category">Vibration</string>
+    <string name="vibration_summary">Ajust vibration strenght</string>
     <string name="vibration_override_title">Override System Vibration</string>
     <string name="vibration_system_title">System Vibration Strength</string>
     <string name="vibration_notification_title">Notification Vibration Strength</string>
     <string name="vibration_call_title">Call Vibration Strength</string>
 
-    <!-- Log Tile -->
-    <string name="quick_settings_log_tile_label">LogTile</string>
-    <string name="quick_settings_log_tile_dialog_title">Options</string>
-    <string name="cannot_get_su">Action failed because of missing superuser access</string>
-
-    <!-- Selinux Switch -->
-    <string name="selinux_category">SELinux</string>
-    <string name="selinux_explanation_summary">SELinux is a set of kernel modifications and user-space tools. Changing modes can cause unwanted effects. Use at your own risk.</string>
-    <string name="selinux_mode_title">SELinux mode</string>
-    <string name="selinux_permissive_summary">Permissive</string>
-    <string name="selinux_enforcing_summary">Enforcing</string>
-    <string name="selinux_persistence_title">Persist across reboots</string>
-    <string name="selinux_persistence_summary">Restore the above set sepolicy mode on each boot</string>
-    <string name="selinux_permissive_toast_title">Selinux set to permissive!</string>
-    <string name="selinux_enforcing_toast_title">Selinux set to enforcing!</string>
-    <string name="selinux_unrooted_summary">Couldn\'t detect root. You must have root to use these switches</string>
-
-    <!-- Touchboost -->
-    <string name="boost_title">Boost</string>
-    <string name="touchboost_title">Enable Touchboost</string>
-    <string name="touchboost_summary">Boost CPU when touch detected for smooth experience</string>
-
     <!-- Torch -->
+    <string name="torch_summary">Ajust torch values</string>
     <string name="torch_yellow_brightness_title">Yellow Torch</string>
     <string name="torch_white_brightness_title">White Torch</string>
 
    <!-- Glove Mode -->
     <string name="glove_title">Glove mode</string>
     <string name="glove_summary">Increases touch sensivity</string>
-
-    <!-- HW Buttuons -->
-    <string name="button">Disable HW Buttons</string>
-    <string name="button_summary">Disable Device Buttons</string>
 </resources>

@@ -1,11 +1,11 @@
-package com.xiaomi.parts;
+package com.xiaomi.parts.touch;
 
 import android.app.Activity;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-public class DeviceSettingsActivity extends Activity {
+public class TouchSettingsActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -14,11 +14,11 @@ public class DeviceSettingsActivity extends Activity {
         getActionBar().setDisplayHomeAsUpEnabled(true);
 
         Fragment fragment = getFragmentManager().findFragmentById(android.R.id.content);
-        DeviceSettings deviceSettingsFragment;
+        TouchSettings TouchSettingsFragment;
         if (fragment == null) {
-            deviceSettingsFragment = new DeviceSettings();
+            TouchSettingsFragment = new TouchSettings();
             getFragmentManager().beginTransaction()
-                    .add(android.R.id.content, deviceSettingsFragment)
+                    .add(android.R.id.content, TouchSettingsFragment)
                     .commit();
         }
     }

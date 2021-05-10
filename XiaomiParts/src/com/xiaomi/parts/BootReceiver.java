@@ -8,10 +8,18 @@ import androidx.preference.PreferenceManager;
 import android.provider.Settings;
 import android.content.SharedPreferences;
 import com.xiaomi.parts.ambient.SensorsDozeService;
-import com.xiaomi.parts.fps.FPSInfoService;
 import com.xiaomi.parts.kcal.Utils;
 import com.xiaomi.parts.soundcontrol.SoundControlSettings;
 import com.xiaomi.parts.soundcontrol.SoundControlFileUtils;
+import com.xiaomi.parts.FileUtils;
+import com.xiaomi.parts.torch.TorchSettings;
+import com.xiaomi.parts.torch.TorchUtils;
+import com.xiaomi.parts.touch.TouchSettings;
+import com.xiaomi.parts.touch.TouchUtils;
+import com.xiaomi.parts.vibration.VibrationSettings;
+import com.xiaomi.parts.vibration.VibrationUtils;
+import com.xiaomi.parts.dirac.DiracSettings;
+import com.xiaomi.parts.dirac.DiracService;
 
 public class BootReceiver extends BroadcastReceiver implements Utils {
 
@@ -45,34 +53,30 @@ public class BootReceiver extends BroadcastReceiver implements Utils {
                     PREF_HUE, HUE_DEFAULT));
         }
 
-        FileUtils.setValue(DeviceSettings.TORCH_1_BRIGHTNESS_PATH,
+        TorchUtils.setValue(TorchSettings.TORCH_1_BRIGHTNESS_PATH,
                 Settings.Secure.getInt(context.getContentResolver(),
-                        DeviceSettings.KEY_WHITE_TORCH_BRIGHTNESS, 255));
-        FileUtils.setValue(DeviceSettings.TORCH_2_BRIGHTNESS_PATH,
+                        TorchSettings.KEY_WHITE_TORCH_BRIGHTNESS, 255));
+        TorchUtils.setValue(TorchSettings.TORCH_2_BRIGHTNESS_PATH,
                 Settings.Secure.getInt(context.getContentResolver(),
-                        DeviceSettings.KEY_YELLOW_TORCH_BRIGHTNESS, 255));
+                        TorchSettings.KEY_YELLOW_TORCH_BRIGHTNESS, 255));
 
         //Vibration
-	FileUtils.setValue(DeviceSettings.PREF_VIBRATION_PATH, Settings.Secure.getInt(context.getContentResolver(),
-                DeviceSettings.PREF_VIBRATION_OVERRIDE, 0));
-	FileUtils.setValue(DeviceSettings.VIBRATION_SYSTEM_PATH, Settings.Secure.getInt(
-                context.getContentResolver(), DeviceSettings.PREF_VIBRATION_SYSTEM_STRENGTH, 80) / 100.0 * (DeviceSettings.MAX_VIBRATION - DeviceSettings.MIN_VIBRATION) + DeviceSettings.MIN_VIBRATION);
-	FileUtils.setValue(DeviceSettings.VIBRATION_NOTIFICATION_PATH, Settings.Secure.getInt(
-                context.getContentResolver(), DeviceSettings.PREF_VIBRATION_NOTIFICATION_STRENGTH, 80) / 100.0 * (DeviceSettings.MAX_VIBRATION - DeviceSettings.MIN_VIBRATION) + DeviceSettings.MIN_VIBRATION);
-        FileUtils.setValue(DeviceSettings.VIBRATION_CALL_PATH, Settings.Secure.getInt(
-                context.getContentResolver(), DeviceSettings.PREF_VIBRATION_CALL_STRENGTH, 80) / 100.0 * (DeviceSettings.MAX_VIBRATION - DeviceSettings.MIN_VIBRATION) + DeviceSettings.MIN_VIBRATION);
-
-        //TouchBoost
-        FileUtils.setValue(DeviceSettings.MSM_TOUCHBOOST_PATH, Settings.Secure.getInt(context.getContentResolver(),
-                DeviceSettings.PREF_MSM_TOUCHBOOST, 0));
+	VibrationUtils.setValue(VibrationSettings.PREF_VIBRATION_PATH, Settings.Secure.getInt(context.getContentResolver(),
+                VibrationSettings.PREF_VIBRATION_OVERRIDE, 0));
+	VibrationUtils.setValue(VibrationSettings.VIBRATION_SYSTEM_PATH, Settings.Secure.getInt(
+                context.getContentResolver(), VibrationSettings.PREF_VIBRATION_SYSTEM_STRENGTH, 80) / 100.0 * (VibrationSettings.MAX_VIBRATION - VibrationSettings.MIN_VIBRATION) + VibrationSettings.MIN_VIBRATION);
+	VibrationUtils.setValue(VibrationSettings.VIBRATION_NOTIFICATION_PATH, Settings.Secure.getInt(
+                context.getContentResolver(), VibrationSettings.PREF_VIBRATION_NOTIFICATION_STRENGTH, 80) / 100.0 * (VibrationSettings.MAX_VIBRATION - VibrationSettings.MIN_VIBRATION) + VibrationSettings.MIN_VIBRATION);
+        VibrationUtils.setValue(VibrationSettings.VIBRATION_CALL_PATH, Settings.Secure.getInt(
+                context.getContentResolver(), VibrationSettings.PREF_VIBRATION_CALL_STRENGTH, 80) / 100.0 * (VibrationSettings.MAX_VIBRATION - VibrationSettings.MIN_VIBRATION) + VibrationSettings.MIN_VIBRATION);
 
 	// Glove Mode
-        boolean GloveEnabled = sharedPrefs.getBoolean(DeviceSettings.GLOVE_MODE, false);
-        FileUtils.setValue(DeviceSettings.GLOVE_PATH, GloveEnabled);
+        boolean GloveEnabled = sharedPrefs.getBoolean(TouchSettings.GLOVE_MODE, false);
+        TouchUtils.setValue(TouchSettings.GLOVE_PATH, GloveEnabled);
 
         // Disable Button
-        boolean ButtonEnabled = sharedPrefs.getBoolean(DeviceSettings.BUTTON_KEY, false);
-        FileUtils.setValue(DeviceSettings.BUTTON_PATH, ButtonEnabled);
+        //boolean ButtonEnabled = sharedPrefs.getBoolean(DeviceSettings.BUTTON_KEY, false);
+        //FileUtils.setValue(DeviceSettings.BUTTON_PATH, ButtonEnabled);
 
 	// Sound Control
         int gain = Settings.Secure.getInt(context.getContentResolver(),
@@ -85,9 +89,5 @@ public class BootReceiver extends BroadcastReceiver implements Utils {
 	//Dirac
         context.startService(new Intent(context, DiracService.class));
         context.startService(new Intent(context, SensorsDozeService.class));
-        boolean enabled = sharedPrefs.getBoolean(DeviceSettings.PREF_KEY_FPS_INFO, false);
-        if (enabled) {
-            context.startService(new Intent(context, FPSInfoService.class));
-        }
     }
 }

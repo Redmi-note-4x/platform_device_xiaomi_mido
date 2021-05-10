@@ -1,4 +1,4 @@
-package com.xiaomi.parts;
+package com.xiaomi.parts.vibration;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -7,7 +7,8 @@ import androidx.preference.Preference;
 import androidx.preference.Preference.OnPreferenceChangeListener;
 import androidx.preference.PreferenceManager;
 
-import com.xiaomi.parts.DeviceSettings;
+import com.xiaomi.parts.vibration.VibrationSettings;
+import com.xiaomi.parts.vibration.VibrationUtils;
 
 public class Vibration implements OnPreferenceChangeListener {
 
@@ -18,26 +19,26 @@ public class Vibration implements OnPreferenceChangeListener {
     }
 
     public static String getFile() {
-        if (FileUtils.fileWritable(DeviceSettings.PREF_VIBRATION_PATH)) {
-            return DeviceSettings.PREF_VIBRATION_PATH;
+        if (VibrationUtils.fileWritable(VibrationSettings.PREF_VIBRATION_PATH)) {
+            return VibrationSettings.PREF_VIBRATION_PATH;
         }
         return null;
     }
 
     public static boolean isSupported() {
-        return FileUtils.fileWritable(getFile());
+        return VibrationUtils.fileWritable(getFile());
     }
 
     public static boolean isCurrentlyEnabled(Context context) {
-        return FileUtils.getFileValueAsBoolean(getFile(), false);
+        return VibrationUtils.getFileValueAsBoolean(getFile(), false);
     }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object value) {
         final String key = preference.getKey();
         switch (key) {
-            case DeviceSettings.PREF_VIBRATION_OVERRIDE:
-                FileUtils.setValue(DeviceSettings.PREF_VIBRATION_PATH, (boolean) value);
+            case VibrationSettings.PREF_VIBRATION_OVERRIDE:
+                VibrationUtils.setValue(VibrationSettings.PREF_VIBRATION_PATH, (boolean) value);
                 break;
 
             default:

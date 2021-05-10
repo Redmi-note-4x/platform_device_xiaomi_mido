@@ -1,4 +1,4 @@
-package com.xiaomi.parts;
+package com.xiaomi.parts.dirac;
 
 import android.app.ActivityManager;
 import android.content.Intent;
