@@ -99,5 +99,4 @@ interface IDisplayConfig {
   void setCameraSmoothInfo(in vendor.qti.hardware.display.config.CameraSmoothOp op, in int fps);
   long registerCallback(in vendor.qti.hardware.display.config.IDisplayConfigCallback callback);
   void unRegisterCallback(in long handle);
-  void notifyDisplayIdleState(in int[] dispId);
 }

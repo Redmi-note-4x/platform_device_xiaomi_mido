@@ -6,7 +6,7 @@ aidl_interface {
     ],
     stability: "vintf",
     imports: [
-        "android.hardware.common",
+        "android.hardware.common-V2",
     ],
     backend: {
         java: {
@@ -16,5 +16,9 @@ aidl_interface {
             enabled: false,
         },
     },
-    versions: ["1"],
+    versions: [
+        "1",
+        "2",
+        "3",
+    ],
 }

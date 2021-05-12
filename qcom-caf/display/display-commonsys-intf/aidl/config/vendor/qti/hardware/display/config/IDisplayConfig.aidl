@@ -547,4 +547,13 @@ interface IDisplayConfig {
      * @return: returns ok if successful.
      */
     void unRegisterCallback(in long handle);
+
+    /*
+     * Notify idle state to HWC HAL for a given display ID
+     *
+     * @param dispId display ID
+     *
+     * @return error is NONE upon success
+     */
+    void notifyDisplayIdleState(in int[] dispId);
 }
