@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory>
+        <com.xiaomi.parts.preferences.SecureSettingSwitchPreference
+            android:defaultValue="false"
+            android:key="chopchop"
+            android:title="@string/chopchop_title"
+            android:summary="@string/chopchop_summary" />
+    </PreferenceCategory>
+</PreferenceScreen>

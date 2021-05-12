@@ -8,6 +8,10 @@
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
     <uses-permission android:name="android.permission.INJECT_EVENTS"/>
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-feature android:name="android.hardware.Camera" />
 
     <uses-sdk android:minSdkVersion="29" />
 
@@ -59,6 +63,22 @@
             <meta-data
                 android:name="com.android.settings.summary"
                 android:resource="@string/glove_summary" />
+        </activity>
+
+        <activity
+            android:name=".action.ChopChopSettingsActivity"
+            android:exported="false"
+            android:label="@string/chopchop_title">
+            <intent-filter>
+                <action android:name="com.android.settings.action.IA_SETTINGS" />
+            </intent-filter>
+
+            <meta-data
+                android:name="com.android.settings.category"
+                android:value="com.android.settings.category.ia.gestures" />
+            <meta-data
+                android:name="com.android.settings.summary"
+                android:resource="@string/chopchop_summary" />
         </activity>
 
         <activity
@@ -142,6 +162,10 @@
 
         <service android:name="com.xiaomi.parts.ambient.SensorsDozeService"
                  android:permission="SensorsDozeService">
+        </service>
+
+        <service android:name="com.xiaomi.parts.action.ChopChopService"
+                 android:exported="true" >
         </service>
 
         <activity

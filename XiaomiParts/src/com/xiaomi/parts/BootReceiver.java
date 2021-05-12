@@ -20,6 +20,8 @@ import com.xiaomi.parts.vibration.VibrationSettings;
 import com.xiaomi.parts.vibration.VibrationUtils;
 import com.xiaomi.parts.dirac.DiracSettings;
 import com.xiaomi.parts.dirac.DiracService;
+import com.xiaomi.parts.action.ChopChopSettings;
+import com.xiaomi.parts.action.ChopChopService;
 
 public class BootReceiver extends BroadcastReceiver implements Utils {
 
@@ -89,5 +91,10 @@ public class BootReceiver extends BroadcastReceiver implements Utils {
 	//Dirac
         context.startService(new Intent(context, DiracService.class));
         context.startService(new Intent(context, SensorsDozeService.class));
+
+        boolean enabled = sharedPrefs.getBoolean(ChopChopSettings.CHOPCHOP, false);
+        if (enabled) {
+            context.startService(new Intent(context, ChopChopService.class));
+        }
     }
 }

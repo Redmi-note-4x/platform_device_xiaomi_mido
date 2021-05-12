@@ -191,4 +191,8 @@
    <!-- Glove Mode -->
     <string name="glove_title">Glove mode</string>
     <string name="glove_summary">Increases touch sensivity</string>
+
+   <!-- Chop Chop -->
+    <string name="chopchop_title">Chop Chop</string>
+    <string name="chopchop_summary">Shake phone to turn on flash</string>
 </resources>
