@@ -4,3 +4,8 @@
 
 # Default to BFQ I/O scheduler
 persist.sys.io.scheduler=bfq
+
+# IORap
+ro.iorapd.enable=true
+iorapd.perfetto.enable=true
+iorapd.readahead.enable=true
