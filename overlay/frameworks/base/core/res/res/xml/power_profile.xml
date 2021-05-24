@@ -23,7 +23,7 @@
         <value>307</value>
         <value>353</value>
     </array>
-    <item name="cpu.awake">1.6</item>
+    <item name="cpu.suspend">1.6</item>
     <item name="cpu.idle">1.6</item>
     <item name="battery.capacity">4100</item>
 </device>
