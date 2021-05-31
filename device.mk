@@ -274,10 +274,6 @@ PRODUCT_PACKAGES += \
     android.hardware.keymaster@3.0-impl:64 \
     android.hardware.keymaster@3.0-service
 
-# Libnbaio
-PRODUCT_PACKAGES += \
-    libnbaio
-
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.xiaomi_mido
