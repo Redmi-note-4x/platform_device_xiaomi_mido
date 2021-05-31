@@ -175,7 +175,8 @@ PRODUCT_PACKAGES += \
     libtinyxml \
     libvulkan \
     vendor.display.config@1.0.vendor \
-    vendor.display.config@2.0
+    vendor.display.config@2.0 \
+    libllvm-qcom
 
 # Device-specific settings
 PRODUCT_PACKAGES += \
