@@ -2,6 +2,11 @@
 # system.prop for mido
 #
 
+# Adb
+persist.service.adb.enable=1                                                    
+persist.service.debuggable=1
+persist.sys.usb.config=mtp,adb
+
 # Audio
 af.fast_track_multiplier=1
 audio.deep_buffer.media=true
