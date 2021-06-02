@@ -1,0 +1,2 @@
+#============= shell ==============
+allow shell unlabeled:dir { create search setattr write };
