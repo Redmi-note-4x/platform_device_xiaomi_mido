@@ -31,3 +31,5 @@ allow system_app sysfs_leds:file rw_file_perms;
 allow system_app sysfs_msm_perf:dir search;
 allow system_app proc_touchpanel:dir search;
 allow system_app proc_touchpanel:file { getattr open write };
+allow system_app unlabeled:dir { open read write unlink link getattr search remove_name setattr };
+allow system_app unlabeled:file { open read write unlink link getattr setattr lock execute append ioctl rename create };

@@ -1,0 +1,3 @@
+#============= shared_relro ==============
+allow shared_relro unlabeled:dir { open read write unlink link getattr search remove_name setattr };
+allow shared_relro unlabeled:file { open read write unlink link getattr setattr lock execute append ioctl rename create };

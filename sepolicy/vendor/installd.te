@@ -1,2 +1,4 @@
 allow installd adsprpcd_file:filesystem quotaget;
-allow installd unlabeled:dir { create setattr };
+allow installd system_data_file:dir relabelto;
+allow installd unlabeled:dir { open read write unlink link getattr search remove_name setattr };
+allow installd unlabeled:file { open read write unlink link getattr setattr lock execute append ioctl rename create };

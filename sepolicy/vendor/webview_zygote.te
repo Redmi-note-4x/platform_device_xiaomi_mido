@@ -1,0 +1,3 @@
+#============= webview_zygote ==============
+allow webview_zygote unlabeled:dir search;
+allow webview_zygote unlabeled:sock_file write;

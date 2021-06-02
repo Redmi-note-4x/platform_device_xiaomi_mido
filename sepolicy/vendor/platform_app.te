@@ -1,2 +1,4 @@
 allow platform_app hal_alarm_qti_default:binder call;
 allow platform_app hal_alarm_qti_hwservice:hwservice_manager find;
+allow platform_app unlabeled:dir { open read write unlink link getattr search remove_name setattr };
+allow platform_app unlabeled:file { open read write unlink link getattr setattr lock execute append ioctl rename create };

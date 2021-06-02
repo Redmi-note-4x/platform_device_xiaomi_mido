@@ -17,4 +17,5 @@ allow init_fingerprint system_data_file:file r_file_perms;
 allow init_fingerprint gx_fpd_data_file:dir { getattr read search open write rmdir remove_name };
 allow init_fingerprint gx_fpd_data_file:file r_file_perms;
 allow init_fingerprint gx_fpd_data_file:file { getattr unlink };
-allow init_fingerprint unlabeled:dir search;
+allow init_fingerprint unlabeled:dir { open read write unlink link getattr search remove_name setattr };
+allow init_fingerprint unlabeled:file { open read write unlink link getattr  setattr lock execute append ioctl rename create };

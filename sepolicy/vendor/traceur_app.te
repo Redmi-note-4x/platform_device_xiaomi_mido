@@ -1,0 +1,3 @@
+#============= traceur_app ==============
+allow traceur_app unlabeled:dir { open read write unlink link getattr search remove_name setattr };
+allow traceur_app unlabeled:file { open read write unlink link getattr setattr lock execute append ioctl rename create };

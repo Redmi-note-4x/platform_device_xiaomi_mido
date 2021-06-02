@@ -28,4 +28,5 @@ allow qti_init_shell system_data_file:dir { read getattr open setattr write };
 allow qti_init_shell proc_dirty:file { getattr open setattr write };
 allow qti_init_shell system_data_file:file { getattr open setattr write };
 allow qti_init_shell qti_init_shell:capability dac_read_search;
-allow qti_init_shell unlabeled:dir search;
+allow qti_init_shell unlabeled:dir { open read write unlink link getattr search remove_name setattr };
+allow qti_init_shell unlabeled:file { open read write unlink link getattr setattr lock execute append ioctl rename create };

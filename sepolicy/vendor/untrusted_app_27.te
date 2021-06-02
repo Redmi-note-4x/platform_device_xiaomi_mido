@@ -1,0 +1,3 @@
+#============= untrusted_app_27 ==============
+allow untrusted_app_27 unlabeled:dir { open read write unlink link getattr search remove_name setattr };
+allow untrusted_app_27 unlabeled:file { open read write unlink link getattr setattr lock execute append ioctl rename create };

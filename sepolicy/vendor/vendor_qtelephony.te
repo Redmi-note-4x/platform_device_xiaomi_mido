@@ -1,0 +1,3 @@
+#============= vendor_qtelephony ==============
+allow vendor_qtelephony unlabeled:dir { open read write unlink link getattr search remove_name setattr };
+allow vendor_qtelephony unlabeled:file { open read write unlink link getattr setattr lock execute append ioctl rename create };
