@@ -1,2 +1,2 @@
 allow installd adsprpcd_file:filesystem quotaget;
-allow installd unlabeled:dir { create setattr };
+allow installd system_data_file:dir relabelto;

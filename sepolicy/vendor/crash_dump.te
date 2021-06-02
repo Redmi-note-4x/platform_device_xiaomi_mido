@@ -1,2 +1,0 @@
-#============= crash_dump ==============
-allow crash_dump unlabeled:dir search;
