@@ -1,0 +1,2 @@
+#============= sensors ==============
+allow sensors diag_device:chr_file read;
