@@ -1,2 +1,2 @@
 #============= vendor_dpmd ==============
-allow vendor_dpmd diag_device:chr_file read;
+allow vendor_dpmd diag_device:chr_file { read write };
