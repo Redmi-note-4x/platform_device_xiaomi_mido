@@ -1,2 +1,2 @@
 #============= sensors ==============
-allow sensors diag_device:chr_file { read write };
+allow sensors diag_device:chr_file { open read write };
