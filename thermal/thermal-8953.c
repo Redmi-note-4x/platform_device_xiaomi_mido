@@ -38,7 +38,7 @@ static char *cpu_sensors_8953[] =
 
 static char *misc_sensors_8953[] =
 {
-    "gpu0-usr",
+    "gpu1-usr",
     "battery",
     "xo-therm-adc"
 };
