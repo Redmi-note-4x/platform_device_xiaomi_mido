@@ -344,9 +344,6 @@ PRODUCT_PACKAGES += \
     android.hardware.power.stats@1.0-service.mock \
     android.hardware.power-service.mido-libperfmgr
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/power-libperfmgr/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
-
 PRODUCT_SOONG_NAMESPACES += \
     hardware/google/interfaces \
     hardware/google/pixel

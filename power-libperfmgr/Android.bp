@@ -48,4 +48,12 @@ cc_binary {
     vendor: true,
     vintf_fragments: ["android.hardware.power-service.mido.xml"],
 
+    required: ["powerhint.json"],
+}
+
+prebuilt_etc {
+    name: "powerhint.json",
+    filename: "powerhint.json",
+    src: "configs/powerhint.json",
+    vendor: true,
 }
