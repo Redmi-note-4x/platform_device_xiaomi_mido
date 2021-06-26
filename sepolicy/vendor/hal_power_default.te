@@ -17,6 +17,7 @@ allow hal_power_default {
   sysfs_devfreq
   sysfs_devices_system_cpu
   sysfs_devices_system_cpu
+  sysfs_idle_state
   sysfs_kgsl
 }:file rw_file_perms;
 

@@ -50,6 +50,7 @@
 
 # Power HAL
 /vendor/bin/hw/android\.hardware\.power-service\.mido-libperfmgr                 u:object_r:hal_power_default_exec:s0
+/sys/devices/virtual/graphics/fb0/idle_state                                     u:object_r:sysfs_idle_state:s0
 
 # Sys files
 /sys/devices(/platform)?/soc/78b6000\.i2c/i2c-2/2-[0-9a-f]+/leds(/.*)?          u:object_r:sysfs_leds:s0
