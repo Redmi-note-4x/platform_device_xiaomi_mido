@@ -1,2 +1,2 @@
 #============= ims ==============
-allow ims diag_device:chr_file { open read write };
+allow ims diag_device:chr_file { ioctl open read write };

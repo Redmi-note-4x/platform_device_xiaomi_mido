@@ -1,2 +1,2 @@
 allow rild rild_file:file r_file_perms;
-allow rild diag_device:chr_file { open read write };
+allow rild diag_device:chr_file { ioctl open read write };
