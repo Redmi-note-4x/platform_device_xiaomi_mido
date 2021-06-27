@@ -108,7 +108,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libhfp:32 \
     libsndmonitor:32 \
-    libspkrprot:32
+    libspkrprot:32 \
+    libssrec
 
 # Audio configuration
 PRODUCT_COPY_FILES += \

@@ -12,7 +12,7 @@ persist.vendor.audio.fluence.voicerec=false
 persist.vendor.audio.hw.binder.size_kbyte=1024
 ro.af.client_heap_size_kbyte=7168
 ro.vendor.audio.sdk.fluencetype=fluence
-ro.vendor.audio.sdk.ssr=false
+ro.vendor.audio.sdk.ssr=true
 vendor.audio.flac.sw.decoder.24bit=true
 vendor.audio.hal.boot.timeout.ms=20000
 vendor.audio.hw.aac.encoder=true
@@ -52,6 +52,7 @@ vendor.audio.feature.multi_voice_session.enable=true
 vendor.audio.feature.snd_mon.enable=true
 vendor.audio.feature.spkr_prot.enable=true
 vendor.audio.feature.src_trkn.enable=true
+vendor.audio.feature.ssrec.enable=true
 vendor.audio.feature.vbat.enable=true
 vendor.audio.feature.wsa.enable=true
 
