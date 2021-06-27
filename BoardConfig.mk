@@ -175,6 +175,8 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 # Enable real time lockscreen charging current values
 BOARD_GLOBAL_CFLAGS += -DBATTERY_REAL_INFO
 
+TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
+
 # Inherit from the proprietary version
 -include vendor/xiaomi/mido/BoardConfigVendor.mk
 
