@@ -22,4 +22,6 @@ aidl_interface {
         "3",
         "4",
     ],
+    owner: "qti",
 }
+
