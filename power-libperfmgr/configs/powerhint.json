@@ -201,6 +201,12 @@
     },
     {
       "PowerHint": "SUSTAINED_PERFORMANCE",
+      "Node": "CPUClusterMinFreq",
+      "Duration": 0,
+      "Value": "652800"
+    },
+    {
+      "PowerHint": "SUSTAINED_PERFORMANCE",
       "Node": "PowerHALMainState",
       "Duration": 0,
       "Value": "SUSTAINED_PERFORMANCE"
@@ -221,7 +227,7 @@
       "PowerHint": "INTERACTION",
       "Node": "CPUClusterMinFreq",
       "Duration": 0,
-      "Value": "1036800"
+      "Value": "652800"
     },
     {
       "PowerHint": "INTERACTION",
