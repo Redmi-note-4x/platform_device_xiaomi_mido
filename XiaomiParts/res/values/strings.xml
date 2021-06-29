@@ -4,11 +4,6 @@
     <!-- Head Title -->
     <string name="xiaomi_parts_title">Xiaomi Parts</string>
 
-    <!-- Category Title -->
-    <string name="audio_category">Audio</string>
-    <string name="display_category">Display</string>
-    <string name="torch_category">Torch</string>
-
     <!-- KCal -->
     <string name="device_kcal_title">Display Calibration</string>
     <string name="device_kcal_summary">Display color calibration using KCAL</string>
@@ -184,9 +179,10 @@
     <string name="vibration_call_title">Call Vibration Strength</string>
 
     <!-- Torch -->
-    <string name="torch_summary">Ajust torch values</string>
-    <string name="torch_yellow_brightness_title">Yellow Torch</string>
-    <string name="torch_white_brightness_title">White Torch</string>
+    <string name="torch_category">Torch Settings</string>
+    <string name="torch_summary">Flashlight white/yellow control</string>
+    <string name="torch_yellow_brightness_title">Yellow Torch Brightness</string>
+    <string name="torch_white_brightness_title">White Torch Brightness</string>
 
    <!-- Glove Mode -->
     <string name="glove_title">Glove mode</string>
