@@ -1,32 +1,23 @@
 # XiaomiParts
 allow system_app {
+    kcal_dev
     sysfs_hgain
     sysfs_mgain
     sysfs_sgain
+    sysfs_torch
+    sysfs_vibrator
+    sysfs_leds
 }:file rw_file_perms;
+
+allow system_app {
+    kcal_dev
+    sysfs_leds
+    sysfs_torch
+    sysfs_vibrator
+}:dir search;
 
 # zram
 r_dir_file(system_app sysfs_zram)
 
-# XiaomiParts
-allow system_app kcal_dev:dir search;
-allow system_app kcal_dev:file rw_file_perms;
-allow system_app sysfs_vibrator:dir search;
-allow system_app sysfs_vibrator:file { read write };
-allow system_app sysfs_vibrator:file open;
-allow system_app sysfs_vibrator:file getattr;
-allow system_app sysfs_headgain:dir search;
-allow system_app sysfs_fpsinfo:file rw_file_perms;
-allow system_app sysfs_fpsinfo:dir search;
-allow system_app sysfs_headgain:dir search;
-allow system_app sysfs_headgain:file rw_file_perms;
-allow system_app sysfs_micgain:dir search;
-allow system_app sysfs_micgain:file rw_file_perms;
-allow system_app sysfs_fps:file rw_file_perms;
-allow system_app sysfs_torch:dir search;
-allow system_app sysfs_torch:file rw_file_perms;
-allow system_app sysfs_touchboost:file { open read getattr write };
-allow system_app sysfs_leds:dir search;
-allow system_app sysfs_msm_perf:dir search;
 allow system_app proc_touchpanel:dir search;
 allow system_app proc_touchpanel:file { getattr open write };

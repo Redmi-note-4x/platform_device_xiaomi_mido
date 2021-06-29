@@ -4,8 +4,3 @@ allow vendor_init {
   fpc_data_file
   proc_swap
 }:dir { create search getattr open read setattr ioctl write add_name remove_name rmdir relabelfrom };
-
-allow vendor_init sysfs_hgain:file { relabelfrom relabelto };
-allow vendor_init sysfs_mgain:file { relabelfrom relabelto };
-allow vendor_init sysfs_headgain:file relabelto;
-allow vendor_init sysfs_micgain:file relabelto;
