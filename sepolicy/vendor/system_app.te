@@ -5,7 +5,6 @@ allow system_app {
     sysfs_mgain
     sysfs_sgain
     sysfs_torch
-    sysfs_vibrator
     sysfs_leds
 }:file rw_file_perms;
 
@@ -13,7 +12,6 @@ allow system_app {
     kcal_dev
     sysfs_leds
     sysfs_torch
-    sysfs_vibrator
 }:dir search;
 
 # zram

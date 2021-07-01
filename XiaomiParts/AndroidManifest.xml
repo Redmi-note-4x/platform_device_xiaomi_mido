@@ -62,22 +62,6 @@
         </activity>
 
         <activity
-            android:name=".vibration.VibrationSettingsActivity"
-            android:exported="false"
-            android:label="@string/vibration_category" >
-            <intent-filter>
-                <action android:name="com.android.settings.action.IA_SETTINGS" />
-            </intent-filter>
-
-            <meta-data
-                android:name="com.android.settings.category"
-                android:value="com.android.settings.category.ia.sound" />
-            <meta-data
-                android:name="com.android.settings.summary"
-                android:resource="@string/vibration_summary" />
-        </activity>
-
-        <activity
             android:name=".dirac.DiracSettingsActivity"
             android:exported="false"
             android:label="@string/dirac_title" >

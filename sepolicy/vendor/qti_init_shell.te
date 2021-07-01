@@ -13,7 +13,5 @@ allow qti_init_shell sysfs_leds:file { getattr setattr write };
 # XiaomiParts
 allow qti_init_shell kcal_dev:dir search;
 allow qti_init_shell kcal_dev:file rw_file_perms;
-allow qti_init_shell sysfs_vibrator:dir search;
-allow qti_init_shell sysfs_vibrator:file rw_file_perms;
 allow qti_init_shell sysfs_torch:dir search;
 allow qti_init_shell sysfs_torch:file rw_file_perms;

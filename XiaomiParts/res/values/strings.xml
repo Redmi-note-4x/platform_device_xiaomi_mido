@@ -170,14 +170,6 @@
     <string name="microphone_gain">Microphone gain</string>
     <string name="speaker_gain">Speaker gain</string>
 
-    <!-- Vibrator -->
-    <string name="vibration_category">Vibration</string>
-    <string name="vibration_summary">Ajust vibration strenght</string>
-    <string name="vibration_override_title">Override System Vibration</string>
-    <string name="vibration_system_title">System Vibration Strength</string>
-    <string name="vibration_notification_title">Notification Vibration Strength</string>
-    <string name="vibration_call_title">Call Vibration Strength</string>
-
     <!-- Torch -->
     <string name="torch_category">Torch Settings</string>
     <string name="torch_summary">Flashlight white/yellow control</string>

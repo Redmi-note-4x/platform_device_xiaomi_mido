@@ -16,8 +16,6 @@ import com.xiaomi.parts.torch.TorchSettings;
 import com.xiaomi.parts.torch.TorchUtils;
 import com.xiaomi.parts.touch.TouchSettings;
 import com.xiaomi.parts.touch.TouchUtils;
-import com.xiaomi.parts.vibration.VibrationSettings;
-import com.xiaomi.parts.vibration.VibrationUtils;
 import com.xiaomi.parts.dirac.DiracSettings;
 import com.xiaomi.parts.dirac.DiracService;
 
@@ -59,16 +57,6 @@ public class BootReceiver extends BroadcastReceiver implements Utils {
         TorchUtils.setValue(TorchSettings.TORCH_2_BRIGHTNESS_PATH,
                 Settings.Secure.getInt(context.getContentResolver(),
                         TorchSettings.KEY_YELLOW_TORCH_BRIGHTNESS, 255));
-
-        //Vibration
-	VibrationUtils.setValue(VibrationSettings.PREF_VIBRATION_PATH, Settings.Secure.getInt(context.getContentResolver(),
-                VibrationSettings.PREF_VIBRATION_OVERRIDE, 0));
-	VibrationUtils.setValue(VibrationSettings.VIBRATION_SYSTEM_PATH, Settings.Secure.getInt(
-                context.getContentResolver(), VibrationSettings.PREF_VIBRATION_SYSTEM_STRENGTH, 80) / 100.0 * (VibrationSettings.MAX_VIBRATION - VibrationSettings.MIN_VIBRATION) + VibrationSettings.MIN_VIBRATION);
-	VibrationUtils.setValue(VibrationSettings.VIBRATION_NOTIFICATION_PATH, Settings.Secure.getInt(
-                context.getContentResolver(), VibrationSettings.PREF_VIBRATION_NOTIFICATION_STRENGTH, 80) / 100.0 * (VibrationSettings.MAX_VIBRATION - VibrationSettings.MIN_VIBRATION) + VibrationSettings.MIN_VIBRATION);
-        VibrationUtils.setValue(VibrationSettings.VIBRATION_CALL_PATH, Settings.Secure.getInt(
-                context.getContentResolver(), VibrationSettings.PREF_VIBRATION_CALL_STRENGTH, 80) / 100.0 * (VibrationSettings.MAX_VIBRATION - VibrationSettings.MIN_VIBRATION) + VibrationSettings.MIN_VIBRATION);
 
 	// Glove Mode
         boolean GloveEnabled = sharedPrefs.getBoolean(TouchSettings.GLOVE_MODE, false);
