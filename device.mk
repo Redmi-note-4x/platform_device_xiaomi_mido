@@ -342,6 +342,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libjson
 
+#QTI performance
+PRODUCT_BOOT_JARS += \
+    QPerformance \
+    UxPerformance
+
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.qcom \
@@ -410,7 +415,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     vendor/qcom/opensource/vibrator/excluded-input-devices.xml:$(TARGET_COPY_OUT_VENDOR)/etc/excluded-input-devices.xml
-    
+
 # VNDK
 PRODUCT_PACKAGES += \
     libstdc++.vendor
