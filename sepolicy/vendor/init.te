@@ -19,3 +19,8 @@ allow init hwservicemanager:binder call;
 allow init proc:file { getattr relabelfrom write };
 allow init sysfs_hgain:file { getattr relabelfrom write };
 allow init sysfs_mgain:file { getattr relabelfrom write };
+
+# Dolby
+allow init vendor_data_file:file lock;
+allow init hal_audio_default:binder call;
+allow init platform_app:binder call;
