@@ -12,3 +12,5 @@ allow system_server apexd_prop:file { getattr open };
 allow system_server bluetooth_a2dp_offload_prop:file { getattr open };
 allow system_server bluetooth_audio_hal_prop:file { getattr open };
 allow system_server bluetooth_prop:file { getattr open };
+dontaudit system_server system_file:dir write;
+allow system_server kernel:system syslog_read;
