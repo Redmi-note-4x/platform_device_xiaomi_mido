@@ -5,3 +5,6 @@ persist.audio.dirac             u:object_r:dirac_prop:s0
 
 # Dolby
 persist.vendor.dolby.loglevel                 u:object_r:vendor_dolby_loglevel_prop:s0
+
+# Insmod
+vendor.all.devices.ready        u:object_r:vendor_device_prop:s0
