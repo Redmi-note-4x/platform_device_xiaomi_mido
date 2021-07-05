@@ -17,6 +17,9 @@ vendor/lib64/libfastcvopt.so|487fc5c4b486579c11af0570d4a99507099ee6f2
 vendor/lib64/libmdsprpc.so|7d16c9824bda0a94ce5e68099c4c8ccfb1c545c5
 vendor/lib64/vendor.qti.hardware.dsp@1.0.so|95b26a4a29f1443ec389be6ca80151a0aec96b36
 
+# ADSP acdb - from daisy-user-10-QKQ1.191002.002-V11.0.18.0.QDLMIXM-release-keys
+vendor/etc/acdbdata/adsp_avs_config.acdb|ac0616af3b2d4f070c0e54c18126a877e528621b
+
 # ADSP modules - from LA.UM.9.6.2.r1-04200-89xx.0
 vendor/lib/rfsa/adsp/libadsp_fd_skel.so|677d2932dac248049f031fc5893163e22b49439a
 vendor/lib/rfsa/adsp/libapps_mem_heap.so|5c82ad9cfe3f30105d899e2a4e90cc7566f81252
