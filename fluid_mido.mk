@@ -44,3 +44,6 @@ BUILD_FINGERPRINT := "xiaomi/mido/mido:7.0/NRD90M/V9.6.1.0.NCFMIFD:user/release-
 PRODUCT_PRODUCT_PROPERTIES += \
 	ro.fluid.maintainer=Kingsman44 \
 	ro.fluid.cpu=MSM8953
+
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.hwui.use_vulkan=true
