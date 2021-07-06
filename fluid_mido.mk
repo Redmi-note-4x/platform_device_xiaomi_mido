@@ -27,8 +27,9 @@ $(call inherit-product, vendor/fluid/config/common_full_phone.mk)
 # Gapps
 TARGET_INCLUDE_GAPPS := true
 TARGET_GAPPS_ARCH := arm64
-TARGET_SUPPORTS_GOOGLE_RECORDER := true
-TARGET_INCLUDE_STOCK_ARCORE := true
+TARGET_SUPPORTS_GOOGLE_RECORDER := false
+TARGET_INCLUDE_STOCK_ARCORE := false
+TARGET_INCLUDE_LIVE_WALLPAPERS := false
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := mido
