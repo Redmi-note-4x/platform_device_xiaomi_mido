@@ -1089,6 +1089,9 @@ vendor/lib64/libmeters-ns.so|bce04b8dad64dc7e4ad6114bc8771bf5c6f90464
 vendor/lib64/libmeters.so|3930232951d085b3f0b21f97a5f38f1696c76a8c
 vendor/lib64/libskewknob.so|59677e968b7c35f205d000e6a6b10d80b2ac8200
 
+# Perf - from LA.UM.9.6.2.r1-02500-89xx.0
+system_ext/etc/perf/wlc_model.tflite|83cf4df067bc14c78f31943f32bcaf6f32419125
+
 # Perf (configs)
 vendor/etc/lm/AdaptLaunchFeature.xml|924b892f0952b16616f5878389e77a1da624b716
 vendor/etc/lm/AppClassifierFeature.xml|63f1febdb6991f881b20b997b38686eb067ae5bb
