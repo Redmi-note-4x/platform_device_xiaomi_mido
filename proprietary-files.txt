@@ -53,7 +53,9 @@ vendor/lib64/libaudcal.so|213bdd87ec3339042796f62605e38690e2500fd6
 vendor/lib64/libaudioalsa.so|534d4dc07fecea0611273c745721b1ed2015a3a3
 
 # Audio - from LA.UM.9.6.2.r1-02500-89xx.0
+vendor/lib/libqtigef.so|80fb4a524d9d11c6e94c337ea263256f816f1f39
 vendor/lib/soundfx/libasphere.so|c5d774c899e30c8e14ff20b1790df553b34e41ec
+vendor/lib64/libqtigef.so|9108e3248c066102d7c57dd79d3e960647a8c84d
 vendor/lib64/soundfx/libasphere.so|0074f7645a035955e35341f76aa414608ab569ba
 
 # Audio ACDB - from LA.UM.9.6.2.r1-04200-89xx.0
