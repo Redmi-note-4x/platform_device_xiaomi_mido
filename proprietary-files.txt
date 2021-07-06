@@ -71,6 +71,10 @@ vendor/etc/acdbdata/QRD/QRD_Headset_cal.acdb|ba8ab21912dd9a8c41014f6c26f2dca6d44
 vendor/etc/acdbdata/QRD/QRD_Speaker_cal.acdb|b1a9a1497d1ecfab01e8a59d4c33410d409753a3
 vendor/etc/acdbdata/QRD/QRD_workspaceFile.qwsp|997da5dd12d92c6c803cf33c69b5a1a92dd2fe49
 
+# Audio (Dolby)
+vendor/lib/libhwdaphal.so
+vendor/lib64/libhwdaphal.so
+
 # libaudioparsers from daisy-user-10-QKQ1.191002.002-V11.0.5.0.QDLMIXM-release-keys
 -vendor/lib/libaudioparsers.so
 -vendor/lib64/libaudioparsers.so
