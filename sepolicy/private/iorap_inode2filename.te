@@ -1,0 +1,16 @@
+#============= iorap_inode2filename ==============
+allow iorap_inode2filename adb_data_file:dir read;
+allow iorap_inode2filename apk_private_data_file:dir read;
+allow iorap_inode2filename asec_image_file:dir read;
+allow iorap_inode2filename cache_file:dir read;
+allow iorap_inode2filename gsi_data_file:dir read;
+allow iorap_inode2filename ota_data_file:dir read;
+allow iorap_inode2filename shell_data_file:dir read;
+allow iorap_inode2filename tombstone_data_file:dir read;
+allow iorap_inode2filename e2fs_exec:file getattr;
+allow iorap_inode2filename mkfs_exec:file getattr;
+allow iorap_inode2filename netd_exec:file getattr;
+allow iorap_inode2filename notify_traceur_exec:file getattr;
+allow iorap_inode2filename perfetto_exec:file getattr;
+allow iorap_inode2filename simpleperf_exec:file getattr;
+allow iorap_inode2filename app_data_file:lnk_file read;

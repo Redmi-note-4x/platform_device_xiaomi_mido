@@ -1,0 +1,2 @@
+#============= iorap_prefetcherd ==============
+allow iorap_prefetcherd vendor_file:file read;

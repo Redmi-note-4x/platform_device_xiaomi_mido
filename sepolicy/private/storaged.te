@@ -1,0 +1,2 @@
+#============= storaged ==============
+allow storaged debugfs_mmc:file read;
