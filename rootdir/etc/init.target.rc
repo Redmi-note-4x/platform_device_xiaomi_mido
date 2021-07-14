@@ -104,7 +104,6 @@ on property:sys.shutdown.requested=*
 
     # set default schedTune value for foreground/top-app
     write /dev/stune/foreground/schedtune.prefer_idle 1
-    write /dev/stune/top-app/schedtune.boost 10
     write /dev/stune/top-app/schedtune.prefer_idle 1
 
 service vendor.qseecomd /vendor/bin/qseecomd
