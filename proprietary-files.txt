@@ -17,7 +17,7 @@ vendor/lib64/libfastcvopt.so|487fc5c4b486579c11af0570d4a99507099ee6f2
 vendor/lib64/libmdsprpc.so|7d16c9824bda0a94ce5e68099c4c8ccfb1c545c5
 vendor/lib64/vendor.qti.hardware.dsp@1.0.so|95b26a4a29f1443ec389be6ca80151a0aec96b36
 
-# ADSP acdb - from daisy-user-10-QKQ1.191002.002-V11.0.18.0.QDLMIXM-release-keys
+# ADSP acdb - from daisy-user 10 QKQ1.191002.002 V11.0.21.0.QDLMIXM release-keys
 vendor/etc/acdbdata/adsp_avs_config.acdb|ac0616af3b2d4f070c0e54c18126a877e528621b
 
 # ADSP modules - from LA.UM.9.6.2.r1-04200-89xx.0
@@ -29,7 +29,7 @@ vendor/lib/rfsa/adsp/libfastcvadsp.so|9818625bfa018f517e32a8f4a1e7fb4b255e5049
 vendor/lib/rfsa/adsp/libscveObjectSegmentation_skel.so|944169db3ac67056b92ef4f850f69346958370b5
 vendor/lib/rfsa/adsp/libscveT2T_skel.so|91b9200dbb982abf0d6b440668252d892a616f66
 
-# ADSP modules - from daisy-user-10-QKQ1.191002.002-V11.0.18.0.QDLMIXM-release-keys
+# ADSP modules - from daisy-user 10 QKQ1.191002.002 V11.0.21.0.QDLMIXM release-keys
 vendor/lib/rfsa/adsp/libdirac-capiv2.so|e56031dfaee094d5267e3cc16625cfceaa07cc27
 
 # ANT+ - from LA.UM.9.6.2.r1-04200-89xx.0
@@ -75,9 +75,9 @@ vendor/etc/acdbdata/QRD/QRD_workspaceFile.qwsp|997da5dd12d92c6c803cf33c69b5a1a92
 vendor/lib/libhwdaphal.so
 vendor/lib64/libhwdaphal.so
 
-# libaudioparsers from daisy-user-10-QKQ1.191002.002-V11.0.5.0.QDLMIXM-release-keys
--vendor/lib/libaudioparsers.so
--vendor/lib64/libaudioparsers.so
+# libaudioparsers - from daisy-user 10 QKQ1.191002.002 V11.0.21.0.QDLMIXM release-keys
+-vendor/lib/libaudioparsers.so|4b980c4392b6e800fb23213a0daaa83b35c04051
+-vendor/lib64/libaudioparsers.so|67f6836de4391c33cc030faa5c885ab250324291
 
 # Bluetooth - from LA.UM.9.6.2.r1-04200-89xx.0
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|2401640a10df4de23f704b87c4adab2da9ed111d
@@ -991,12 +991,12 @@ vendor/lib64/libsdm-diag.so|ba86907e54afb2d72ea7fe8492adfb872b6de9e3
 vendor/lib64/libsdmextension.so|7b7905b2bcd7fc784c280a2e7945c0e91f5ba118
 vendor/lib64/libtinyxml2_1.so|92101861d95cbdf9625d192d0b2295baa5960b68
 
-# Graphics firmware - from Daisy 10/QKQ1.191002.002/V11.0.5.0.QDLMIXM
+# Graphics firmware - from daisy-user 10 QKQ1.191002.002 V11.0.21.0.QDLMIXM release-keys
 vendor/firmware/a506_zap.b00|c45a7b34456844f5deb73e2dce79cbfcfb9ae71c
 vendor/firmware/a506_zap.b01|374b5c4a2212b2636d5dfc2deda66b56b6bf2d03
 vendor/firmware/a506_zap.b02|b79957c47f0a6757ac1d721dbe06551508454634
 vendor/firmware/a506_zap.mdt|621df918f1d6ef0a0c3fe25c8f6a58d56af4b26a
-vendor/firmware/a530_pfp.fw|d027c70fde64241ec13160d09ee1b6c272974a4b
+vendor/firmware/a530_pfp.fw|c19e1905c15622d7bb02409e6748959bceda9b08
 vendor/firmware/a530_pm4.fw|b1cf625b5552b99839687f479c124ac5daca2ca2
 
 # HotWord Enrollment - from oneplus8pro qssi-user-11-RP1A.201005.001-2106032233-release-keys 
