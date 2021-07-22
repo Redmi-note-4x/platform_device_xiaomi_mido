@@ -441,17 +441,28 @@ PRODUCT_COPY_FILES += \
 
 # Wifi
 PRODUCT_PACKAGES += \
+    android.hardware.wifi.supplicant@1.3 \
     android.hardware.wifi@1.0-service-lazy \
     libcld80211 \
     libwpa_client \
-    hostapd \
     libqmiservices_shim \
     libwifi-hal-qcom \
     TetheringConfigOverlay \
+    vendor.qti.hardware.wifi.supplicant@2.3 \
     WifiOverlay \
     wpa_cli \
     wpa_supplicant \
-    wpa_supplicant.conf
+    wpa_supplicant.conf \
+
+# Wifi (Hostapd)
+PRODUCT_PACKAGES += \
+    android.hardware.wifi.hostapd@1.2 \
+    hostapd \
+    hostapd_cli \
+    hostapd.accept \
+    hostapd.deny \
+    hostapd_default.conf \
+    vendor.qti.hardware.wifi.hostapd@1.3 \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
