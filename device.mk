@@ -408,7 +408,8 @@ PRODUCT_COPY_FILES += \
 
 # Service Tracker
 PRODUCT_PACKAGES += \
-    vendor.qti.hardware.servicetracker@1.2
+    vendor.qti.hardware.servicetracker@1.2 \
+    vendor.qti.hardware.servicetracker@1.2.vendor
 
 # Thermal
 PRODUCT_COPY_FILES += \
