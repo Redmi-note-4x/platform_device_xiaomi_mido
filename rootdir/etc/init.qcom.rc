@@ -36,6 +36,24 @@ on early-init
     chown root system /dev/kmsg
     chmod 0620 /dev/kmsg
 
+    # boot time fs tune
+    write /sys/block/sda/queue/iosched/slice_idle 0
+
+    # Disable I/O stats.
+    write /sys/block/dm-0/queue/iostats 0
+    write /sys/block/dm-1/queue/iostats 0
+    write /sys/block/sda/queue/iostats 0
+
+    # Increase maximum number of I/O requests.
+    write /sys/block/dm-0/queue/nr_requests 256
+    write /sys/block/dm-1/queue/nr_requests 256
+    write /sys/block/sda/queue/nr_requests 256
+
+    # Increase readahead to 2MiB.
+    write /sys/block/dm-0/queue/read_ahead_kb 2048
+    write /sys/block/dm-1/queue/read_ahead_kb 2048
+    write /sys/block/sda/queue/read_ahead_kb 2048
+
 on init
     # Loading kernel modules in background
     start insmod_sh
@@ -284,10 +302,6 @@ on post-fs-data
     chown radio radio /data/vendor/radio/db_check_done
     chmod 0660 /data/vendor/radio/db_check_done
 
-    # set aggressive read ahead for dm-0 and dm-1 during boot up
-    write /sys/block/dm-0/queue/read_ahead_kb 2048
-    write /sys/block/dm-1/queue/read_ahead_kb 2048
-
     # Thermal Profile
     write /sys/class/thermal/thermal_message/sconfig 0
 
@@ -308,6 +322,7 @@ on property:sys.boot_completed=1
     #Reset read ahead for dm-0 and dm-1 to 512kb
     write /sys/block/dm-0/queue/read_ahead_kb 512
     write /sys/block/dm-1/queue/read_ahead_kb 512
+    write /sys/block/sda/queue/read_ahead_kb 512
     #Reinit lmkd to reconfigure lmkd properties
     setprop lmkd.reinit 1
 
