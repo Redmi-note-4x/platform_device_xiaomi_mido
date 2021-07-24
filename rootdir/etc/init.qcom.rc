@@ -79,6 +79,9 @@ on late-fs
     start vendor.configstore-hal
     start vendor.qti.hardware.display.allocator
 
+    # mount RW partitions which need run fsck
+    mount_all /vendor/etc/fstab.qcom --late
+
 on early-boot
     # Wait for devices
     wait_for_prop vendor.all.devices.ready 1
