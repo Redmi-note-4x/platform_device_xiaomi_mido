@@ -999,7 +999,7 @@ vendor/firmware/a506_zap.mdt|621df918f1d6ef0a0c3fe25c8f6a58d56af4b26a
 vendor/firmware/a530_pfp.fw|c19e1905c15622d7bb02409e6748959bceda9b08
 vendor/firmware/a530_pm4.fw|b1cf625b5552b99839687f479c124ac5daca2ca2
 
-# HotWord Enrollment - from oneplus8pro qssi-user-11-RP1A.201005.001-2106032233-release-keys 
+# HotWord Enrollment - from oneplus8pro qssi-user-11-RP1A.201005.001 2107082312 release-keys 
 product/etc/permissions/privapp-permissions-hotword.xml|4b2475e0c223fec7c4d81d85b08314324c430953
 product/etc/sysconfig/hotword-hiddenapi-package-whitelist.xml|a062041908164045e8b658d1cc4e8f3302f4bb90
 -product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk|aca670c20dfee58a96a471b64ea7d63a0a3fb812
