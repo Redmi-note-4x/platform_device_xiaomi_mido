@@ -1,0 +1,2 @@
+#============= thermal-engine ==============
+allow thermal-engine thermal-engine:capability kill;
