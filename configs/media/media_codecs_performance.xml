@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<!-- Copyright (c) 2015, The Linux Foundation. All rights reserved.
+<!-- Copyright (c) 2015-2021, The Linux Foundation. All rights reserved.
 
      Not a Contribution.
 
@@ -42,7 +42,7 @@
             <Limit name="measured-frame-rate-352x288" range="111-111" />
             <Limit name="measured-frame-rate-640x480" range="144-144" />
         </MediaCodec>
-        <MediaCodec name="OMX.qcom.video.encoder.vp8" type="video/x-vnd.on2.vp8" update="true">
+        <MediaCodec name="OMX.google.vp8.encoder" type="video/x-vnd.on2.vp8" update="true">
             <Limit name="measured-frame-rate-320x180" range="312-312" />
             <Limit name="measured-frame-rate-640x360" range="175-174" />
             <Limit name="measured-frame-rate-1280x720" range="12-28" />
@@ -101,12 +101,13 @@
             <Limit name="measured-frame-rate-1280x720" range="389-389" />
             <Limit name="measured-frame-rate-1920x1080" range="199-199" />
         </MediaCodec>
-        <MediaCodec name="OMX.qcom.video.decoder.vp9" type="video/x-vnd.on2.vp9" update="true">
-            <Limit name="measured-frame-rate-320x240" range="344-344" />
-            <Limit name="measured-frame-rate-640x360" range="299-299" />
-            <Limit name="measured-frame-rate-1280x720" range="348-348" />
-            <Limit name="measured-frame-rate-1920x1080" range="100-102" />
-            <Limit name="measured-frame-rate-3840x2160" range="48-48" />
+        <MediaCodec name="OMX.google.vp9.decoder" type="video/x-vnd.on2.vp9" update="true">
+            <Limit name="measured-frame-rate-320x180" range="279-280" />   <!-- N=156 v98%=1.2 -->
+            <Limit name="measured-frame-rate-320x240" range="511-511" />   <!-- N=156 v98%=1.2 -->
+            <Limit name="measured-frame-rate-640x360" range="255-255" />   <!-- N=156 v98%=1.2 -->
+            <Limit name="measured-frame-rate-1280x720" range="303-303" />  <!-- N=156 v98%=1.2 -->
+            <Limit name="measured-frame-rate-1920x1080" range="269-269" /> <!-- N=156 v98%=1.2 -->
+		    <Limit name="measured-frame-rate-3840x2160" range="45-45" />   <!-- N=156 v98%=1.2 -->
         </MediaCodec>
         <MediaCodec name="OMX.google.h264.decoder" type="video/avc" update="true">
             <Limit name="measured-frame-rate-320x240" range="536-536" />
@@ -126,10 +127,11 @@
             <Limit name="measured-frame-rate-352x288" range="170-182" />
         </MediaCodec>
         <MediaCodec name="OMX.google.vp8.decoder" type="video/x-vnd.on2.vp8" update="true">
-            <Limit name="measured-frame-rate-320x240" range="575-580" />
-            <Limit name="measured-frame-rate-640x360" range="175-180" />
-            <Limit name="measured-frame-rate-1280x720" range="38-42" />
-            <Limit name="measured-frame-rate-1920x1080" range="14-18" />
+		    <Limit name="measured-frame-rate-320x180" range="495-500" />   <!-- N=156 v98%=1.2 -->
+            <Limit name="measured-frame-rate-320x240" range="1330-1330" /> <!-- N=156 v98%=1.2 -->
+            <Limit name="measured-frame-rate-640x360" range="146-149" />   <!-- N=156 v98%=1.2 -->
+            <Limit name="measured-frame-rate-1280x720" range="31-31" />    <!-- N=156 v98%=1.2 -->
+            <Limit name="measured-frame-rate-1920x1080" range="12-13" />   <!-- N=156 v98%=1.2 -->
         </MediaCodec>
         <MediaCodec name="OMX.google.vp9.decoder" type="video/x-vnd.on2.vp9" update="true">
             <Limit name="measured-frame-rate-320x240" range="604-604" />
