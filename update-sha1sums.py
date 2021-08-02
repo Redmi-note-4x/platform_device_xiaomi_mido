@@ -22,8 +22,9 @@ from hashlib import sha1
 
 device='mido'
 vendor='xiaomi'
+filename='proprietary-files.txt'
 
-with open('proprietary-files.txt', 'r') as f:
+with open(filename, 'r') as f:
     lines = f.read().splitlines()
 vendorPath = '../../../vendor/' + vendor + '/' + device + '/proprietary'
 needSHA1 = False
@@ -63,11 +64,55 @@ def update():
 
             lines[index] = '%s|%s' % (line, hash)
 
+def arrange(x):
+    file=open(x,'r')
+    f=file.read()
+    g=f.split("\n\n")
+    new_txt=""
+    dash=""
+    tags=[]
+    text=[]
+    for i in range(0,len(g)):
+        s=g[i]
+        s=s.split("\n")
+        for k in range(0,len(s)):
+            if len(s[k]) > 0:
+                if s[k][0] == '-':
+                    s[k]=s[k][1:]
+                    tags.append(s[k])
+        s.sort(key=str.lower)
+        for j in range(0,len(s)):
+            if len(s[j]) > 0:
+                if s[j] in tags:
+                    dash='-'
+                if j == (len(s)-1):
+                    new_txt+=dash + s[j] + '\n\n'
+                else:
+                    new_txt+=dash + s[j] + '\n'
+            dash=''
+        text.append(new_txt)
+        new_txt=''
+
+    text.sort(key=str.lower)
+
+    if text[len(text)-1][:-4] == '\n\n':
+        text[len(text)-1]=text[len(text)-1][:-4]
+    elif text[len(text)-1][:-2] == '\n':
+        text[len(text)-1]=text[len(text)-1][:-2]
+
+    file.close()
+
+    file=open(x,'w')
+    for r in text:
+        file.writelines(r)
+    file.close()
 
 if len(sys.argv) == 2 and sys.argv[1] == '-c':
     cleanup()
 else:
     update()
 
-with open('proprietary-files.txt', 'w') as file:
+with open(filename, 'w') as file:
     file.write('\n'.join(lines) + '\n')
+
+arrange(filename)
