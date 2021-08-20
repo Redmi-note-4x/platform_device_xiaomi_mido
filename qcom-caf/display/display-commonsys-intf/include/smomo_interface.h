@@ -1,5 +1,5 @@
 /*
-* Copyright (c) 2019, The Linux Foundation. All rights reserved.
+* Copyright (c) 2019, 2021, The Linux Foundation. All rights reserved.
 *
 * Redistribution and use in source and binary forms, with or without modification, are permitted
 * provided that the following conditions are met:
@@ -33,6 +33,7 @@
 #define __SMOMO_INTERFACE_H__
 
 #include <sys/types.h>
+#include <ui/Fence.h>
 
 #include <vector>
 #include <string>
@@ -43,7 +44,7 @@ namespace smomo {
 #define CREATE_SMOMO_INTERFACE_NAME "CreateSmomoInterface"
 #define DESTROY_SMOMO_INTERFACE_NAME "DestroySmomoInterface"
 
-#define SMOMO_REVISION_MAJOR (1)
+#define SMOMO_REVISION_MAJOR (2)
 #define SMOMO_REVISION_MINOR (0)
 #define SMOMO_VERSION_TAG ((uint16_t) ((SMOMO_REVISION_MAJOR << 8) \
                                           | SMOMO_REVISION_MINOR))
@@ -68,8 +69,9 @@ struct SmomoBufferStats {
   int32_t id;  // layer ID
   int32_t queued_frames;  // queued frame count of this layer
   bool auto_timestamp;  // whether timestamp was generated automatically
-  nsecs_t timestamp;  // layer buffer's timestamp
+  nsecs_t timestamp;  // layer buffer's desired present timestamp
   nsecs_t dequeue_latency;  // last dequeue duration
+  int64_t key;  // buffer identity
 };
 
 /*! @brief SmoMo interface implemented by SmoMo library.
@@ -81,6 +83,8 @@ struct SmomoBufferStats {
 class SmomoIntf {
  public:
   virtual ~SmomoIntf() = default;
+
+  // 1.0 interface
 
   /*! @brief Update SmoMo internal state.
 
@@ -155,6 +159,74 @@ class SmomoIntf {
     @return \link int \endlink
   */
   virtual int GetFrameRate() = 0;
+
+  // 2.0 interface
+
+  /*! @brief Set layer buffer's present timestamp.
+
+    @details This function is called by SmoMo clients used to indicate buffer has been presented.
+
+    @param[in] layer_id layer id
+    @param[in] timestamp buffer's desired present timestamp
+
+    @return \link void \endlink
+  */
+  virtual void SetPresentTime(const int32_t layer_id, const nsecs_t timestamp) = 0;
+
+  /*! @brief vsync listener.
+
+    @details This function is called by SmoMo clients used to notify Vsync events.
+
+    @param[in] timestamp vsync timestamp
+
+    @return \link void \endlink
+  */
+  virtual void OnVsync(const nsecs_t timestamp) = 0;
+
+  /*! @brief Is this layer buffer early to present.
+
+    @details This function is called by SmoMo clients used to check whether this layer buffer is
+    not ready to present.
+
+    @param[in] layer_id layer id
+    @param[in] desired_present_time desired present time
+
+    @return \link bool \endlink
+  */
+  virtual bool FrameIsEarly(const int32_t layer_id, const nsecs_t desired_present_time) = 0;
+
+  /*! @brief Is this layer buffer late to present.
+
+    @details This function is called by SmoMo clients used to check whether this layer buffer is
+    late to present.
+
+    @param[in] layer_id layer id
+    @param[in] next_vsync_time When next VSYNC arrives
+
+    @return \link bool \endlink
+  */
+  virtual bool FrameIsLate(const int32_t layer_id, const nsecs_t next_vsync_time) = 0;
+
+  /*! @brief Sync to display hardware.
+
+    @details This function is called by SmoMo clients used to align with display hardware.
+
+    @param[in] fence present fence
+    @param[out] timestamp present fence timestamp
+
+    @return \link bool \endlink
+  */
+  virtual bool SyncToDisplay(const android::sp<android::Fence>& fence,
+      nsecs_t *timestamp) = 0;
+
+  /*! @brief Low latency mode enaled or not.
+
+    @details This function is called by SmoMo clients used to check whether it's
+    in low latency mode.
+
+    @return \link bool \endlink
+  */
+  virtual bool LowLatencyMode() = 0;
 };
 
 typedef bool (*CreateSmomoInterface)(uint16_t version, SmomoIntf **interface);
