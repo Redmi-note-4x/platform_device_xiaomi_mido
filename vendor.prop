@@ -114,6 +114,7 @@ vendor.vidc.disable.split.mode=1
 ro.vendor.extension_library=libqti-perfd-client.so
 ro.vendor.at_library=libqti-at.so
 ro.vendor.qti.sys.fw.bservice_enable=true
+ro.vendor.perf.scroll_opt=true
 
 # Radio
 persist.radio.multisim.config=dsds
