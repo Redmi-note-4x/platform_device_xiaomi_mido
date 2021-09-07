@@ -55,17 +55,6 @@
     echo -6 >  /sys/devices/system/cpu/cpu5/sched_load_boost
     echo -6 >  /sys/devices/system/cpu/cpu6/sched_load_boost
     echo -6 >  /sys/devices/system/cpu/cpu7/sched_load_boost
-
-    # Enable bus-dcvs
-    for device in /sys/devices/platform/soc
-    do
-        for cpubw in $device/*cpu-cpu-ddr-bw/devfreq/*cpu-cpu-ddr-bw
-        do
-            echo "bw_hwmon" > $cpubw/governor
-            echo 85 > $cpubw/bw_hwmon/io_percent
-            echo 0 > $cpubw/bw_hwmon/guard_band_mbps
-        done
-    done
 }
 
 target=`getprop ro.board.platform`
@@ -324,7 +313,7 @@ esac
 #init task load, restrict wakeups to preferred cluster
 echo 15 > /proc/sys/kernel/sched_init_task_load
 
-for devfreq_gov in /sys/class/devfreq/qcom,mincpubw*/governor
+for devfreq_gov in /sys/class/devfreq/soc:qcom,mincpubw*/governor
 do
     echo "cpufreq" > $devfreq_gov
 done
@@ -376,11 +365,6 @@ do
     do
         echo 1611 > $cpu_min_freq
     done
-done
-
-for gpu_bimc_io_percent in /sys/class/devfreq/soc:qcom,gpubw/bw_hwmon/io_percent
-do
-    echo 40 > $gpu_bimc_io_percent
 done
 
 # disable thermal & BCL core_control to update interactive gov settings
