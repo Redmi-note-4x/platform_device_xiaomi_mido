@@ -90,6 +90,7 @@ void low_ram_device()
         property_override("ro.config.low_ram", "true");
         property_override("pm.dexopt.downgrade_after_inactive_days", "10");
         property_override("pm.dexopt.shared", "quicken");
+	property_override("dalvik.vm.systemservercompilerfilter", "speed-profile");
     }
 }
 
