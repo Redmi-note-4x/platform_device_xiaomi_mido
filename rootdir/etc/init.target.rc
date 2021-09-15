@@ -164,9 +164,11 @@ on charger
 on boot
     chown system system /sys/kernel/hbtp/display_pwr
 
-# Flashlight
-    chown root system /sys/class/leds/led:torch_1/max_brightness
-    chmod 0660 /sys/class/leds/led:torch_1/max_brightness
+# Smart Charging
+   chown system system /sys/class/power_supply/battery/charging_enabled
+   chmod 0666 /sys/class/power_supply/battery/charging_enabled
+   chown system system /sys/class/power_supply/battery/input_suspend
+   chmod 0666 /sys/class/power_supply/battery/input_suspend
 
 # Update cpusets on boot and we want better load balancing
     write /dev/cpuset/top-app/cpus 0-7
@@ -193,28 +195,3 @@ service ppd /vendor/bin/mm-pp-dpps
     group system graphics
     socket pps stream 0660 system system
     disabled
-
-on boot 
-# Smart Charging
-   chown system system /sys/class/power_supply/battery/charging_enabled 
-   chmod 0666 /sys/class/power_supply/battery/charging_enabled 
-   chown system system /sys/class/power_supply/battery/input_suspend 
-   chmod 0666 /sys/class/power_supply/battery/input_suspend
-
-# Vibrator
-   chown system system /sys/class/leds/vibrator/vmax_mv_user
-   chown system system /sys/class/leds/vibrator/vmax_mv_call
-   chown system system /sys/class/leds/vibrator/vmax_mv_strong
-   chown system system sys/class/leds/vibrator/vmax_override
-   chmod 0660 /sys/class/leds/vibrator/vmax_override
-   write /sys/class/leds/vibrator/vmax_override 1
-   chown root system /sys/class/timed_output/vibrator/vtg_level
-   chmod 0660 /sys/class/timed_output/vibrator/vtg_level
-
-# Glove Mode
-    chown root system /sys/devices/virtual/tp_glove/device/glove_enable
-    chmod 0660 /sys/devices/virtual/tp_glove/device/glove_enable
-
-# HW Buttons
-    chown root system /sys/devices/soc/78b7000.i2c/i2c-3/3-0038/disable_keys
-    chmod 0660 /sys/devices/soc/78b7000.i2c/i2c-3/3-0038/disable_keys

@@ -113,6 +113,10 @@ debug.stagefright.omx_default_rank=0
 debug.stagefright.omx_default_rank.sw-audio=1
 vendor.vidc.disable.split.mode=1
 
+# Parts
+ro.parts.torch1=255
+ro.parts.torch2=255
+
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
 ro.vendor.at_library=libqti-at.so

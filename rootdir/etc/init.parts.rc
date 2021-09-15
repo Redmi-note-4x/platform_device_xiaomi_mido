@@ -1,0 +1,49 @@
+on property:sys.boot_completed=1
+  # Audio gain permissions
+  chown system system /sys/kernel/sound_control/headphone_gain
+  chown system system /sys/kernel/sound_control/mic_gain
+  chown system system /sys/kernel/sound_control/speaker_gain
+  restorecon_recursive /sys/kernel/sound_control
+  chmod 0660 /sys/kernel/sound_control/headphone_gain
+  chmod 0660 /sys/kernel/sound_control/mic_gain
+  chmod 0660 /sys/kernel/sound_control/speaker_gain
+
+  # Glove Mode
+  chown root system /sys/devices/virtual/tp_glove/device/glove_enable
+  chmod 0660 /sys/devices/virtual/tp_glove/device/glove_enable
+
+  # HW Buttons
+  chown root system /sys/devices/soc/78b7000.i2c/i2c-3/3-0038/disable_keys
+  chmod 0660 /sys/devices/soc/78b7000.i2c/i2c-3/3-0038/disable_keys
+
+  # KCal
+  chown system system /sys/devices/platform/kcal_ctrl.0/kcal_cont
+  chown system system /sys/devices/platform/kcal_ctrl.0/kcal_enable
+  chown system system /sys/devices/platform/kcal_ctrl.0/kcal_hue
+  chown system system /sys/devices/platform/kcal_ctrl.0/kcal_sat
+  chown system system /sys/devices/platform/kcal_ctrl.0/kcal_val
+  chown system system /sys/devices/platform/kcal_ctrl.0/kcal_min
+  chown system system /sys/devices/platform/kcal_ctrl.0/kcal
+  chmod 660 /sys/devices/platform/kcal_ctrl.0/kcal_cont
+  chmod 660 /sys/devices/platform/kcal_ctrl.0/kcal_enable
+  chmod 660 /sys/devices/platform/kcal_ctrl.0/kcal_hue
+  chmod 660 /sys/devices/platform/kcal_ctrl.0/kcal_sat
+  chmod 660 /sys/devices/platform/kcal_ctrl.0/kcal_val
+  chmod 660 /sys/devices/platform/kcal_ctrl.0/kcal_min
+  chmod 660 /sys/devices/platform/kcal_ctrl.0/kcal
+
+  # Flashlight
+  chown root system /sys/devices/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,leds@d300/leds/led:torch_1/max_brightness
+  chmod 0660 /sys/devices/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,leds@d300/leds/led:torch_1/max_brightness
+  chown root system /sys/devices/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,leds@d300/leds/led:torch_0/max_brightness
+  chmod 0660 /sys/devices/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,leds@d300/leds/led:torch_0/max_brightness
+
+on property:ro.parts.torch1=*
+  chown system system /sys/devices/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,leds@d300/leds/led:torch_1/max_brightness
+  chmod 0660 /sys/devices/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,leds@d300/leds/led:torch_1/max_brightness
+  write /sys/devices/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,leds@d300/leds/led:torch_1/max_brightness ${ro.parts.torch1}
+
+on property:ro.parts.torch2=*
+  chown system system /sys/devices/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,leds@d300/leds/led:torch_2/max_brightness
+  chmod 0660 /sys/devices/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,leds@d300/leds/led:torch_2/max_brightness
+  write /sys/devices/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,leds@d300/leds/led:torch_2/max_brightness ${ro.parts.torch2}
