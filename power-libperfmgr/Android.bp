@@ -29,6 +29,7 @@ cc_binary {
         "libperfmgr",
         "libutils",
         "pixel-power-ext-ndk_platform",
+        "vendor.lineage.power-ndk_platform",
     ],
 
     srcs: [
@@ -36,6 +37,7 @@ cc_binary {
         "InteractionHandler.cpp",
         "Power.cpp",
         "PowerExt.cpp",
+        "LineagePower.cpp"
     ],
 
     cflags: [

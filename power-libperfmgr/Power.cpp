@@ -40,12 +40,14 @@ namespace pixel {
 constexpr char kPowerHalStateProp[] = "vendor.powerhal.state";
 constexpr char kPowerHalAudioProp[] = "vendor.powerhal.audio";
 constexpr char kPowerHalRenderingProp[] = "vendor.powerhal.rendering";
+constexpr char kPowerHalProfileProp[] = "vendor.powerhal.perf_profile";
 
 Power::Power(std::shared_ptr<HintManager> hm)
     : mHintManager(hm),
       mInteractionHandler(nullptr),
       mDoubleTapEnabled(false),
-      mSustainedPerfModeOn(false) {
+      mSustainedPerfModeOn(false),
+      mCurrentPerfProfile(PowerProfile::BALANCED) {
     mInteractionHandler = std::make_unique<InteractionHandler>(mHintManager);
     mInteractionHandler->Init();
 
@@ -70,6 +72,21 @@ Power::Power(std::shared_ptr<HintManager> hm)
         mHintManager->DoHint("EXPENSIVE_RENDERING");
     }
 
+    state = ::android::base::GetProperty(kPowerHalProfileProp, "");
+    if (state == "POWER_SAVE") {
+        ALOGI("Initialize with POWER_SAVE profile");
+        setProfile(PowerProfile::POWER_SAVE);
+    } else if (state == "BIAS_POWER_SAVE") {
+        ALOGI("Initialize with BIAS_POWER_SAVE profile");
+        setProfile(PowerProfile::BIAS_POWER_SAVE);
+    } else if (state == "BIAS_PERFORMANCE") {
+        ALOGI("Initialize with BIAS_PERFORMANCE profile");
+        setProfile(PowerProfile::BIAS_PERFORMANCE);
+    } else if (state == "HIGH_PERFORMANCE") {
+        ALOGI("Initialize with HIGH_PERFORMANCE profile");
+        setProfile(PowerProfile::HIGH_PERFORMANCE);
+    }
+
     // Now start to take powerhint
     ALOGI("PowerHAL ready to process hints");
 
@@ -82,6 +99,52 @@ ndk::ScopedAStatus Power::updateHint(const char *hint, bool enable) {
     } else {
         mHintManager->EndHint(hint);
     }
+
+    return ndk::ScopedAStatus::ok();
+}
+
+ndk::ScopedAStatus Power::setProfile(PowerProfile profile) {
+    if (mCurrentPerfProfile == profile) {
+        return ndk::ScopedAStatus::ok();
+    }
+
+    // End previous perf profile hints
+    switch (mCurrentPerfProfile) {
+        case PowerProfile::POWER_SAVE:
+            mHintManager->EndHint("PROFILE_POWER_SAVE");
+            break;
+        case PowerProfile::BIAS_POWER_SAVE:
+            mHintManager->EndHint("PROFILE_BIAS_POWER_SAVE");
+            break;
+        case PowerProfile::BIAS_PERFORMANCE:
+            mHintManager->EndHint("PROFILE_BIAS_PERFORMANCE");
+            break;
+        case PowerProfile::HIGH_PERFORMANCE:
+            mHintManager->EndHint("PROFILE_HIGH_PERFORMANCE");
+            break;
+        default:
+            break;
+    }
+
+    // Apply perf profile hints
+    switch (profile) {
+        case PowerProfile::POWER_SAVE:
+            mHintManager->DoHint("PROFILE_POWER_SAVE");
+            break;
+        case PowerProfile::BIAS_POWER_SAVE:
+            mHintManager->DoHint("PROFILE_BIAS_POWER_SAVE");
+            break;
+        case PowerProfile::BIAS_PERFORMANCE:
+            mHintManager->DoHint("PROFILE_BIAS_PERFORMANCE");
+            break;
+        case PowerProfile::HIGH_PERFORMANCE:
+            mHintManager->DoHint("PROFILE_HIGH_PERFORMANCE");
+            break;
+        default:
+            break;
+    }
+
+    mCurrentPerfProfile = profile;
 
     return ndk::ScopedAStatus::ok();
 }
