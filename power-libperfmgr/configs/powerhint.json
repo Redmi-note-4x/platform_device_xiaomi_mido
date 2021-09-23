@@ -5,6 +5,7 @@
       "Path": "/sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq",
       "Values": [
         "9999999",
+        "2016000",
         "1804800",
         "1401600",
         "1036800"
@@ -27,7 +28,7 @@
       "Name": "GPUMaxFreq",
       "Path": "/sys/class/kgsl/kgsl-3d0/devfreq/max_freq",
       "Values": [
-        "600000000",
+        "650000000",
         "320000000"
       ],
       "DefaultIndex": 0,
@@ -214,7 +215,7 @@
       "PowerHint": "SUSTAINED_PERFORMANCE",
       "Node": "GPUMaxFreq",
       "Duration": 0,
-      "Value": "600000000"
+      "Value": "650000000"
     },
     {
       "PowerHint": "SUSTAINED_PERFORMANCE",
@@ -227,6 +228,12 @@
       "Node": "CPUClusterMinFreq",
       "Duration": 0,
       "Value": "652800"
+    },
+    {
+      "PowerHint": "INTERACTION",
+      "Node": "GPUMinFreq",
+      "Duration": 1000,
+      "Value": "133330000"
     },
     {
       "PowerHint": "INTERACTION",
@@ -319,6 +326,12 @@
       "Value": "10000"
     },
     {
+      "PowerHint": "LAUNCH",
+      "Node": "GPUMinFreq",
+      "Duration": 0,
+      "Value": "320000000"
+    },
+    {
       "PowerHint": "AUDIO_LAUNCH",
       "Node": "CPUClusterMinFreq",
       "Duration": 2000,
@@ -358,7 +371,7 @@
       "PowerHint": "EXPENSIVE_RENDERING",
       "Node": "GPUMaxFreq",
       "Duration": 0,
-      "Value": "600000000"
+      "Value": "650000000"
     },
     {
       "PowerHint": "Flipendo",
