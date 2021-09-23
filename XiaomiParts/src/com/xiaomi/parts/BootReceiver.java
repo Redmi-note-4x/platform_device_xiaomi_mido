@@ -13,6 +13,7 @@ import com.xiaomi.parts.soundcontrol.SoundControlSettings;
 import com.xiaomi.parts.soundcontrol.SoundControlFileUtils;
 import com.xiaomi.parts.FileUtils;
 import com.xiaomi.parts.torch.TorchSettings;
+import com.xiaomi.parts.torch.TorchUtils;
 import com.xiaomi.parts.touch.TouchSettings;
 import com.xiaomi.parts.touch.TouchUtils;
 import com.xiaomi.parts.dirac.DiracSettings;
@@ -49,6 +50,13 @@ public class BootReceiver extends BroadcastReceiver implements Utils {
             FileUtils.setValue(KCAL_HUE, Settings.Secure.getInt(context.getContentResolver(),
                     PREF_HUE, HUE_DEFAULT));
         }
+
+        TorchUtils.setValue(TorchSettings.TORCH_1_BRIGHTNESS_PATH,
+                Settings.Secure.getInt(context.getContentResolver(),
+                        TorchSettings.KEY_WHITE_TORCH_BRIGHTNESS, 255));
+        TorchUtils.setValue(TorchSettings.TORCH_2_BRIGHTNESS_PATH,
+                Settings.Secure.getInt(context.getContentResolver(),
+                        TorchSettings.KEY_YELLOW_TORCH_BRIGHTNESS, 255));
 
 	// Glove Mode
         boolean GloveEnabled = sharedPrefs.getBoolean(TouchSettings.GLOVE_MODE, false);

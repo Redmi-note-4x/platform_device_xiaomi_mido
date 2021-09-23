@@ -28,7 +28,7 @@
 import /vendor/etc/init/hw/init.qcom.usb.rc
 import /vendor/etc/init/hw/init.msm.usb.configfs.rc
 import /vendor/etc/init/hw/init.target.rc
-import /vendor/etc/init/hw/init.parts.rc
+import /vendor/etc/init/hw/init.soundcontrol.rc
 
 on early-init
     mount debugfs debugfs /sys/kernel/debug
@@ -171,6 +171,32 @@ on boot
     # GPU boost
     chown system system /sys/class/kgsl/kgsl-3d0/min_pwrlevel
     chmod 0660 /sys/class/kgsl/kgsl-3d0/min_pwrlevel
+
+    # KCal
+    chown system system /sys/devices/platform/kcal_ctrl.0/kcal_cont
+    chown system system /sys/devices/platform/kcal_ctrl.0/kcal_enable
+    chown system system /sys/devices/platform/kcal_ctrl.0/kcal_hue
+    chown system system /sys/devices/platform/kcal_ctrl.0/kcal_sat
+    chown system system /sys/devices/platform/kcal_ctrl.0/kcal_val
+    chown system system /sys/devices/platform/kcal_ctrl.0/kcal_min
+    chown system system /sys/devices/platform/kcal_ctrl.0/kcal
+    chmod 660 /sys/devices/platform/kcal_ctrl.0/kcal_cont
+    chmod 660 /sys/devices/platform/kcal_ctrl.0/kcal_enable
+    chmod 660 /sys/devices/platform/kcal_ctrl.0/kcal_hue
+    chmod 660 /sys/devices/platform/kcal_ctrl.0/kcal_sat
+    chmod 660 /sys/devices/platform/kcal_ctrl.0/kcal_val
+    chmod 660 /sys/devices/platform/kcal_ctrl.0/kcal_min
+    chmod 660 /sys/devices/platform/kcal_ctrl.0/kcal
+
+    # Flashlight
+    chown root system /sys/devices/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,leds@d300/leds/led:torch_1/max_brightness
+    chmod 0660 /sys/devices/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,leds@d300/leds/led:torch_1/max_brightness
+    chown root system /sys/devices/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,leds@d300/leds/led:torch_0/max_brightness
+    chmod 0660 /sys/devices/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,leds@d300/leds/led:torch_0/max_brightness
+
+    # Sound
+    chmod 0660 /sys/kernel/sound_control/earpiece_gain
+    chmod 0660 /sys/kernel/sound_control/speaker_gain
 
     chown wifi wifi /sys/module/wlan/parameters/fwpath
 

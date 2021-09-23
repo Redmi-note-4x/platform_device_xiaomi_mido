@@ -113,10 +113,6 @@ debug.stagefright.omx_default_rank=0
 debug.stagefright.omx_default_rank.sw-audio=1
 vendor.vidc.disable.split.mode=1
 
-# Parts
-ro.parts.torch1=255
-ro.parts.torch2=255
-
 # Perf
 ro.vendor.qti.sys.fw.bservice_enable=true
 ro.vendor.perf.scroll_opt=true
