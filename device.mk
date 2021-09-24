@@ -172,8 +172,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.ir@1.0-service.xiaomi_mido
 
-$(call inherit-product, hardware/qcom-caf/msm8996/display/display-commonsys-intf/config/display-interfaces-product.mk)
-$(call inherit-product, hardware/qcom-caf/msm8996/display/display-commonsys-intf/config/display-product-system.mk)
+$(call inherit-product, hardware/qcom-caf/msm8996-r/display/display-commonsys-intf/config/display-interfaces-product.mk)
+$(call inherit-product, hardware/qcom-caf/msm8996-r/display/display-commonsys-intf/config/display-product-system.mk)
 
 # Display
 PRODUCT_PACKAGES += \
