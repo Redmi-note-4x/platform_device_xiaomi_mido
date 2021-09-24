@@ -39,7 +39,7 @@
       "Path": "/sys/class/kgsl/kgsl-3d0/devfreq/min_freq",
       "Values": [
         "320000000",
-        "133330000"
+        "180000000"
       ],
       "ResetOnInit": true
     },
@@ -221,7 +221,7 @@
       "PowerHint": "SUSTAINED_PERFORMANCE",
       "Node": "GPUMinFreq",
       "Duration": 0,
-      "Value": "133330000"
+      "Value": "180000000"
     },
     {
       "PowerHint": "INTERACTION",
@@ -233,7 +233,7 @@
       "PowerHint": "INTERACTION",
       "Node": "GPUMinFreq",
       "Duration": 1000,
-      "Value": "133330000"
+      "Value": "180000000"
     },
     {
       "PowerHint": "INTERACTION",
