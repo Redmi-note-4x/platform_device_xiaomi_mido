@@ -12,14 +12,12 @@ cc_binary {
 
     shared_libs: [
         "libbinder",
-        "libbinder_ndk",
         "libcutils",
         "liblog",
         "libhidlbase",
         "libhardware",
         "libutils",
         "android.hardware.biometrics.fingerprint@2.1",
-        "android.hardware.power-ndk_platform",
     ],
 
 }

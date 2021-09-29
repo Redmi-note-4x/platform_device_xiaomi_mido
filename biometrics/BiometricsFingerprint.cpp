@@ -33,22 +33,13 @@ namespace implementation {
 
 // Supported fingerprint HAL version
 
-// Boost duration
-static constexpr int kDefaultBoostDurationMs = 2000;
-
-// Power AIDL instance name
-static const std::string kPowerInstance = std::string(IPower::descriptor) + "/default";
-
 using RequestStatus =
         android::hardware::biometrics::fingerprint::V2_1::RequestStatus;
 
 BiometricsFingerprint *BiometricsFingerprint::sInstance = nullptr;
 
-BiometricsFingerprint::BiometricsFingerprint() :
-        mClientCallback(nullptr), mPowerService(nullptr), mDevice(nullptr) {
+BiometricsFingerprint::BiometricsFingerprint() : mClientCallback(nullptr), mDevice(nullptr) {
     sInstance = this; // keep track of the most recent instance
-    mPowerService = IPower::fromBinder(ndk::SpAIBinder(
-        AServiceManager_getService(kPowerInstance.c_str())));
     mDevice = openHal();
 
     if (!mDevice) {
@@ -290,7 +281,6 @@ void BiometricsFingerprint::notify(const fingerprint_msg_t *msg) {
             break;
         case FINGERPRINT_ACQUIRED: {
                 int32_t vendorCode = 0;
-                sInstance->mPowerService->setBoost(Boost::INTERACTION, kDefaultBoostDurationMs);
                 FingerprintAcquiredInfo result =
                     VendorAcquiredFilter(msg->data.acquired.acquired_info, &vendorCode);
                 if (!thisPtr->mClientCallback->onAcquired(devId, result, vendorCode).isOk()) {
