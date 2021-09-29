@@ -1035,13 +1035,6 @@ vendor/etc/lm/AdaptLaunchFeature.xml|924b892f0952b16616f5878389e77a1da624b716
 vendor/etc/lm/AppClassifierFeature.xml|63f1febdb6991f881b20b997b38686eb067ae5bb
 vendor/etc/lm/GameOptimizationFeature.xml|a10ee3c63bbdd29955efb88b541f2a48b7066100
 
-# Perf (configs) - from LA.UM.9.6.2.r1-04200-89xx.0
-vendor/etc/perf/commonresourceconfigs.xml|459a18579580713fd839f93c86d6b1f7f028be1e
-vendor/etc/perf/perfboostsconfig.xml|1c120821b2fe9b3ebf9d00b7bc8c0a374c2918d2
-vendor/etc/perf/perfconfigstore.xml|7e3af83ea95a398370d76b83eec7bfedf72eb268
-vendor/etc/perf/targetconfig.xml|aa20c25397df1455206965737f82d44d44430e45
-vendor/etc/perf/targetresourceconfigs.xml|a913faa5efddec9542ef0db3b57a60ddb6bb6e1b
-
 # Perf (IOP) - from pan_sprout T89571AA3-user 11 RKQ1.200928.002 00WW_3_150 release-keys
 system_ext/lib/libqti-iopd-client_system.so|6b510018995acf38e44736749027064d37189390
 system_ext/lib/vendor.qti.hardware.iop@1.0.so|f522603e1b741ff8dcf643e8fe9ce407316dfbe4
