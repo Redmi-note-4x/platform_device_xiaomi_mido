@@ -64,12 +64,6 @@ persist.qfp=false
 # FM
 ro.fm.transmitter=false
 
-# Dolby
-persist.vendor.audio_fx.current=dolby
-ro.vendor.dolby.dax.version=DS1_2.2.0.0_r1
-vendor.audio.dolby.ds2.enabled=true
-vendor.audio.dolby.ds2.hardbypass=true
-
 # LMKD
 ro.lmk.log_stats=true
 ro.lmk.low=1001
