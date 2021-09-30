@@ -21,9 +21,9 @@ public class TorchSettings extends PreferenceFragment implements
     private static final String TAG = "TorchSettings";
 
     public static final  String KEY_YELLOW_TORCH_BRIGHTNESS = "yellow_torch_brightness";
-    public static final  String TORCH_2_BRIGHTNESS_PATH = "/sys/devices/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,leds@d300/leds/led:torch_1/max_brightness";
+    public static final  String TORCH_2_BRIGHTNESS_PATH = "sys/devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,leds@d300/leds/led:torch_1/max_brightness";
     public static final  String KEY_WHITE_TORCH_BRIGHTNESS = "white_torch_brightness";
-    public static final  String TORCH_1_BRIGHTNESS_PATH = "/sys/devices/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,leds@d300/leds/led:torch_0/max_brightness";
+    public static final  String TORCH_1_BRIGHTNESS_PATH = "sys/devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,leds@d300/leds/led:torch_0/max_brightness";
 
     private static Context mContext;
     private CustomSeekBarPreference mWhiteTorchBrightness;
