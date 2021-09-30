@@ -691,4 +691,7 @@
 
     <!-- Whether to enable Qualcomm Boost Framework -->
     <bool name="config_enableQcCpuBoost">true</bool>
+
+    <!-- Perfd Animation Boost -->
+    <bool name="config_enablePerfBoostForAnimation">true</bool>
 </resources>
