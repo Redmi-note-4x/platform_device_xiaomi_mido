@@ -1,5 +1,5 @@
 /*
-* Copyright (c) 2019, 2021, The Linux Foundation. All rights reserved.
+* Copyright (c) 2019, 2021-2022 The Linux Foundation. All rights reserved.
 *
 * Redistribution and use in source and binary forms, with or without modification, are permitted
 * provided that the following conditions are met:
@@ -72,6 +72,17 @@ struct SmomoBufferStats {
   nsecs_t timestamp;  // layer buffer's desired present timestamp
   nsecs_t dequeue_latency;  // last dequeue duration
   int64_t key;  // buffer identity
+};
+
+enum DisplayType {
+  kBuiltin,
+  kPluggable,
+};
+
+struct DisplayInfo {
+  int32_t display_id;
+  DisplayType type;
+  bool is_primary;
 };
 
 /*! @brief SmoMo interface implemented by SmoMo library.
@@ -227,6 +238,16 @@ class SmomoIntf {
     @return \link bool \endlink
   */
   virtual bool LowLatencyMode() = 0;
+
+  /*! @brief Enable/Disable Refresh Rate change.
+
+    @details This function is called by SmoMo clients used to control
+    refresh rate change.
+
+    @return \link void \endlink
+  */
+  virtual void SetRefreshRateChangeStatus(bool enable) = 0;
+
 };
 
 typedef bool (*CreateSmomoInterface)(uint16_t version, SmomoIntf **interface);
