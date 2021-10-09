@@ -123,6 +123,7 @@ ril.subscription.types=NV,RUIM
 ro.telephony.call_ring.multiple=false
 ro.telephony.use_old_mnc_mcc_format=true
 service.qti.ims.enabled=1
+persist.sys.fflag.override.settings_provider_model=false
 #
 # Set network mode to (T/L/G/W/1X/EVDO, T/L/G/W/1X/EVDO) for 7+7 mode device on DSDS mode
 #
