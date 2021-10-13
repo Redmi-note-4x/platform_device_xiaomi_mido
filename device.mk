@@ -36,9 +36,6 @@ PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += $(LOCAL_PATH)/overlay/packages/apps/Sna
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
-    
-QCOM_SOONG_NAMESPACE := \
-    $(LOCAL_PATH)/qcom-caf
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -175,8 +172,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.ir@1.0-service.xiaomi_mido
 
-$(call inherit-product, $(LOCAL_PATH)/qcom-caf/display/display-commonsys-intf/config/display-interfaces-product.mk)
-$(call inherit-product, $(LOCAL_PATH)/qcom-caf/display/display-commonsys-intf/config/display-product-system.mk)
+$(call inherit-product, hardware/qcom-caf/msm8996/display/display-commonsys-intf/config/display-interfaces-product.mk)
+$(call inherit-product, hardware/qcom-caf/msm8996/display/display-commonsys-intf/config/display-product-system.mk)
 
 # Display
 PRODUCT_PACKAGES += \
