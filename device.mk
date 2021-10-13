@@ -424,6 +424,10 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.servicetracker@1.2 \
     vendor.qti.hardware.servicetracker@1.2.vendor
 
+# ThemePicker
+PRODUCT_PACKAGES += \
+    ThemePicker
+
 # Thermal
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal-engine.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf
