@@ -92,6 +92,7 @@ PRODUCT_PACKAGES += \
     android.hardware.audio@6.0-impl:32 \
     android.hardware.audio.effect@6.0-impl:32 \
     android.hardware.audio.service \
+    android.hardware.bluetooth@1.0.vendor \
     android.hardware.bluetooth.audio@2.0-impl:32 \
     android.hardware.soundtrigger@2.1-impl:32 \
     audio.a2dp.default \
@@ -188,6 +189,8 @@ PRODUCT_PACKAGES += \
     memtrack.msm8953 \
     libdisplayconfig \
     libqdMetaData \
+    libsdmutils \
+    libsdmutils.vendor \
     libtinyxml \
     libvulkan \
     vendor.display.config@2.0
@@ -198,6 +201,7 @@ PRODUCT_PACKAGES += \
 
 # DRM
 PRODUCT_PACKAGES += \
+    android.hardware.drm@1.4.vendor \
     android.hardware.drm@1.0-impl:64 \
     android.hardware.drm@1.0-service-lazy \
     android.hardware.drm@1.4-service.clearkey
@@ -228,6 +232,7 @@ PRODUCT_PACKAGES += \
 
 # GPS
 PRODUCT_PACKAGES += \
+    android.hardware.gnss@2.1.vendor \
     libcurl
 
 PRODUCT_COPY_FILES += \
@@ -317,6 +322,10 @@ PRODUCT_PACKAGES += \
     libavservices_minijail.vendor \
     libnbaio
 
+# Netd
+PRODUCT_PACKAGES += \
+    android.system.net.netd@1.1.vendor \
+
 # OMX
 PRODUCT_PACKAGES += \
     libc2dcolorconvert \
@@ -393,6 +402,7 @@ PRODUCT_PACKAGES += \
 # RIL
 PRODUCT_PACKAGES += \
     android.hardware.secure_element@1.0 \
+    android.hardware.secure_element@1.0.vendor \
     librmnetctl \
     libcnefeatureconfig \
     qti-telephony-hidl-wrapper \
