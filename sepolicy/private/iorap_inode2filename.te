@@ -9,6 +9,6 @@ allow iorap_inode2filename tombstone_data_file:dir read;
 allow iorap_inode2filename e2fs_exec:file getattr;
 allow iorap_inode2filename mkfs_exec:file getattr;
 allow iorap_inode2filename netd_exec:file getattr;
-allow iorap_inode2filename notify_traceur_exec:file getattr;
+#allow iorap_inode2filename notify_traceur_exec:file getattr;
 allow iorap_inode2filename perfetto_exec:file getattr;
 allow iorap_inode2filename simpleperf_exec:file getattr;
