@@ -1052,8 +1052,6 @@ vendor/etc/lm/GameOptimizationFeature.xml|a10ee3c63bbdd29955efb88b541f2a48b70661
 # Perf - from pan_sprout T89571AA3-user 11 RKQ1.200928.002 00WW_3_150 release-keys
 etc/permissions/com.qualcomm.qti.Performance.xml|7976f2fd46b8d07814310cc957a70f829bdd6932
 etc/permissions/com.qualcomm.qti.UxPerformance.xml|d92749d80c5d956db8251b08ea6388d3f107a32c
--framework/QPerformance.jar|fa9463eec3a5a10641757de11478082365b4e018
--framework/UxPerformance.jar|8a5351cc4d07fcfccab052b1b5de4a790ed4326c
 system_ext/bin/perfservice|2257167793f05a858970d08efa13112095796bd4
 system_ext/etc/init/perfservice.rc|7d4732437d2204e06ea09db85f169fef693086e8
 system_ext/etc/perf/wlc_model.tflite|83cf4df067bc14c78f31943f32bcaf6f32419125
