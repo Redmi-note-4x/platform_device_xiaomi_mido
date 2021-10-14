@@ -27,7 +27,8 @@ allow init proc:file { getattr relabelfrom write };
 allow init sysfs_hgain:file { getattr relabelfrom write };
 allow init sysfs_mgain:file { getattr relabelfrom write };
 
-# Dolby
-allow init vendor_data_file:file lock;
-allow init hal_audio_default:binder call;
-allow init platform_app:binder call;
+allow init hal_drm_hwservice:hwservice_manager { add find };
+allow init hal_perf_hwservice:hwservice_manager find;
+allow init hidl_base_hwservice:hwservice_manager add;
+allow init hal_power_service:service_manager add;
+
