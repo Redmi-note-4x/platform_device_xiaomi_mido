@@ -109,6 +109,9 @@ persist.vendor.dpmhalservice.enable=1
 # DRM
 drm.service.enabled=true
 
+# Fingerprint
+fingerprint.nocleanup=true
+
 # Fm
 vendor.hw.fm.init=0
 
