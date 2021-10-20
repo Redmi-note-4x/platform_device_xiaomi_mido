@@ -14,9 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/fluid_mido.mk
+    $(LOCAL_DIR)/aosp_mido.mk
 
 COMMON_LUNCH_CHOICES := \
-    fluid_mido-user \
-    fluid_mido-userdebug \
-    fluid_mido-eng
+    aosp_mido-user \
+    aosp_mido-userdebug \
+    aosp_mido-eng
