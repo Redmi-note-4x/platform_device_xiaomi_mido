@@ -464,6 +464,8 @@ PRODUCT_PACKAGES += \
 
 # Vibrator
 PRODUCT_PACKAGES += \
+    android.hardware.vibrator-V1-ndk_platform.vendor \
+    android.hardware.vibrator@1.3.vendor \
     vendor.qti.hardware.vibrator.service
 
 PRODUCT_COPY_FILES += \
