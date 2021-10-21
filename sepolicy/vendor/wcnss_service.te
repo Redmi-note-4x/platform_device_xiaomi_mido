@@ -6,3 +6,4 @@ set_prop(wcnss_service, vendor_default_prop);
 allow wcnss_service wifi_data_file:dir search;
 allow wcnss_service property_socket:sock_file write;
 allow wcnss_service init:unix_stream_socket connectto;
+get_prop(wcnss_service, system_prop)
