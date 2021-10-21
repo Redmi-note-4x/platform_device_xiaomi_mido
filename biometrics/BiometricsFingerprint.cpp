@@ -34,7 +34,7 @@ namespace implementation {
 // Supported fingerprint HAL version
 
 // Boost duration
-static constexpr int kDefaultBoostDurationMs = 2000;
+static constexpr int kDefaultBoostDurationMs = 5000;
 
 // Power AIDL instance name
 static const std::string kPowerInstance = std::string(IPower::descriptor) + "/default";
