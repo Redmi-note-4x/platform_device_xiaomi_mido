@@ -63,12 +63,11 @@
         <!-- Type="1", Animation boost of 0.6sec -->
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value-->
         <!-- CPUBOOST_MIN_FREQ BIG Core resource opcode, value-->
-        <!-- GPU_MIN_PWRLVL resource opcode, value-->
 
         <!-- Type="1", Animation boost of 0.6sec -->
         <Config
             Id="0x00001083" Enable="true" Timeout="600"  Target="msm8953"
-            Resources="0x40800100, 0x578, 0x40800000, 0x446, 0x40804100, 0xFFF" />
+            Resources="0x40800100, 0x578, 0x40800000, 0x446" />
 
     <!--Vertical Scroll boost-->
         <!-- Type="1", Vertical Scroll boost -->
