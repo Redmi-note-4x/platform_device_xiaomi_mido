@@ -21,7 +21,7 @@
             android:defaultToDeviceProtectedStorage="true"
             android:directBootAware="true"
             android:enabled="true"
-            android:exported="false">
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -31,7 +31,7 @@
 
         <activity
             android:name=".torch.TorchSettingsActivity"
-	    android:exported="false"
+            android:exported="true"
             android:label="@string/torch_category">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
@@ -47,7 +47,7 @@
 
         <activity
             android:name=".touch.TouchSettingsActivity"
-            android:exported="false"
+            android:exported="true"
             android:label="@string/glove_title">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
@@ -63,7 +63,7 @@
 
         <activity
             android:name=".dirac.DiracSettingsActivity"
-            android:exported="false"
+            android:exported="true"
             android:label="@string/dirac_title" >
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
@@ -80,7 +80,7 @@
         <activity
             android:name=".kcal.KCalSettingsActivity"
             android:excludeFromRecents="true"
-            android:exported="false"
+            android:exported="true"
             android:theme="@style/CustomOptionsTheme"
             android:label="@string/advanced_settings_kcal">
             <intent-filter>
@@ -96,7 +96,7 @@
 
         <activity
             android:name=".soundcontrol.SoundControlSettingsActivity"
-            android:exported="false"
+            android:exported="true"
             android:excludeFromRecents="true"
             android:label="@string/sound_settings">
             <intent-filter>
@@ -113,6 +113,7 @@
         <service
             android:name=".dirac.DiracService"
             android:enabled="true"
+            android:exported="true"
             android:stopWithTask="false" />
             <service
             android:name=".dirac.DiracTileService"
@@ -131,6 +132,7 @@
         <activity
             android:name="com.xiaomi.parts.ambient.AmbientGesturePreferenceActivity"
             android:theme="@style/CustomOptionsTheme"
+            android:exported="true"
             android:label="@string/ambient_display_gestures_title">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
