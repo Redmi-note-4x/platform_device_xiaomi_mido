@@ -1,0 +1,2 @@
+#============= priv_app ==============
+allow priv_app net_dns_prop:file { getattr open };
