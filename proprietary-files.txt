@@ -1166,7 +1166,7 @@ system_ext/lib64/libembmstinyxml.so|cb72973ce2529f71a48dfb96c7bf2b35aa736ea9
 # Radio (IMS VT) - from LA.UM.9.6.2.r1-04200-89xx.0
 system_ext/lib64/lib-imscamera.so|2b7c94e2d070d71841e558393c881d13affb7438
 system_ext/lib64/lib-imsvideocodec.so|ac7089da1c9824e367b1137be8bf4e496974f245
-system_ext/lib64/lib-imsvt.so|205b5d3b47e9a990a950e05d5a7f2d006871d3cf
+system_ext/lib64/lib-imsvt.so|7bd38368dd337f066797cde4e29c38c5744f75de
 system_ext/lib64/lib-imsvtextutils.so|0aadc4666d6e68429fcdd2db4bff1bf48538a155
 system_ext/lib64/lib-imsvtutils.so|d3a1a558664700fed951b8c63c900efcfc680830
 system_ext/lib64/libimscamera_jni.so|217354bfe6d1e1736572218b1a34468937544350
