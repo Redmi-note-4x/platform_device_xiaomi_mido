@@ -159,6 +159,9 @@ persist.vendor.recovery_update=false
 persist.service.lgospd.enable=0
 persist.service.pcsync.enable=0
 
+# System
+persist.sys.binary_xml=false
+
 # Time Services
 persist.backup.ntpServer=0.pool.ntp.org
 
