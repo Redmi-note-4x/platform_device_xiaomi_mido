@@ -417,6 +417,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.secure_element@1.0 \
     android.hardware.secure_element@1.0.vendor \
+    extphonelib \
+    extphonelib.xml \
+    extphonelib-product \
+    extphonelib_product.xml \
     librmnetctl \
     libcnefeatureconfig \
     libxml2 \
