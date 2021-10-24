@@ -122,4 +122,20 @@
             Resources="0x40800000, 0x4E0, 0x40800100, 0x4E0, 0x40804000, 0x4E0, 0x40804100, 0x4E0, 0x4280C000, 0x156,
             0x42810000, 0x156, 0x42814000, 0x1E4F"/>
     </Powerhint>
+
+    <Powerhint>
+
+ <!-- camera 30fps and camera preview -->
+        <!--sample_ms = 10mS -->
+        <!--SLB for Core0 = -6 -->
+        <!--SLB for Core1 = -6 -->
+        <!--SLB for Core2 = -6 -->
+        <!--SLB for Core3 = -6 -->
+        <!--hispeed load = 95 -->
+        <!--hispeed freq = 1036 -->
+        <Config
+            Id="0x00001331" Enable="true" Timeout="0" Target="msm8953"
+            Resources="0x41820000, 0xa, 0x40c68100, 0xfffffffa, 0x40c68110, 0xfffffffa, 0x40c68120, 0xfffffffa,
+            0x40c68130, 0xfffffffa, 0x41440100, 0x5f, 0x4143c100, 0x40c"/>
+    </Powerhint>
 </HintConfigs>
