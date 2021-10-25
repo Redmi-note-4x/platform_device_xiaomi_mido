@@ -1,0 +1,2 @@
+#============= qtidataservices_app ==============
+get_prop(qtidataservices_app, default_prop)

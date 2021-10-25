@@ -22,3 +22,4 @@ allow qti_init_shell sysfs_torch:file rw_file_perms;
 allow qti_init_shell qti_init_shell:capability kill;
 dontaudit qti_init_shell proc_dirty:file { open write };
 allow qti_init_shell sysfs_io_sched_tuneable:file write;
+allow qti_init_shell system_data_file:file getattr;
