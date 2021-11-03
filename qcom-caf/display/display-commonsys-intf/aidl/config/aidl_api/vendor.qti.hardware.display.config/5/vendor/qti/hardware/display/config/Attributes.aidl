@@ -46,11 +46,12 @@
 
 package vendor.qti.hardware.display.config;
 @VintfStability
-interface IDisplayConfigCallback {
-  oneway void notifyCWBBufferDone(in int error, in android.hardware.common.NativeHandle buffer);
-  oneway void notifyQsyncChange(in boolean qsyncEnabled, in int refreshRate, in int qsyncRefreshRate);
-  oneway void notifyIdleStatus(in boolean isIdle);
-  oneway void notifyCameraSmoothInfo(in vendor.qti.hardware.display.config.CameraSmoothOp op, in int fps);
-  oneway void notifyResolutionChange(in int displayId, in vendor.qti.hardware.display.config.Attributes attr);
-  oneway void notifyFpsMitigation(in int displayId, in vendor.qti.hardware.display.config.Attributes attr, in vendor.qti.hardware.display.config.Concurrency concurrency);
+parcelable Attributes {
+  int vsyncPeriod;
+  int xRes;
+  int yRes;
+  float xDpi;
+  float yDpi;
+  vendor.qti.hardware.display.config.DisplayPortType panelType;
+  boolean isYuv;
 }
