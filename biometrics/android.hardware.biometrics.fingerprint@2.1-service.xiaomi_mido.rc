@@ -6,11 +6,13 @@ service vendor.fps_hal /vendor/bin/hw/android.hardware.biometrics.fingerprint@2.
     user system
     group system input uhid
     disabled
+    task_profiles ServiceCapacityLow
 
 service vendor.gx_fpd /vendor/bin/gx_fpd
      class core
      user system
      group system drmrpc
+     task_profiles ServiceCapacityLow
 
 on boot
     # Fingerprint Permissions

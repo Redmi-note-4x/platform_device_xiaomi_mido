@@ -359,7 +359,7 @@ service vendor.atfwd /vendor/bin/ATFWD-daemon
     class late_start
     user system
     group system radio
-    writepid /dev/cpuset/system-background/tasks
+    task_profiles ServiceCapacityLow
 
 service insmod_sh /vendor/bin/init.insmod.sh /vendor/etc/init.insmod.cfg
     class main
@@ -372,13 +372,13 @@ service vendor.sensors.qti /vendor/bin/sensors.qti
     class core
     user system
     group system
-    writepid /dev/cpuset/system-background/tasks
+    task_profiles ServiceCapacityLow
 
 service loc_launcher /vendor/bin/loc_launcher
     class late_start
     user gps
     group gps
-    writepid /dev/cpuset/system-background/tasks
+    task_profiles ServiceCapacityLow
 
 service qcom-sh /vendor/bin/init.qcom.sh
     class late_start
