@@ -39,3 +39,5 @@ type debugfs_ipc, fs_type, debugfs_type;
 
 # Expensive rendering
 type vendor_sysfs_kgsl, sysfs_type, fs_type;
+
+type sysfs_io_sched_tuneable, fs_type, sysfs_type;
