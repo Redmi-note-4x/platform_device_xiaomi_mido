@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-
-    <color name="disabled_text_color">#66000000</color>
-
-    <color name="meme_parts_icon_tint">@*android:color/accent_device_default_light</color>
-
-</resources>
