@@ -86,6 +86,9 @@ vendor.vidc.enc.disable_bframes=1
 vendor.vidc.enc.disable.pq=true
 vendor.video.disable.ubwc=1
 
+# Netflix
+ro.netflix.bsp_rev=Q660-13149-1
+
 # Qualcomm
 ro.vendor.qti.va_aosp.support=1
 
