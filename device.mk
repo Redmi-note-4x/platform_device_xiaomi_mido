@@ -390,8 +390,7 @@ PRODUCT_PACKAGES += \
     init.target.rc \
     init.veth_ipa_config.sh \
     ueventd.qcom.rc \
-    init.insmod.sh \
-    init.class_main.sh
+    init.insmod.sh
 
 # RenderScript HAL
 PRODUCT_PACKAGES += \
@@ -412,8 +411,8 @@ PRODUCT_PACKAGES += \
 
 # RIL
 PRODUCT_PACKAGES += \
-    android.hardware.secure_element@1.0 \
-    android.hardware.secure_element@1.0.vendor \
+    android.hardware.secure_element@1.2 \
+    android.hardware.secure_element@1.2.vendor \
     extphonelib \
     extphonelib.xml \
     extphonelib-product \
