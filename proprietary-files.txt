@@ -1185,6 +1185,17 @@ vendor/lib64/libdsutils.so|fe909f54243f07fc76382b0839f95f96e1abfef2
 vendor/lib64/libqdi.so|5e14939265c9f30c59f4a7964bf83da69ecfa38d
 -vendor/lib64/libqmiservices.so|842a1b61fad7dd34753e945ee2ada0fdc9589c09
 
+# qspmhal - from thyme qssi-user-12-SKQ1.210908.001-21.10.12-release-keys
+system_ext/lib/vendor.qti.qspmhal@1.0.so|156f4146959ad9933c86b6e53b9f29b49cdea33a
+system_ext/lib64/vendor.qti.qspmhal@1.0.so|57e852026c754b9bf44020daeea64f0f5b48ebb5
+vendor/bin/vendor.qti.qspmhal@1.0-service|f59287ddc53e1024ef069432931ceb17094974c6
+vendor/etc/init/vendor.qti.qspmhal@1.0-service.rc|bdc5cbedd1688807409c72262824ca9162b20239
+vendor/etc/seccomp_policy/qspm.policy|943dd12bd4ae7cb0037b2e246143d76bb1787257
+vendor/lib/vendor.qti.qspmhal@1.0-impl.so|63dcd6e15c4739fadc2b4f856eaa859296c9eb22
+vendor/lib/vendor.qti.qspmhal@1.0.so|ddd4257046c4c6c2b3e0dea08618a4787fb12cca
+vendor/lib64/vendor.qti.qspmhal@1.0-impl.so|29c18d639082d5ee0bbf86d346ad4efee93eb22e
+vendor/lib64/vendor.qti.qspmhal@1.0.so|61b2b43bd2243bf2329eb5a383180c87eef5c5f8
+
 # Radio (eMBMS) - from LA.UM.9.6.2.r1-04200-89xx.0
 -system_ext/app/embms/embms.apk|e30c32f9e2e5ee2580ff788c76a8969b45199a96
 system_ext/etc/permissions/embms.xml|22e7474091f9f71f02dd0cfc76cfa8848a46f079
