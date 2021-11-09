@@ -70,16 +70,6 @@ void property_override(char const prop[], char const value[], bool add = true)
     }
 }
 
-void set_avoid_gfxaccel_config() {
-    struct sysinfo sys;
-    sysinfo(&sys);
-
-    if (sys.totalram <= 3072ull * 1024 * 1024) {
-        // Reduce memory footprint
-        property_override("ro.config.avoid_gfx_accel", "true");
-    }
-}
-
 void low_ram_device()
 {
     struct sysinfo sys;
@@ -97,7 +87,6 @@ void low_ram_device()
 void vendor_load_properties()
 {
     check_device();
-    set_avoid_gfxaccel_config();
     low_ram_device();
 
     property_override("dalvik.vm.heapstartsize", "8m");
@@ -106,6 +95,7 @@ void vendor_load_properties()
     property_override("dalvik.vm.heaptargetutilization", heaptargetutilization);
     property_override("dalvik.vm.heapminfree", heapminfree);
     property_override("dalvik.vm.heapmaxfree", heapmaxfree);
+    property_override("ro.config.avoid_gfx_accel", "true");
 
     // Misc
     property_override("ro.apex.updatable", "false");
