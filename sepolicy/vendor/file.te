@@ -37,9 +37,5 @@ type kcal_dev, sysfs_type, fs_type;
 type sysfs_msm_boot, fs_type, sysfs_type;
 type debugfs_ipc, fs_type, debugfs_type;
 
-# Expensive rendering
-type vendor_sysfs_kgsl, sysfs_type, fs_type;
-
 type sysfs_io_sched_tuneable, fs_type, sysfs_type;
-
 type hal_qspmhal_default_exec, exec_type, file_type, vendor_file_type;

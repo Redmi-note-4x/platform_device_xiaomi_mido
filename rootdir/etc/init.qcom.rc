@@ -170,10 +170,6 @@ on boot
     # Set the default message loglevel to KERN_INFO
     write /proc/sys/kernel/printk "4 6 1 7"
 
-    # GPU boost
-    chown system system /sys/class/kgsl/kgsl-3d0/min_pwrlevel
-    chmod 0660 /sys/class/kgsl/kgsl-3d0/min_pwrlevel
-
     # KCal
     chown system system /sys/devices/platform/kcal_ctrl.0/kcal_cont
     chown system system /sys/devices/platform/kcal_ctrl.0/kcal_enable
