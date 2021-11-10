@@ -1232,7 +1232,6 @@ vendor/lib64/vendor.qti.imsrtpservice@3.0.so|460e589128fce0b0e83bb3c75aa32f7e1a9
 
 # Radio (IMS) - from LA.UM.9.6.3.r1-04400-89xx.0
 -system_ext/app/imssettings/imssettings.apk|8b47c43d56228dcce93cc8c07c6ceb08cb3d2fe5
--system_ext/app/uceShimService/uceShimService.apk|e7222c1d9c4fa93418d692a97ee36562e4e1cc94
 vendor/bin/imsdatadaemon|476fb2c270ca3352ee41ca3dc8c49b86517830a5
 vendor/bin/imsqmidaemon|44b0d218106ce8124ca6c2cc956c26f7119645ca
 vendor/bin/imsrcsd|bf29aac14856f29268c01599e5f6c7c6ae520685
