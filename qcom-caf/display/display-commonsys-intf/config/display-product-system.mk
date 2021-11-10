@@ -1,7 +1,9 @@
 PRODUCT_PACKAGES += libdisplayconfig \
+                    libdisplayconfig.system \
                     libqdMetaData \
                     libqdMetaData.system \
                     libgralloc.qti \
+		    libgralloc.system.qti \
                     libdrm \
                     vendor.display.config@1.0 \
                     vendor.display.config@1.1 \
@@ -14,6 +16,7 @@ PRODUCT_PACKAGES += libdisplayconfig \
                     libsmomoconfig.qti \
                     libcomposerextn.qti \
                     libdisplayconfig.qti \
+		    libdisplayconfig.system.qti \
                     vendor.qti.hardware.display.config-V1-ndk_platform \
                     vendor.qti.hardware.display.config-V2-ndk_platform \
                     vendor.qti.hardware.display.config-V3-ndk_platform \
