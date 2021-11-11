@@ -37,3 +37,6 @@ dontaudit init proc_dirty:file { open write };
 allow init sysfs_io_sched_tuneable:file write;
 allow init vendor_file:file { execute execute_no_trans };
 set_prop(init, bootloader_prop)
+allow init vendor_init:capability kill;
+allow init hal_qspmhal_default_exec:file { execute execute_no_trans };
+allow init default_android_hwservice:hwservice_manager { add find };
