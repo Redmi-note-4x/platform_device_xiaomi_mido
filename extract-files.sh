@@ -101,7 +101,7 @@ sed -i -e '$a\\    capabilities NET_BIND_SERVICE' "${DEVICE_BLOB_ROOT}"/vendor/e
 "${PATCHELF}" --add-needed "fakelogprint.so" "${DEVICE_BLOB_ROOT}"/vendor/lib64/hw/gxfingerprint.default.so
 
 # Ims
-"${PATCHELF}" --add-needed "lib-imsvt.so" "${DEVICE_BLOB_ROOT}"/system_ext/lib64/lib-imsvideocodec.so
+"${PATCHELF}" --add-needed "libgui-shim.so" "${DEVICE_BLOB_ROOT}"/system_ext/lib64/lib-imsvideocodec.so
 
 # Wcnss_service - libqmiservices_shim
 "${PATCHELF}" --add-needed "libqmiservices_shim.so" "${DEVICE_BLOB_ROOT}"/vendor/bin/wcnss_service
