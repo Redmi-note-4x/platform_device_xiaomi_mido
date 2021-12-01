@@ -24,6 +24,8 @@
 
 using ::aidl::android::hardware::power::Mode;
 
+#define BATTERY_SAVER_NODE "/sys/module/battery_saver/parameters/enabled"
+
 namespace aidl {
 namespace android {
 namespace hardware {
@@ -35,6 +37,9 @@ bool isDeviceSpecificModeSupported(Mode type, bool* _aidl_return) {
             case Mode::LAUNCH:
             *_aidl_return = true;
             return true;
+        case Mode::LOW_POWER:
+            *_aidl_return = true;
+            return true;
         default:
             return false;
     }
@@ -44,6 +49,9 @@ bool setDeviceSpecificMode(Mode type, bool enabled) {
     switch (type) {
         case Mode::LAUNCH:
             power_hint(POWER_HINT_LAUNCH, enabled ? &enabled : NULL);
+            return true;
+        case Mode::LOW_POWER:
+            ::android::base::WriteStringToFile(enabled ? "Y" : "N", BATTERY_SAVER_NODE, true);
             return true;
         default:
             return false;
