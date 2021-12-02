@@ -174,16 +174,17 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.ir@1.0-service.xiaomi_mido
 
+$(call inherit-product, $(LOCAL_PATH)/qcom-caf/display/display-commonsys/config/display-product-commonsys.mk)
 $(call inherit-product, $(LOCAL_PATH)/qcom-caf/display/display-commonsys-intf/config/display-interfaces-product.mk)
 $(call inherit-product, $(LOCAL_PATH)/qcom-caf/display/display-commonsys-intf/config/display-product-system.mk)
 
 # Display
 PRODUCT_PACKAGES += \
     android.hidl.allocator@1.0.vendor \
-    vendor.qti.hardware.display.allocator-service \
-    android.hardware.graphics.mapper@3.0-impl-qti-display \
-    android.hardware.graphics.mapper@4.0-impl-qti-display \
+    android.hardware.graphics.allocator@2.0-impl:64 \
+    android.hardware.graphics.allocator@2.0-service \
     android.hardware.graphics.composer@2.1-service \
+    android.hardware.graphics.mapper@2.0-impl-2.1 \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service \
     gralloc.msm8953 \
