@@ -29,6 +29,10 @@ TARGET_INCLUDE_STOCK_ARCORE := true
 CHERISH_BUILD_TYPE := Unofficial
 $(call inherit-product, vendor/cherish/config/common_full_phone.mk)
 
+# Bypass build time check on uses_libs until vendor fixes all their apps
+PRODUCT_BROKEN_VERIFY_USES_LIBRARIES := true
+RELAX_USES_LIBRARY_CHECK := true
+
 # Maintainer
 PRODUCT_GENERIC_PROPERTIES += \
     ro.cherish.maintainer=AswLueEmang
