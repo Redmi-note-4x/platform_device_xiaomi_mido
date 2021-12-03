@@ -37,24 +37,6 @@
     echo 1401600 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/hispeed_freq
     #default value for hispeed_load is 90, for 8953 and sdm450 it should be 85
     echo 85 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/hispeed_load
-    echo 0 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/pl
-    echo 0 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/rtg_boost_freq
-
-    echo 652800 > /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq
-
-    #input boost params
-    echo 1401600 > /sys/module/cpu_boost/parameters/input_boost_freq
-    echo 40 > /sys/module/cpu_boost/parameters/input_boost_ms
-
-    # sched_load_boost as -6 is equivalent to target load as 85. It is per cpu tunable.
-    echo -6 >  /sys/devices/system/cpu/cpu0/sched_load_boost
-    echo -6 >  /sys/devices/system/cpu/cpu1/sched_load_boost
-    echo -6 >  /sys/devices/system/cpu/cpu2/sched_load_boost
-    echo -6 >  /sys/devices/system/cpu/cpu3/sched_load_boost
-    echo -6 >  /sys/devices/system/cpu/cpu4/sched_load_boost
-    echo -6 >  /sys/devices/system/cpu/cpu5/sched_load_boost
-    echo -6 >  /sys/devices/system/cpu/cpu6/sched_load_boost
-    echo -6 >  /sys/devices/system/cpu/cpu7/sched_load_boost
 }
 
 target=`getprop ro.board.platform`
@@ -365,6 +347,11 @@ do
     do
         echo 1611 > $cpu_min_freq
     done
+done
+
+for gpu_bimc_io_percent in /sys/class/devfreq/soc:qcom,gpubw/bw_hwmon/io_percent
+do
+    echo 40 > $gpu_bimc_io_percent
 done
 
 # disable thermal & BCL core_control to update interactive gov settings
