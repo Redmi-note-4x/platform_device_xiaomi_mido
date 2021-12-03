@@ -775,7 +775,7 @@ vendor/etc/diracmobile.config|d781cd6798a7481a8f7128d144abfb2b8794212d
 vendor/lib/libDiracAPI_SHARED.so|42b49679d38eca93fead05ea06ddbdc8108fd4b1
 vendor/lib/soundfx/libdirac.so|f63826a905b520fa524e4c1b147be7cf65240953
 
-# DPM - from thyme qssi-user-12-SKQ1.210908.001-21.10.12-release-keys
+# DPM - from alioth qssi-user 12 SKQ1.211006.001 21.12.1 release-keys 
 system_ext/bin/dpmd|d4073d02594eb71dcc850b1120ac508d1e4350c8
 system_ext/etc/dpm/dpm.conf|95e27da8c989e96c6faea6f0697bce11955b62a5
 system_ext/etc/init/dpmd.rc|738b638ff04cda368e22c03e16baf90ba157a6fc
@@ -792,7 +792,7 @@ system_ext/lib64/libdpmtcm.so|ac8bb063de43870f67e2aba15eee5baaa9864c84
 vendor/bin/dpmQmiMgr|b8e0b554afb95f9266719aa5cb9d2f881243699b
 vendor/etc/init/dpmQmiMgr.rc|1538743661a5c48c15cd105beaad20f72953885a
 vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so|4b9949ae7fc00e408352f526f62e956366ee06d2
-vendor/lib64/libdpmqmihal.so|ffcd85e1f6bf7d54f37953edc2cb2c4a61fc894a
+vendor/lib64/libdpmqmihal.so|4408eef7b684afed3bc50eaa9829e7b8c90df94d
 
 # DRM - from LA.UM.9.6.2.r1-04200-89xx.0
 vendor/bin/qseecomd|12fde638ad4528c06fe336342862fd0ffc033dd0
@@ -1043,7 +1043,7 @@ vendor/etc/lm/AdaptLaunchFeature.xml|924b892f0952b16616f5878389e77a1da624b716
 vendor/etc/lm/AppClassifierFeature.xml|63f1febdb6991f881b20b997b38686eb067ae5bb
 vendor/etc/lm/GameOptimizationFeature.xml|a10ee3c63bbdd29955efb88b541f2a48b7066100
 
-# Perf (IOP) - from thyme qssi-user-12-SKQ1.210908.001-21.10.12-release-keys
+# Perf (IOP) - from alioth qssi-user 12 SKQ1.211006.001 21.12.1 release-keys 
 system_ext/lib/libqti-iopd-client_system.so|8e7f04c1d2a8009a3e1d27e44a834503ea3c86f1
 system_ext/lib/vendor.qti.hardware.iop@2.0.so|47ed2c773e62c640c998fb62f5e93b166e1b7e52
 system_ext/lib64/libqti-iopd-client_system.so|4beb6b34cb2fc52f80fad9afcf38ae7274410d79
@@ -1055,21 +1055,21 @@ vendor/lib64/libqti-iopd-client.so|3a7d9bb5089d577ae612fa9273ace97da287b381
 vendor/lib64/libqti-iopd.so|9c1358b0021fb8d32cd609e0692792c712708736
 vendor/lib64/vendor.qti.hardware.iop@2.0.so|449ecbc5713d226d3548fd9d7164426d41c40ddc
 
-# Perf - from thyme qssi-user-12-SKQ1.210908.001-21.10.12-release-keys
+# Perf - from alioth qssi-user 12 SKQ1.211006.001 21.12.1 release-keys 
 system_ext/bin/perfservice|387d670d0854b23d88990c2ff7da7dc59b10c16b
 system_ext/etc/init/perfservice.rc|7d4732437d2204e06ea09db85f169fef693086e8
 system_ext/etc/perf/wlc_model.tflite|83cf4df067bc14c78f31943f32bcaf6f32419125
 system_ext/etc/seccomp_policy/perfservice.policy|579d2f1b36b98aee30594d2e955552e4dd18ed87
-system_ext/lib/libbeluga.so|8c471c924e3da8433ffb20ec86e2539d440a502c
-system_ext/lib/libqti-at.so|99f83a8de29a7474002c38300639c066f63e379a
-system_ext/lib/libqti-perfd-client_system.so|437ec8d7daef99a8f57deb8499fe8da4b8f7fe85
+system_ext/lib/libbeluga.so|a77ff56c364d5c854848563e9d36bd6717a86725
+system_ext/lib/libqti-at.so|0f8b84cc4fba0a49dec04f9f0575c2d51c4745b6
+system_ext/lib/libqti-perfd-client_system.so|53c5231bbce9a291e61d7480e097252f9a861a67
 system_ext/lib/libqti_performance.so|c0f8e9508ff68a88af0d2b53ce3c608e8949e8b4
 system_ext/lib/vendor.qti.hardware.perf@2.3.so|b57bf786778b04e424b02aad24016e8b244b39eb
-system_ext/lib64/libbeluga.so|ee3c1b68bc44372cbc63d074a786ca460605fc45
-system_ext/lib64/libqti-at.so|91af7d11c3b8d33075115a9f6a70a3e902912f69
-system_ext/lib64/libqti-perfd-client_system.so|a41f274472cdb34a9ba9c8e8fe6398f9cc8e22ea
-system_ext/lib64/libqti_performance.so|1dc973e2b40611e064b8cfddf1bb7d1c8776ef91
-system_ext/lib64/libskewknob_system.so|df8b7cb95263f2ac7026f574b8e0ec9d37b99d7d
+system_ext/lib64/libbeluga.so|c68bf35ff624327ccf28f177cf324480a3969a04
+system_ext/lib64/libqti-at.so|98ae9f8f57d5e056fa5b0be98ab639db6863f03b
+system_ext/lib64/libqti-perfd-client_system.so|1320663016dda7455ab914abfe78e35f060b373a
+system_ext/lib64/libqti_performance.so|fe1bbf8bb59784b47422a8556fde6170ae9c1ab7
+system_ext/lib64/libskewknob_system.so|fed2977cf0739a31b2d86cd9cac2d42232e7f18a
 system_ext/lib64/vendor.qti.hardware.perf@2.3.so|0b144846c5dceff7e1be51d4aacc6c7c075ce0e6
 vendor/bin/hw/vendor.qti.hardware.perf@2.2-service|c002c92d94d2b259998a90ee5a87c7b1bd8ff4f9
 vendor/bin/msm_irqbalance|8065e47d0ece486dd21f6c044dae46b578df1d8c
@@ -1078,23 +1078,23 @@ vendor/lib/libperfconfig.so|9306090990181d06d96d470a6b3f078859940002
 vendor/lib/libperfgluelayer.so|d7681aff21949ca361a372f66eb6e37d6f939779
 vendor/lib/libperfioctl.so|b1fb1ab2df74bcafc6e4b4bd7e26a14be35c81c5
 vendor/lib/libqti-perfd-client.so|9794772e2b9167f2c4fae0a175ce3f2a4736dc44
-vendor/lib/libqti-perfd.so|1a9dfdf2c90813183bb0ce9ed1ebf957e856d4c8
+vendor/lib/libqti-perfd.so|28741d6163f7a4789c97d9c125b44e53edd50e79
 vendor/lib/libqti-util.so|c3eb473391566e5ba5dd553a0b451f7becdf3c8b
 vendor/lib/libqti-utils.so|ba352b754f525b7e6b08c35cb214e8074431a23d
 vendor/lib64/libadaptlaunch.so|242f227b1bc92c34482b7295dcde3c6540636170
 vendor/lib64/libappclassifier.so|e6e7dae55b361ba79a77c3541eaf4a533fecafff
 vendor/lib64/libgameoptfeature.so|828029c3478f1f91d0a47b958e3da9da2eedc907
-vendor/lib64/liblearningmodule.so|353e791288d6b42e12f48d3a6d5792feb8d8861e
+vendor/lib64/liblearningmodule.so|61ee21e7d6c6f1ec9580449e9af6e4f91004e5c8
 vendor/lib64/libmeters-ns.so|51809b9313000d7e1f12c7c74f8ced9042926c69
 vendor/lib64/libmeters.so|ba00518b9fbfd54624274acabe70ac89c307ae98
 vendor/lib64/libperfconfig.so|207033a106a22a3ca3116865458f1810e170dc61
 vendor/lib64/libperfgluelayer.so|935e3a28837ef28313426d4a3a0ab264531fa40b
 vendor/lib64/libperfioctl.so|971d8108b9a6d5854be68792dc19a16c37734f59
 vendor/lib64/libqti-perfd-client.so|b6881ca5b77335490bd91c6803feb5d31cbf8e92
-vendor/lib64/libqti-perfd.so|b6823952e5ed4add4892fb54edfa566d7cacb466
+vendor/lib64/libqti-perfd.so|c09e40614099985e7892d021887751f16d52363c
 vendor/lib64/libqti-util.so|39b92a173673c17efcf39a41a3e8b5c6a29db025
 vendor/lib64/libqti-utils.so|cf649367b188f2e5883b6c3fe442a994b45808bb
-vendor/lib64/libreffeature.so|8a1244586b4eda3fc72596d14a4e8b2a055e6d0c
+vendor/lib64/libreffeature.so|c5564833f8833881f86032f2f1064781b139faf5
 
 # Peripheral manager - from LA.UM.9.6.2.r1-04200-89xx.0
 vendor/bin/pm-proxy|782599642da7fbfc21f5e9a9965d898efeb75859
@@ -1169,7 +1169,7 @@ vendor/lib64/libqmi_encdec.so|a18bb21e5b9b53e3dc8dc45f6e7e65e32a467607
 vendor/lib64/libqmi_legacy.so|f324c6701ecf78ff50975c0bc7f99aea09cb3539
 -vendor/lib64/libqmiservices.so|52770edf3e35f5376f3d0a131636f3213c9e59fa
 
-# qspmhal - from thyme qssi-user-12-SKQ1.210908.001-21.10.12-release-keys
+# qspmhal - from alioth qssi-user 12 SKQ1.211006.001 21.12.1 release-keys 
 system_ext/lib/vendor.qti.qspmhal@1.0.so|156f4146959ad9933c86b6e53b9f29b49cdea33a
 system_ext/lib64/vendor.qti.qspmhal@1.0.so|57e852026c754b9bf44020daeea64f0f5b48ebb5
 vendor/bin/vendor.qti.qspmhal@1.0-service|f59287ddc53e1024ef069432931ceb17094974c6
@@ -1191,7 +1191,7 @@ system_ext/lib64/libembmstinyxml.so|5a998ab8d31e76ccf50a962c493d800483e03ebf
 
 # Radio (IMS VT) - from LA.UM.9.6.3.r1-04400-89xx.0
 system_ext/lib64/lib-imscamera.so|49ead972646b09d700556d63676673b3e8af2036
-system_ext/lib64/lib-imsvideocodec.so|acc2028deca39c389086b53d4fa142738d4bf402
+system_ext/lib64/lib-imsvideocodec.so|7c2367614d64caf4703b57e76b980d26ecc0b49b
 system_ext/lib64/lib-imsvt.so|4f96cc5f27551d0b6cb11ad6447d9ce8829dde47
 system_ext/lib64/lib-imsvtextutils.so|1acf1de305e455a3a924483e5652b37133d10fd1
 system_ext/lib64/lib-imsvtutils.so|dfc5cf0854fe38c191a53ec3bd2a322d05d85567
