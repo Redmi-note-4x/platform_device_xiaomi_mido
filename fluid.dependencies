@@ -1,0 +1,8 @@
+[
+  {
+    "remote": "github",
+    "repository": "Redmi-note-4x/tinyxml",
+    "target_path": "external/tinyxml",
+    "branch": "11"
+  }
+]
