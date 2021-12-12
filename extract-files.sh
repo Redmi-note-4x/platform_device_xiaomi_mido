@@ -103,8 +103,4 @@ sed -i -e '$a\\    capabilities NET_BIND_SERVICE' "${DEVICE_BLOB_ROOT}"/vendor/e
 # Ims
 "${PATCHELF}" --add-needed "libgui-shim.so" "${DEVICE_BLOB_ROOT}"/system_ext/lib64/lib-imsvideocodec.so
 
-# Wcnss_service - libqmiservices_shim
-"${PATCHELF}" --add-needed "libqmiservices_shim.so" "${DEVICE_BLOB_ROOT}"/vendor/bin/wcnss_service
-sed -i "s|dms_get_service_object_internal_v01|dms_get_service_object_shimshim_v01|g" "${DEVICE_BLOB_ROOT}"/vendor/bin/wcnss_service
-
 "${MY_DIR}/setup-makefiles.sh"
