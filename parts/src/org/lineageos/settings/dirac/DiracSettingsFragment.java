@@ -106,7 +106,7 @@ public class DiracSettingsFragment extends PreferenceFragment implements
     }
 
     private void setEnabled(boolean enabled){
-        mSwitchBar.setChecked(enabled);
+        mSwitchBar.setActivated(enabled);
         mHeadsetType.setEnabled(enabled);
         mPreset.setEnabled(enabled);
     }
