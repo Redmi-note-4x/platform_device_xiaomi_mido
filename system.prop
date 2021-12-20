@@ -78,6 +78,7 @@ av.debug.disable.pers.cache=1
 media.aac_51_output_enabled=true
 media.msm8956hw=0
 mmp.enable.3g2=true
+ro.odm.build.media_performance_class=31
 vendor.mm.enable.qcom_parser=1048575
 vendor.vidc.debug.level=0
 vendor.vidc.dec.downscalar_height=1088
