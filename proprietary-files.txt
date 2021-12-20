@@ -1025,63 +1025,36 @@ vendor/lib/libvqzip.so|f85628ea634df1c31d69380d960ad7ea3396e7b2
 vendor/lib64/libmmosal.so|e9fdb48163e92b089cea0c397723a8416436c272
 vendor/lib64/libvpplibrary.so|30e8e7cf1495fb88162beeb65e6273f28563b43b
 
-# Perf (configs)
-vendor/etc/lm/AdaptLaunchFeature.xml|924b892f0952b16616f5878389e77a1da624b716
-vendor/etc/lm/AppClassifierFeature.xml|63f1febdb6991f881b20b997b38686eb067ae5bb
-vendor/etc/lm/GameOptimizationFeature.xml|a10ee3c63bbdd29955efb88b541f2a48b7066100
-
-# Perf (IOP) - from alioth qssi-user 12 SKQ1.211006.001 21.12.1 release-keys 
-system_ext/lib/libqti-iopd-client_system.so|8e7f04c1d2a8009a3e1d27e44a834503ea3c86f1
-system_ext/lib/vendor.qti.hardware.iop@2.0.so|47ed2c773e62c640c998fb62f5e93b166e1b7e52
-system_ext/lib64/libqti-iopd-client_system.so|4beb6b34cb2fc52f80fad9afcf38ae7274410d79
-system_ext/lib64/vendor.qti.hardware.iop@2.0.so|26a4e7952b545b134345b108fd16e308c36a7ec4
-vendor/lib/libqti-iopd-client.so|05650c4063a0d1dc47b486d08323a33d598990cb
-vendor/lib/libqti-iopd.so|ad47cf2e7f60f7e29c92b6d3c41f84729493e373
-vendor/lib/vendor.qti.hardware.iop@2.0.so|4ea05fcdadd3562378ee97394b1e6991ac0620e7
-vendor/lib64/libqti-iopd-client.so|3a7d9bb5089d577ae612fa9273ace97da287b381
-vendor/lib64/libqti-iopd.so|9c1358b0021fb8d32cd609e0692792c712708736
-vendor/lib64/vendor.qti.hardware.iop@2.0.so|449ecbc5713d226d3548fd9d7164426d41c40ddc
-
-# Perf - from alioth qssi-user 12 SKQ1.211006.001 21.12.1 release-keys 
-system_ext/bin/perfservice|387d670d0854b23d88990c2ff7da7dc59b10c16b
-system_ext/etc/init/perfservice.rc|7d4732437d2204e06ea09db85f169fef693086e8
-system_ext/etc/perf/wlc_model.tflite|83cf4df067bc14c78f31943f32bcaf6f32419125
-system_ext/etc/seccomp_policy/perfservice.policy|579d2f1b36b98aee30594d2e955552e4dd18ed87
-system_ext/lib/libbeluga.so|a77ff56c364d5c854848563e9d36bd6717a86725
-system_ext/lib/libqti-at.so|0f8b84cc4fba0a49dec04f9f0575c2d51c4745b6
-system_ext/lib/libqti-perfd-client_system.so|53c5231bbce9a291e61d7480e097252f9a861a67
-system_ext/lib/libqti_performance.so|c0f8e9508ff68a88af0d2b53ce3c608e8949e8b4
-system_ext/lib/vendor.qti.hardware.perf@2.3.so|b57bf786778b04e424b02aad24016e8b244b39eb
-system_ext/lib64/libbeluga.so|c68bf35ff624327ccf28f177cf324480a3969a04
-system_ext/lib64/libqti-at.so|98ae9f8f57d5e056fa5b0be98ab639db6863f03b
-system_ext/lib64/libqti-perfd-client_system.so|1320663016dda7455ab914abfe78e35f060b373a
-system_ext/lib64/libqti_performance.so|fe1bbf8bb59784b47422a8556fde6170ae9c1ab7
-system_ext/lib64/libskewknob_system.so|fed2977cf0739a31b2d86cd9cac2d42232e7f18a
-system_ext/lib64/vendor.qti.hardware.perf@2.3.so|0b144846c5dceff7e1be51d4aacc6c7c075ce0e6
-vendor/bin/hw/vendor.qti.hardware.perf@2.2-service|c002c92d94d2b259998a90ee5a87c7b1bd8ff4f9
-vendor/bin/msm_irqbalance|8065e47d0ece486dd21f6c044dae46b578df1d8c
-vendor/etc/init/vendor.qti.hardware.perf@2.2-service.rc|459b4c23550a56ac545f78c6d391f3d7dd9ba45b
-vendor/lib/libperfconfig.so|9306090990181d06d96d470a6b3f078859940002
-vendor/lib/libperfgluelayer.so|d7681aff21949ca361a372f66eb6e37d6f939779
-vendor/lib/libperfioctl.so|b1fb1ab2df74bcafc6e4b4bd7e26a14be35c81c5
-vendor/lib/libqti-perfd-client.so|9794772e2b9167f2c4fae0a175ce3f2a4736dc44
-vendor/lib/libqti-perfd.so|28741d6163f7a4789c97d9c125b44e53edd50e79
-vendor/lib/libqti-util.so|c3eb473391566e5ba5dd553a0b451f7becdf3c8b
-vendor/lib/libqti-utils.so|ba352b754f525b7e6b08c35cb214e8074431a23d
-vendor/lib64/libadaptlaunch.so|242f227b1bc92c34482b7295dcde3c6540636170
-vendor/lib64/libappclassifier.so|e6e7dae55b361ba79a77c3541eaf4a533fecafff
-vendor/lib64/libgameoptfeature.so|828029c3478f1f91d0a47b958e3da9da2eedc907
-vendor/lib64/liblearningmodule.so|61ee21e7d6c6f1ec9580449e9af6e4f91004e5c8
-vendor/lib64/libmeters-ns.so|51809b9313000d7e1f12c7c74f8ced9042926c69
-vendor/lib64/libmeters.so|ba00518b9fbfd54624274acabe70ac89c307ae98
-vendor/lib64/libperfconfig.so|207033a106a22a3ca3116865458f1810e170dc61
-vendor/lib64/libperfgluelayer.so|935e3a28837ef28313426d4a3a0ab264531fa40b
-vendor/lib64/libperfioctl.so|971d8108b9a6d5854be68792dc19a16c37734f59
-vendor/lib64/libqti-perfd-client.so|b6881ca5b77335490bd91c6803feb5d31cbf8e92
-vendor/lib64/libqti-perfd.so|c09e40614099985e7892d021887751f16d52363c
-vendor/lib64/libqti-util.so|39b92a173673c17efcf39a41a3e8b5c6a29db025
-vendor/lib64/libqti-utils.so|cf649367b188f2e5883b6c3fe442a994b45808bb
-vendor/lib64/libreffeature.so|c5564833f8833881f86032f2f1064781b139faf5
+# Perf - from LA.UM.8.6.2.r1-08600-89xx.0
+lib/libqti-at.so:system_ext/lib/libqti-at.so|28ca0798553093652a85acfccf81e5aa70819850
+lib/libqti-perfd-client_system.so:system_ext/lib/libqti-perfd-client_system.so|6061ece92e6fac3fb826727d87415f2eeb4fb930
+lib/libqti_performance.so:system_ext/lib/libqti_performance.so|e8aa933eddaff2f03e9237d8feb4c39ad513f5be
+lib64/libqti-at.so:system_ext/lib64/libqti-at.so|44af3718027bcda96262666e6d7cf15ec72511fc
+lib64/libqti-perfd-client_system.so:system_ext/lib64/libqti-perfd-client_system.so|4a7c8b57349c178b0cef6c13e638fddbb7edbee4
+lib64/libqti_performance.so:system_ext/lib64/libqti_performance.so|effa5f073fd27495c6ab91769609c9b152dc9141
+vendor/bin/hw/vendor.qti.hardware.perf@2.1-service|2e3be88cad2d9b9aa4edc8e68ad5f4d4e7eeaedc
+vendor/bin/msm_irqbalance|0e967f5c7eaf8d863a50996459101be47adf96a2
+vendor/etc/init/vendor.qti.hardware.perf@2.1-service.rc|0d7eaa2a99b16738f4e40d7ee7473bb0dd705d2c
+vendor/etc/lm/AdaptLaunchFeature.xml|746b6082014bf2094d8d6a0233a65bee1e2465d4
+vendor/lib/libperfconfig.so|e44d84d1b38e375a6e13422a8fe21c7876fc8068
+vendor/lib/libperfgluelayer.so|39bfe9f4414537084cb6fcc30c1a95c3192583fd
+vendor/lib/libqti-perfd-client.so|59515ed57886d7c37c98c7da6314f21ff6694474
+vendor/lib/libqti-perfd.so|e80a02f21e5a4ee31afcaf1222b34144112a77da
+vendor/lib/libqti-util.so|7f1b080e1d5c2e03261b80699232b3153146d215
+vendor/lib/libqti-utils.so|a3ace1ce64cafed009b26d69e54908decee52bc8
+vendor/lib64/libadaptlaunch.so|cf784401fc827e5195d595a6d855ec89ea8c22bf
+vendor/lib64/libappclassifier.so|d5956c2dc9344ddcca0e78d84c393320c2e0cc97
+vendor/lib64/libgameoptfeature.so|b135489d253f0a8d7884238fe7887eb85b87745d
+vendor/lib64/liblearningmodule.so|a9390d0ef1ec82c97a61035ec686c1d094fdca98
+vendor/lib64/libmeters-ns.so|3580b575782dcacae030ada48dabc3597a614f41
+vendor/lib64/libmeters.so|09f178dee1aa074f12fac5c502a7a6436ce93716
+vendor/lib64/libperfconfig.so|cc082d4be56372ca49e6fcdc040ba05b27ae72bf
+vendor/lib64/libperfgluelayer.so|06f15511aa43ea3ebfff624e425952dcb7577701
+vendor/lib64/libqti-perfd-client.so|660d1d2a58e10616971c807b638f95b139b5a8e0
+vendor/lib64/libqti-perfd.so|003d9c728a25a50535fe7a77c3616b4079761166
+vendor/lib64/libqti-util.so|45a80be449435d277f09cc59e4a315fa86072c41
+vendor/lib64/libqti-utils.so|267d837082fccc851f827b229a1c876c09bac552
+vendor/lib64/libskewknob.so|bdd7b340dd5908ae8161cc1935a05c1b4158d4a2
 
 # Peripheral manager - from LA.UM.9.6.2.r1-04200-89xx.0
 vendor/bin/pm-proxy|782599642da7fbfc21f5e9a9965d898efeb75859
@@ -1155,17 +1128,6 @@ vendor/lib64/libqmi_csi.so|7e19c2266b7f63f3f9e69c039b1446acd460231b
 vendor/lib64/libqmi_encdec.so|a18bb21e5b9b53e3dc8dc45f6e7e65e32a467607
 vendor/lib64/libqmi_legacy.so|f324c6701ecf78ff50975c0bc7f99aea09cb3539
 -vendor/lib64/libqmiservices.so|52770edf3e35f5376f3d0a131636f3213c9e59fa
-
-# qspmhal - from alioth qssi-user 12 SKQ1.211006.001 21.12.1 release-keys 
-system_ext/lib/vendor.qti.qspmhal@1.0.so|156f4146959ad9933c86b6e53b9f29b49cdea33a
-system_ext/lib64/vendor.qti.qspmhal@1.0.so|57e852026c754b9bf44020daeea64f0f5b48ebb5
-vendor/bin/vendor.qti.qspmhal@1.0-service|f59287ddc53e1024ef069432931ceb17094974c6
-vendor/etc/init/vendor.qti.qspmhal@1.0-service.rc|bdc5cbedd1688807409c72262824ca9162b20239
-vendor/etc/seccomp_policy/qspm.policy|943dd12bd4ae7cb0037b2e246143d76bb1787257
-vendor/lib/vendor.qti.qspmhal@1.0-impl.so|63dcd6e15c4739fadc2b4f856eaa859296c9eb22
-vendor/lib/vendor.qti.qspmhal@1.0.so|ddd4257046c4c6c2b3e0dea08618a4787fb12cca
-vendor/lib64/vendor.qti.qspmhal@1.0-impl.so|29c18d639082d5ee0bbf86d346ad4efee93eb22e
-vendor/lib64/vendor.qti.qspmhal@1.0.so|61b2b43bd2243bf2329eb5a383180c87eef5c5f8
 
 # Radio (eMBMS) - from LA.UM.9.6.3.r1-04400-89xx.0
 -system_ext/app/embms/embms.apk|010db3d97f4faad191f1a53415d7cf0a94dabcd1

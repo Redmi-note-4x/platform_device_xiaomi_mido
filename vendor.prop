@@ -102,7 +102,6 @@ ro.vendor.display.cabl=2
 vendor.display.disable_rotator_downscale=1
 vendor.display.disable_skip_validate=1
 vendor.gralloc.enable_fb_ubwc=1
-sys.display-size=3840x2160
 
 # DPM
 persist.vendor.dpmhalservice.enable=1
@@ -128,7 +127,6 @@ vendor.vidc.disable.split.mode=1
 ro.vendor.extension_library=libqti-perfd-client.so
 ro.vendor.at_library=libqti-at.so
 ro.vendor.qti.sys.fw.bservice_enable=true
-ro.vendor.perf.scroll_opt=true
 
 # Radio
 persist.radio.multisim.config=dsds
