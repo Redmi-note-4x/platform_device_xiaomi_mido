@@ -42,3 +42,6 @@ type sysfs_io_sched_tuneable, fs_type, sysfs_type;
 
 # Battery Saver
 type sysfs_battery_saver, fs_type, sysfs_type;
+
+#Netmgr
+type netmgr_data_file, file_type, data_file_type;
