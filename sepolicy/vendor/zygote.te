@@ -1,3 +1,4 @@
 #============= zygote ==============
 allow zygote zygote:capability { kill };
 allow zygote self:capability kill;
+allow zygote cgroup:file setattr;
