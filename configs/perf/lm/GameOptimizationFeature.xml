@@ -20,7 +20,7 @@
     <Libname>libgameoptfeature.so</Libname>
     <Configs>
         <Enable>1</Enable>
-        <AGTL1>0</AGTL1>
+        <AGTL1>1</AGTL1>
         <AGTL2>0</AGTL2>
         <AGTL3>0</AGTL3>
         <GFAR>0</GFAR>
@@ -32,7 +32,7 @@
         <BIG_SLB_OPCODE>0x40C00000,0x40C00000,0x40C00000,0x40C00000</BIG_SLB_OPCODE>
         <LITTLE_SLB_OPCODE>0x40C00000,0x40C00000,0x40C00000,0x40C00000</LITTLE_SLB_OPCODE>
         <!-- SLBval, TADemand, Jank-->
-        <SLB_MAP>14,200,40,6,150,30,4,125,25,2,100,15,0</SLB_MAP>
+        <SLB_MAP>14,150,40,6,125,30,4,100,25,2,85,15,0</SLB_MAP>
         <STUTTER_SCALE>10</STUTTER_SCALE>
         <!-- This will enable SLB clamping if Janks are zero in consistent learning window-->
         <ENABLE_SLB_CLAMPER>1</ENABLE_SLB_CLAMPER>
@@ -40,30 +40,15 @@
         <AGT_L3_DEFAULTS>-6,-6</AGT_L3_DEFAULTS>
     </Configs>
     <Profiles>
-        <!-- Heavy Game Default -->
-        <!-- CPUBW_HWMON_MIN_FREQ, 30 -->
-        <!-- MIN_FREQ_CLUSTER_LITTLE_CORE_0, 1600 -->
-        <!-- SCHED_GROUP_DOWNMIGRATE, 75, SCHED_GROUP_UPMIGRATE, 90 -->
-        <!-- GPU_MIN_PWRLVL, 6, GPU MIN_FREQUENCY, 345 -->
-        <Profile>
-            <DEFAULT_PROF>
-            0x41800000, 30,
-            0x40800100, 0x640,
-            0x40C58000, 75, 0x40C54000, 90,
-	    0x42804000, 0x6,0x4280C000, 596,
-            </DEFAULT_PROF>
-        </Profile>
         <!-- Agressive Profile - Junk detected -->
         <!-- CPUBW_HWMON_MIN_FREQ, 30 -->
-        <!-- MIN_FREQ_CLUSTER_LITTLE_CORE_0, 1400 -->
-        <!-- SCHED_GROUP_DOWNMIGRATE, 65, SCHED_GROUP_UPMIGRATE, 80 -->
-        <!-- GPU_MIN_PWRLVL, 1, GPU MIN_FREQUENCY, 345 -->
+        <!-- MIN_FREQ_CLUSTER_LITTLE_CORE, 1400 -->
+        <!-- GPU_MIN_PWRLVL, 1 -->
         <Profile>
             <DEFAULT_PROF>
             0x41800000, 30,
             0x40800100, 0x578,
-            0x40C58000, 65, 0x40C54000, 80,
-	    0x42804000, 0x1,0x4280C000, 345,
+	    0x42804000, 0x1,
             </DEFAULT_PROF>
         </Profile>
     </Profiles>
@@ -100,7 +85,6 @@
             </Triggers>
             <Configs>
                 <FPS_NODE>/sys/devices/virtual/graphics/fb0/measured_fps</FPS_NODE>
-                <FPS_PERIODICITY_NODE>/sys/devices/virtual/graphics/fb0/dynamic_fps</FPS_PERIODICITY_NODE>
             </Configs>
             <Samples>80</Samples>
         </Meter>
