@@ -1028,7 +1028,7 @@ vendor/lib64/libvpplibrary.so|30e8e7cf1495fb88162beeb65e6273f28563b43b
 # Perf (lm) - from alioth qssi-user-12-SKQ1.211006.001-21.12.1-release-keys
 vendor/lib64/libadaptlaunch.so|242f227b1bc92c34482b7295dcde3c6540636170
 vendor/lib64/libappclassifier.so|e6e7dae55b361ba79a77c3541eaf4a533fecafff
-vendor/lib64/libgameoptfeature.so|828029c3478f1f91d0a47b958e3da9da2eedc907
+vendor/lib64/libgameoptfeature.so|288259c3cafcec75a8789864a58f5a3028c4e3cc
 vendor/lib64/liblearningmodule.so|353e791288d6b42e12f48d3a6d5792feb8d8861e
 
 # Perf - from LA.UM.8.6.2.r1-08600-89xx.0
