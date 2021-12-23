@@ -7,7 +7,7 @@
       Each feature has an xml file to define the components
 
   ===========================================================================
-  Copyright (c) 2017-2018 Qualcomm Technologies, Inc.
+  Copyright (c) 2019 Qualcomm Technologies, Inc.
   All Rights Reserved.
   Confidential and Proprietary - Qualcomm Technologies, Inc.
   ===========================================================================
@@ -19,6 +19,9 @@
 <Feature>
     <Name>AdaptLaunch</Name>
     <Libname>libadaptlaunch.so</Libname>
+    <Configs>
+        <Enable>1</Enable>
+    </Configs>
     <Meters>
         <SamplesRequired>4</SamplesRequired>
         <Meter>
@@ -33,15 +36,34 @@
                     <Primary>false</Primary>
                     <AsyncId>VENDOR_HINT_TAP_EVENT</AsyncId>
                 </Trigger>
+                <Trigger>
+                    <Primary>true</Primary>
+                    <AsyncId>VENDOR_HINT_APP_WORKLOAD_TYPE</AsyncId>
+                </Trigger>
+                <Trigger>
+                    <Primary>true</Primary>
+                    <AsyncId>VENDOR_HINT_ACTIVITY_START</AsyncId>
+                </Trigger>
+                <Trigger>
+                    <Primary>true</Primary>
+                    <AsyncId>VENDOR_HINT_ACTIVITY_RESUME</AsyncId>
+                </Trigger>
+                <Trigger>
+                    <Primary>true</Primary>
+                    <AsyncId>VENDOR_HINT_ACTIVITY_STOP</AsyncId>
+                </Trigger>
+                <Trigger>
+                    <Primary>true</Primary>
+                    <AsyncId>VENDOR_HINT_ACTIVITY_PAUSE</AsyncId>
+                </Trigger>
             </Triggers>
-            <Samples>120</Samples>
+            <Samples>160</Samples>
             <Fields>
                 <Field>VmRss:</Field>
             </Fields>
         </Meter>
     </Meters>
-    <IgnoredApps>
-        <App>com.king.candycrushsaga</App>
-        <App>com.tencent.tmgp.sgame</App>
-    </IgnoredApps>
+    <SpuriousHintApps>
+        <App>com.android.permissioncontroller</App>
+    </SpuriousHintApps>
 </Feature>
