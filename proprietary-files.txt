@@ -1035,7 +1035,6 @@ lib64/libqti_performance.so:system_ext/lib64/libqti_performance.so|effa5f073fd27
 vendor/bin/hw/vendor.qti.hardware.perf@2.1-service|2e3be88cad2d9b9aa4edc8e68ad5f4d4e7eeaedc
 vendor/bin/msm_irqbalance|0e967f5c7eaf8d863a50996459101be47adf96a2
 vendor/etc/init/vendor.qti.hardware.perf@2.1-service.rc|0d7eaa2a99b16738f4e40d7ee7473bb0dd705d2c
-vendor/etc/lm/AdaptLaunchFeature.xml|746b6082014bf2094d8d6a0233a65bee1e2465d4
 vendor/lib/libperfconfig.so|e44d84d1b38e375a6e13422a8fe21c7876fc8068
 vendor/lib/libperfgluelayer.so|39bfe9f4414537084cb6fcc30c1a95c3192583fd
 vendor/lib/libqti-perfd-client.so|59515ed57886d7c37c98c7da6314f21ff6694474
