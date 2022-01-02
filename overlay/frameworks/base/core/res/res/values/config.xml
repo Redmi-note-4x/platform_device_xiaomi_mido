@@ -682,4 +682,7 @@
     <string name="config_batteryLifeSaverSysfsNode" translatable="false">/sys/class/power_supply/battery/charging_enabled</string>
     <string name="config_batteryLifeSaverSysfsNodeStopValue" translatable="false">0</string>
     <string name="config_batteryLifeSaverSysfsNodeStartValue" translatable="false">1</string>
+
+    <!-- Whether device supports an gaming mode profiles -->
+    <bool name="config_gamingmode_performance">true</bool>
 </resources>
