@@ -21,8 +21,8 @@
     <Configs>
         <Enable>1</Enable>
         <AGTL1>1</AGTL1>
-        <AGTL2>0</AGTL2>
-        <AGTL3>0</AGTL3>
+        <AGTL2>1</AGTL2>
+        <AGTL3>1</AGTL3>
         <GFAR>0</GFAR>
         <AGPE>0</AGPE>
         <IDLE_SENSE>0</IDLE_SENSE>
@@ -43,12 +43,10 @@
         <!-- Agressive Profile - Junk detected -->
         <!-- CPUBW_HWMON_MIN_FREQ, 30 -->
         <!-- MIN_FREQ_CLUSTER_LITTLE_CORE, 1400 -->
-        <!-- GPU_MIN_PWRLVL, 1 -->
         <Profile>
             <DEFAULT_PROF>
             0x41800000, 30,
             0x40800100, 0x578,
-	    0x42804000, 0x1,
             </DEFAULT_PROF>
         </Profile>
     </Profiles>
