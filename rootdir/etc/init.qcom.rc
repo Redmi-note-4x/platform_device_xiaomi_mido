@@ -170,6 +170,14 @@ on boot
     # Set the default message loglevel to KERN_INFO
     write /proc/sys/kernel/printk "4 6 1 7"
 
+    # Battery life saver
+    chown system system /sys/class/power_supply/battery/charging_enabled
+    chmod 0666 /sys/class/power_supply/battery/charging_enabled
+    chown system system /sys/class/power_supply/battery/capacity
+    chmod 0666 /sys/class/power_supply/battery/capacity
+    chown system system /sys/class/power_supply/battery/temp
+    chmod 0666 /sys/class/power_supply/battery/temp
+
     # KCal
     chown system system /sys/devices/platform/kcal_ctrl.0/kcal_cont
     chown system system /sys/devices/platform/kcal_ctrl.0/kcal_enable
