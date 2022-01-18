@@ -412,8 +412,10 @@ PRODUCT_PACKAGES += \
 
 # Radio
 PRODUCT_PACKAGES += \
+    android.hardware.radio@1.2-radio-service \
     android.hardware.radio@1.6 \
     android.hardware.radio@1.6.vendor \
+    android.hardware.radio.config@1.0-service \
     android.hardware.radio.config@1.2 \
     android.hardware.radio.config@1.2.vendor \
     android.hardware.radio.deprecated@1.0 \
