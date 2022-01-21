@@ -356,10 +356,6 @@ PRODUCT_PACKAGES += \
     libstagefrighthw \
     libstagefright_enc_common
 
-# Packages Cleanup
-PRODUCT_PACKAGES += \
-    RemovePkgs
-
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service-qti \
