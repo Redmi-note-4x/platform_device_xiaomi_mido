@@ -46,13 +46,6 @@ vendor/etc/surround_sound_3mic/surround_sound_rec_AZ.cfg
 vendor/lib/libhwdaphal.so
 vendor/lib64/libhwdaphal.so
 
-# Audio - from LA.UM.9.6.2.r1-02500-89xx.0
-vendor/lib/libqtigef.so|80fb4a524d9d11c6e94c337ea263256f816f1f39
-vendor/lib/libsurround_3mic_proc.so|84a4d84fcf567554fb5174fc6d41310d864e5f8e
-vendor/lib/soundfx/libasphere.so|c5d774c899e30c8e14ff20b1790df553b34e41ec
-vendor/lib64/libqtigef.so|9108e3248c066102d7c57dd79d3e960647a8c84d
-vendor/lib64/soundfx/libasphere.so|0074f7645a035955e35341f76aa414608ab569ba
-
 # Audio - from LA.UM.9.6.2.r1-04200-89xx.0
 vendor/lib/libacdb-fts.so|fee2b1f0b93c28f5ef0a4d65736cca01c4275975
 vendor/lib/libacdbloader.so|1f5867fbd9491eb3dda91d74ab2d8713da243c5a
@@ -71,6 +64,13 @@ vendor/lib64/libacdbrtac.so|547a42e2ed54d13e780fab26134ec0fd90054d4c
 vendor/lib64/libadiertac.so|98a8c2702d4e203689e4a80c69c4b1cf93af1567
 vendor/lib64/libaudcal.so|213bdd87ec3339042796f62605e38690e2500fd6
 vendor/lib64/libaudioalsa.so|534d4dc07fecea0611273c745721b1ed2015a3a3
+
+# Audio - from pan_sprout T89571AA3-user 11 RKQ1.200928.002 00WW_3_240 release-keys
+vendor/lib/libqtigef.so|fbb307c0da385bf09cbdef714e8fc1ecfc7ba6fd
+vendor/lib/libsurround_3mic_proc.so|84a4d84fcf567554fb5174fc6d41310d864e5f8e
+vendor/lib/soundfx/libasphere.so|c5d774c899e30c8e14ff20b1790df553b34e41ec
+vendor/lib64/libqtigef.so|b3f1cb946809bfe20a4afced73b4fd24c5591421
+vendor/lib64/soundfx/libasphere.so|0074f7645a035955e35341f76aa414608ab569ba
 
 # Audio ACDB - from LA.UM.9.6.2.r1-04200-89xx.0
 vendor/etc/acdbdata/QRD/QRD_Bluetooth_cal.acdb|0364848ae2eb5505bdace46d6b8f1391a39095a8
@@ -958,10 +958,10 @@ vendor/lib64/libOpenCL.so|cd4a6c252068e74a34ff7a227e421bbe73892911
 vendor/lib64/libpvr.so|310828d47b0020ea7cb52eec68f16903fc1728be
 vendor/lib64/libVkLayer_q3dtools.so|34227e82cd0a4a913dd8aaa369a21203e415c64c
 
-# Graphics - from pan_sprout T89571AA3-user 11 RKQ1.200928.002 00WW_3_150 release-keys
+# Graphics - from pan_sprout T89571AA3-user 11 RKQ1.200928.002 00WW_3_240 release-keys
 vendor/lib/hw/vulkan.adreno.so|f7e04bc036f108d490428e6f37691980c71dbb73
 vendor/lib/libCB.so|4ab96cee42358d01a4cfb0cdd59ff238597199f0
-vendor/lib/libllvm-qcom.so|e7a677fe0199f035cbc9c98eaae5a99244a36b63
+vendor/lib/libllvm-qcom.so|dffbebc6a0b7dd963bb67e3411eafddca7eb29a7
 vendor/lib64/hw/vulkan.adreno.so|f101bd7e86bd092285c4e7cbb45f5ac2734f2db7
 vendor/lib64/libCB.so|2ffc41eaa323b1d50ed229b9ba9da6ff90c03cd9
 vendor/lib64/libllvm-qcom.so|912f120845a76deebf522ae871166ae3930fef51
@@ -985,9 +985,9 @@ system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml|563a585
 # Keystore - from LA.UM.9.6.2.r1-04200-89xx.0
 vendor/lib64/hw/keystore.msm8953.so|0a68ac29004f72237f48008cea188dd98d6c6560
 
-# libaudioparsers - from daisy-user 10 QKQ1.191002.002 V11.0.21.0.QDLMIXM release-keys
--vendor/lib/libaudioparsers.so|4b980c4392b6e800fb23213a0daaa83b35c04051
--vendor/lib64/libaudioparsers.so|67f6836de4391c33cc030faa5c885ab250324291
+# libaudioparsers - from pan_sprout T89571AA3-user 11 RKQ1.200928.002 00WW_3_240 release-keys
+-vendor/lib/libaudioparsers.so|a39f1f6e789547f63b7e2369d73b29876763d68d
+-vendor/lib64/libaudioparsers.so|1463c5ee0f2f040835386d9ccb4a4b010c5bdf58
 
 # Listen - from LA.UM.9.6.2.r1-04200-89xx.0
 vendor/lib/libadpcmdec.so|7a38d6b28b27cf663681ad077614a03164418f91
