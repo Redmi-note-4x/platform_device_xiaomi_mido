@@ -1328,6 +1328,12 @@ vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc|2cfc563d7e157937
 vendor/lib/vendor.qti.hardware.tui_comm@1.0.so|933eb7026797f3dadad3d10fd69443b11f6563f3
 vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so|16baab27397ad493e845515c20ac0c0c063c775d
 
+# Universal Bandwidth Compression (UBWC) - from pan_sprout T89571AA3-user 11 RKQ1.200928.002 00WW_3_240 release-keys
+vendor/lib/libstreamparser.so|5f6d72017b1aa1ae457f6de54b8c101568e22cb8
+vendor/lib/libUBWC.so|30dd8962cb8ab5bf5caeff2f74e3639691c0e6fe
+vendor/lib64/libstreamparser.so|8ccb6cfc28decef9b13b392713fd9e76ceb97764
+vendor/lib64/libUBWC.so|5b9ac103bde9ffc8384f34384d8552e5c44d5725
+
 # Wi-Fi - from LA.UM.9.6.3.r1-04400-89xx.0
 vendor/bin/wcnss_service|48e4a96a9de69bd83791a3b0b2134f5ab1205adc
 
