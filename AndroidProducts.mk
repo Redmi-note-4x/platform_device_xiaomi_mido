@@ -14,9 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/exthm_mido.mk
+    $(LOCAL_DIR)/lineage_mido.mk
 
 COMMON_LUNCH_CHOICES := \
-    exthm_mido-user \
-    exthm_mido-userdebug \
-    exthm_mido-eng
+    lineage_mido-user \
+    lineage_mido-userdebug \
+    lineage_mido-eng
