@@ -67,3 +67,6 @@
 
 # Insmod
 /(vendor|system/vendor)/bin/init\.insmod\.sh u:object_r:init-insmod-sh_exec:s0
+
+# Wifif Mac
+/vendor/bin/nv_mac                      u:object_r:wcnss_service_exec:s0
