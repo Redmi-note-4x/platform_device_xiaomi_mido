@@ -988,10 +988,17 @@ system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml|563a585
 # Keystore - from LA.UM.9.6.2.r1-04200-89xx.0
 vendor/lib64/hw/keystore.msm8953.so|0a68ac29004f72237f48008cea188dd98d6c6560
 
-# Listen - from LA.UM.9.6.2.r1-04200-89xx.0
-vendor/lib/hw/sound_trigger.primary.msm8953.so|55f8b7ebf9b30ef84341081dcdd5289dc70ceaa6
-vendor/lib/libadpcmdec.so|7a38d6b28b27cf663681ad077614a03164418f91
-vendor/lib/libsmwrapper.so|f0ee761c02c888e77d947bb87d162d9379bc1530
+# Listen - from LA.UM.9.6.3.r1-04400-89xx.0
+system_ext/lib/liblistensoundmodel2.qti.so|80bcda8ef520bd37865e66fed1417ea57606ab46
+system_ext/lib64/liblistensoundmodel2.qti.so|d222c69327e19265aeeec043d74bda6a8b24eb7f
+vendor/lib/hw/sound_trigger.primary.msm8953.so|397e38ecdaf8526c4569ef55872ac01a21c56464
+vendor/lib/libadpcmdec.so|452d1123ab4e12c4444df33322f309e2ecc2e1e4
+vendor/lib/liblistensoundmodel2.so|1be16b762221f9805de77e5decb07cee0d4047df
+vendor/lib/libmulawdec.so|ca1045d8cef044ef722c323ea22ffa1e60ac8a92
+vendor/lib/libsmwrapper.so|bd5f722c74a85b9fa11f95950782559411d2fed7
+vendor/lib/vendor.qti.voiceprint@1.0.so|4f42d43a9cefd0599e960d0bb21ad75a0795d0d7
+vendor/lib64/liblistensoundmodel2.so|9969aee4ab4504fffabd5567fe1bfcd567b7edac
+vendor/lib64/vendor.qti.voiceprint@1.0.so|001a755ca7b6f95af152b63e0664eb5748cfb5fa
 
 # Media - from LA.UM.9.6.2.r1-04200-89xx.0
 lib/libFileMux.so|4e05cd5e9913311ad17543d204adcd6d60cc8754
