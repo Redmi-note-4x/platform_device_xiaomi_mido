@@ -43,6 +43,7 @@ debug.mdpcomp.logs=0
 debug.sf.disable_backpressure=1
 debug.sf.enable_hwc_vds=0
 debug.sf.hw=0
+debug.sf.layer_caching_active_layer_timeout_ms=1000
 debug.sf.recomputecrop=0
 dev.pm.dyn_samplingrate=1
 persist.demo.hdmirotationlock=false
