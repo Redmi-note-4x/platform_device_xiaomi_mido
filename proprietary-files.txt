@@ -42,10 +42,6 @@ vendor/etc/drc/drc_cfg_AZ.txt
 vendor/etc/surround_sound_3mic/surround_sound_rec_5.1.cfg
 vendor/etc/surround_sound_3mic/surround_sound_rec_AZ.cfg
 
-# Audio (Dolby)
-vendor/lib/libhwdaphal.so
-vendor/lib64/libhwdaphal.so
-
 # Audio - from coral-user 12 SQ1A.220105.002 7961164 release-keys
 vendor/lib/libacdb-fts.so|e64e43562a616cf631fc351738795d5cc9af2e54
 vendor/lib/libacdbloader.so|47538581c0871c0631b75e1e79741a3b0b999e72
