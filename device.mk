@@ -82,10 +82,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.sip.voip.xml \
     frameworks/native/data/etc/android.software.vulkan.deqp.level-2020-03-01.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.vulkan.deqp.level.xml
 
-# Adb key
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/adbkey.pub:root/adb_keys
-
 # ANT
 PRODUCT_PACKAGES += \
     AntHalService \

@@ -2,11 +2,6 @@
 # system.prop for mido
 #
 
-# Adb
-persist.service.adb.enable=1                                                    
-persist.service.debuggable=1
-persist.sys.usb.config=mtp,adb
-
 # Audio
 ro.config.media_vol_steps=25
 ro.config.vc_call_vol_steps=6
