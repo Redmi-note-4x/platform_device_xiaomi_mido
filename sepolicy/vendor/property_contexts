@@ -9,14 +9,9 @@ persist.vendor.dolby.loglevel                 u:object_r:vendor_dolby_loglevel_p
 # Insmod
 vendor.all.devices.ready        u:object_r:vendor_device_prop:s0
 
-# vendor_radio_prop
-persist.vendor.data.shsusr_load                 u:object_r:vendor_radio_prop:s0
-persist.vendor.data.qmipriod_load               u:object_r:vendor_radio_prop:s0
-
 # Radio
 persist.ims.regmanager.mode     u:object_r:vendor_imsradio_prop:s0
 persist.radio.psensor.rawdata   u:object_r:persist_sensors_radio_prop:s0
 
 # WiFi
 vendor.wlan.                    u:object_r:vendor_wifi_prop:s0
-wifi.active.interface           u:object_r:wifi_prop:s0
