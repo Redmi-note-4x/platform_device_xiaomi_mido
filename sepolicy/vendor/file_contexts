@@ -65,8 +65,5 @@
 # Glove Mode
 /sys/devices/virtual/tp_glove/device/glove_enable                           u:object_r:proc_touchpanel:s0
 
-# Insmod
-/(vendor|system/vendor)/bin/init\.insmod\.sh u:object_r:init-insmod-sh_exec:s0
-
-# Wifif Mac
+# Wifi Mac
 /vendor/bin/nv_mac                      u:object_r:wcnss_service_exec:s0

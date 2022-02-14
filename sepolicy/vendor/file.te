@@ -33,15 +33,11 @@ type sysfs_sgain, sysfs_type, fs_type;
 type sysfs_torch, sysfs_type, fs_type;
 type kcal_dev, sysfs_type, fs_type;
 
-# Insmod
-type sysfs_msm_boot, fs_type, sysfs_type;
-type debugfs_ipc, fs_type, debugfs_type;
-
 # I/O
 type sysfs_io_sched_tuneable, fs_type, sysfs_type;
 
 # Battery Saver
 type sysfs_battery_saver, fs_type, sysfs_type;
 
-#Netmgr
+# Netmgr
 type netmgr_data_file, file_type, data_file_type;

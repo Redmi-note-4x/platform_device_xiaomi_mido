@@ -7,9 +7,6 @@ type dirac_prop, property_type;
 # Dolby
 type vendor_dolby_loglevel_prop, property_type;
 
-# Insmod
-type vendor_device_prop, property_type;
-
 # Radio
 vendor_restricted_prop(vendor_imsradio_prop)
 vendor_internal_prop(persist_sensors_radio_prop)

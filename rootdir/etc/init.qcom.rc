@@ -55,9 +55,6 @@ on early-init
     write /sys/block/sda/queue/read_ahead_kb 2048
 
 on init
-    # Loading kernel modules in background
-    start insmod_sh
-
     # Create cgroup mount point for memory
     mkdir /sys/fs/cgroup/memory/bg 0750 root system
     write /sys/fs/cgroup/memory/bg/memory.swappiness 140
@@ -74,24 +71,11 @@ on init
     write /sys/bus/msm_subsys/devices/subsys4/restart_level RELATED
 
 on post-fs
-    # Set RLIMIT_MEMLOCK to 64MB
-    setrlimit 8 67108864 67108864
     chmod 0755 /sys/kernel/debug/tracing
 
-on late-fs
-    # Start services for bootanim
-    start surfaceflinger
-    start bootanim
-    start vendor.hwcomposer-2-1
-    start vendor.configstore-hal
-    start vendor.gralloc-2-0
-
-    # mount RW partitions which need run fsck
-    mount_all /vendor/etc/fstab.qcom --late
-
 on early-boot
-    # Wait for devices
-    wait_for_prop vendor.all.devices.ready 1
+    # set RLIMIT_MEMLOCK to 64MB
+    setrlimit 8 67108864 67108864
     # Allow subsystem (modem etc) debugging
     write /sys/kernel/boot_adsp/boot 1
     write /sys/kernel/boot_slpi/boot 1
@@ -370,13 +354,6 @@ service vendor.atfwd /vendor/bin/ATFWD-daemon
     user system
     group system radio
     task_profiles ServiceCapacityLow
-
-service insmod_sh /vendor/bin/init.insmod.sh /vendor/etc/init.insmod.cfg
-    class main
-    user root
-    group root system
-    disabled
-    oneshot
 
 service vendor.sensors.qti /vendor/bin/sensors.qti
     class core
