@@ -12,6 +12,7 @@ ro.config.media_vol_steps=25
 ro.config.vc_call_vol_steps=6
 
 # Blur
+ro.launcher.blur.appLaunch=0
 ro.surface_flinger.supports_background_blur=0
 
 # BPF
