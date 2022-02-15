@@ -2,3 +2,4 @@ allow platform_app hal_alarm_qti_default:binder call;
 allow platform_app hal_alarm_qti_hwservice:hwservice_manager find;
 allow platform_app sysfs_kgsl:lnk_file read;
 allow platform_app vendor_default_prop:file { getattr open };
+allow platform_app hal_power_service:service_manager find;
