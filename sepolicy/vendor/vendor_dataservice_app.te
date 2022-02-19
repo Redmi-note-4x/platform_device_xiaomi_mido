@@ -1,3 +1,4 @@
 allow vendor_dataservice_app hal_mwqemadapter_hwservice:hwservice_manager find;
-allow vendor_dataservice_app system_data_file:dir search;
+allow vendor_dataservice_app system_app_data_file:dir create_dir_perms;
+allow vendor_dataservice_app system_app_data_file:{ file lnk_file } create_file_perms;
 allow vendor_dataservice_app user_profile_root_file:dir search;
