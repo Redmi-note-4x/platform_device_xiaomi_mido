@@ -154,6 +154,9 @@ persist.mm.sta.enable=0
 # WFD
 persist.hwc.enable_vds=1
 
+# Seamless transfer
+sys.fflag.override.settings_seamless_transfer=true
+
 # SurfaceFlinger
 ro.surface_flinger.vsync_event_phase_offset_ns=2000000
 ro.surface_flinger.vsync_sf_event_phase_offset_ns=6000000
