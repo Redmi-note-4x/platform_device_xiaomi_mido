@@ -38,3 +38,4 @@ dontaudit gx_fpd storage_file:dir search;
 
 # Allow read/write property
 set_prop(gx_fpd, gxfpd_prop)
+get_prop(gx_fpd, gxfpd_prop)

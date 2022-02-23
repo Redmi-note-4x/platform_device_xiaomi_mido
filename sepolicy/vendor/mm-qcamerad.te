@@ -13,6 +13,6 @@ set_prop(mm-qcamerad, camera_prop)
 set_prop(mm-qcamerad, vendor_camera_prop)
 get_prop(mm-qcamerad, vendor_camera_prop)
 
-allow mm-qcamerad sysfs:file read;
+allow mm-qcamerad sysfs:file { read open };
 allow mm-qcamerad sysfs_graphics:file { open read };
 dontaudit mm-qcamerad default_prop:file read;

@@ -45,5 +45,9 @@ allow hal_fingerprint_default sdcardfs:dir { search };
 allow hal_fingerprint_default sdcardfs:file { getattr };
 get_prop(hal_fingerprint_default, boot_status_prop)
 
+# Allow read/write property
+set_prop(hal_fingerprint_default, gxfpd_prop)
+get_prop(hal_fingerprint_default, gxfpd_prop)
+
 dontaudit hal_fingerprint_default default_android_vndservice:service_manager find;
 dontaudit hal_fingerprint_default default_prop:file read;
