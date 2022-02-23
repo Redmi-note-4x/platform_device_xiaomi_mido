@@ -8,5 +8,4 @@ set_prop(wcnss_service, vendor_set_wlan_prop);
 set_prop(wcnss_service, vendor_set_wlan_prop);
 get_prop(wcnss_service, wcnss_prop);
 get_prop(wcnss_service, vendor_nv_prop);
-get_prop(wcnss_service, system_prop);
 set_prop(wcnss_service, vendor_wifi_prop);
