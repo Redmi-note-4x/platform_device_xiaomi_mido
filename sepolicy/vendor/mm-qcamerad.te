@@ -7,9 +7,12 @@ allow mm-qcamerad system_server:unix_stream_socket { read write };
 
 allow mm-qcamerad diag_device:chr_file { ioctl open read write };
 get_prop(mm-qcamerad, camera_prop)
-allow mm-qcamerad property_socket:sock_file { write };
+allow mm-qcamerad sysfs_jpeg:file { getattr open read };
 allow mm-qcamerad init:unix_stream_socket connectto;
 set_prop(mm-qcamerad, camera_prop)
-get_prop(mm-qcamerad, default_prop)
+set_prop(mm-qcamerad, vendor_camera_prop)
+get_prop(mm-qcamerad, vendor_camera_prop)
+
 allow mm-qcamerad sysfs:file read;
 allow mm-qcamerad sysfs_graphics:file { open read };
+dontaudit mm-qcamerad default_prop:file read;

@@ -1,3 +1,2 @@
 #============= vendor_qtelephony ==============
 allow vendor_qtelephony hal_datafactory_hwservice:hwservice_manager find;
-allow vendor_qtelephony default_android_service:service_manager find;

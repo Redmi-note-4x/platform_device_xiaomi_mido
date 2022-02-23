@@ -1,7 +1,7 @@
 allow init wcnss_device:chr_file write;
 
 # Allow init to bind mount gps_debug.conf
-allow init system_file:file { execute_no_trans mounton };
+allow init system_file:file { mounton };
 
 # adsprpcd
 allow init adsprpcd_file:filesystem { getattr mount relabelfrom relabelto };
@@ -27,15 +27,15 @@ allow init proc:file { getattr relabelfrom write };
 allow init sysfs_hgain:file { getattr relabelfrom write };
 allow init sysfs_mgain:file { getattr relabelfrom write };
 
-allow init hal_drm_hwservice:hwservice_manager { add find };
-allow init hal_perf_hwservice:hwservice_manager find;
 allow init hidl_base_hwservice:hwservice_manager add;
-allow init hal_power_service:service_manager add;
 
 allow init qti_init_shell:capability kill;
 dontaudit init proc_dirty:file { open write };
 allow init sysfs_io_sched_tuneable:file write;
-allow init vendor_file:file { execute execute_no_trans };
 set_prop(init, bootloader_prop)
 allow init vendor_init:capability kill;
-allow init default_android_hwservice:hwservice_manager { add find };
+
+get_prop(vendor_init, vendor_tee_listener_prop)
+get_prop(vendor_init, gxfpd_prop)
+set_prop(vendor_init, gxfpd_prop)
+get_prop(vendor_init, vendor_imsradio_prop)

@@ -1,3 +1,2 @@
 #============= priv_app ==============
 allow priv_app net_dns_prop:file { getattr open };
-allow priv_app property_socket:sock_file { write };

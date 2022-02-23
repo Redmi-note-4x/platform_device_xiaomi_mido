@@ -23,3 +23,6 @@ allow qti_init_shell qti_init_shell:capability kill;
 dontaudit qti_init_shell proc_dirty:file { open write };
 allow qti_init_shell sysfs_io_sched_tuneable:file write;
 allow qti_init_shell system_data_file:file getattr;
+
+# FM
+set_prop(qti_init_shell, vendor_fm_prop)
