@@ -104,6 +104,7 @@ PRODUCT_PACKAGES += \
     libaacwrapper \
     libaudio-resampler \
     libbluetooth \
+    libhapticgenerator \
     libqcomvisualizer \
     libqcomvoiceprocessing \
     libqcompostprocbundle
