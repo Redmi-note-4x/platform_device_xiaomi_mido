@@ -46,34 +46,31 @@ vendor/etc/surround_sound_3mic/surround_sound_rec_AZ.cfg
 vendor/lib/libhwdaphal.so
 vendor/lib64/libhwdaphal.so
 
-# Audio - from coral-user 12 SQ1A.220105.002 7961164 release-keys
-vendor/lib/libacdb-fts.so|e64e43562a616cf631fc351738795d5cc9af2e54
-vendor/lib/libacdbloader.so|47538581c0871c0631b75e1e79741a3b0b999e72
-vendor/lib/libacdbrtac.so|1838febc3226bf22e4cb6decec0363aff70cd62f
-vendor/lib/libadiertac.so|f091409d5022553ec2da402d265b03e6e7f92b1c
-vendor/lib/libadm.so|6c3c35fe8cc24ed0878eb8f87fc49d15305be6da
-vendor/lib/libaudcal.so|3c0e627032c30899cfbaef99f9ea3c3bf032b0ef
-vendor/lib/libaudioalsa.so|1730b04ed50e79a6c8d014656bfb817fdbb77e1e
--vendor/lib/libaudioparsers.so|d212c546c6365ca7e6bc7fd7cfc47a5296c2cd21
-vendor/lib/libdrc.so|63b3fccf9f942a04f2a4c6cd6a5480fbcb92cbfe
-vendor/lib/libqtigef.so|d71dcc740d61b89e5c86ebdefa99a9db6eccae5b
-vendor/lib/libsurround_3mic_proc.so|915aaa9feec2ffdcb59adeb3514664444fe6042f
-vendor/lib/soundfx/libasphere.so|3863ed591cd028118303fce7dd381bafa77bd7f4
-vendor/lib/soundfx/libqcbassboost.so|296246cbeccb6e80be141c81d73dd0424093cb45
-vendor/lib/soundfx/libqcreverb.so|c279f9723965152e15af3df5ad4ba03979850896
-vendor/lib/soundfx/libqcvirt.so|2c3be53a4d93f113660b54fe89045e240c9c55a4
-vendor/lib64/libacdb-fts.so|c18dfe120295a17a14d2b29683f2f6cf4b7cab17
-vendor/lib64/libacdbloader.so|8c55d08ae0c1b1850751c75bff84c2106ec55620
-vendor/lib64/libacdbrtac.so|126338caa04b4b54796fb9a5640bce8f0941d9c7
-vendor/lib64/libadiertac.so|f23fb9b6bd4c64665bdbe5421b70374afd675f25
-vendor/lib64/libaudcal.so|b3f43e9627e8ab7f689b8daffcb61baf9b516f91
-vendor/lib64/libaudioalsa.so|39551a056a5a8a85144229afe0ca7366d58a4d9f
--vendor/lib64/libaudioparsers.so|854e11fb7708b79d876871626cd358c54745f9d4
-vendor/lib64/libqtigef.so|71c0ed7449f914ef2316cd4f4a86ca92a584225f
-vendor/lib64/soundfx/libasphere.so|ba7f561bbd586df1dd693084890db88ed0223709
-vendor/lib64/soundfx/libqcbassboost.so|cd93c3cbb61d069865f227c0f9d129df89a52e34
-vendor/lib64/soundfx/libqcreverb.so|f488f1266bf7bc3b6f803b96c42a1b5fb4b12263
-vendor/lib64/soundfx/libqcvirt.so|1dac62b383bfbd7bb93784c65a058d861be2ea5b
+# Audio - from LA.UM.9.6.2.r1-04200-89xx.0
+vendor/lib/libacdb-fts.so|fee2b1f0b93c28f5ef0a4d65736cca01c4275975
+vendor/lib/libacdbloader.so|1f5867fbd9491eb3dda91d74ab2d8713da243c5a
+vendor/lib/libacdbrtac.so|50f9c46c1ed2758338db567b00e8eee1889ab21a
+vendor/lib/libadiertac.so|5c80bbb7ae8fb329ec4c2518c4e336b010bd57dc
+vendor/lib/libadm.so|a5e6c65b7133440b4550234db4454e4c81627f66
+vendor/lib/libaudcal.so|4fa1da9616f7470caa79f905740daff66922b584
+vendor/lib/libaudioalsa.so|58feb2c5cbc4ac6e23ef4896c87785bed8db3c80
+vendor/lib/libdrc.so|303d67b5bfea162ae994d3817de317258035c42a
+vendor/lib/soundfx/libqcbassboost.so|aee797870096234f1237c6b99819cfceb1a80ecc
+vendor/lib/soundfx/libqcreverb.so|cd884a46419329933c81096ad1eeba46bc0b8a70
+vendor/lib/soundfx/libqcvirt.so|3ed80ebc51ab6c2a56d4e9c29bf119d201a47e65
+vendor/lib64/libacdb-fts.so|ae8275322050d1bd5cebf2cee15864fcf3c87fdf
+vendor/lib64/libacdbloader.so|d32fcac74a11ae0f982b60af13aea0c061383e1b
+vendor/lib64/libacdbrtac.so|547a42e2ed54d13e780fab26134ec0fd90054d4c
+vendor/lib64/libadiertac.so|98a8c2702d4e203689e4a80c69c4b1cf93af1567
+vendor/lib64/libaudcal.so|213bdd87ec3339042796f62605e38690e2500fd6
+vendor/lib64/libaudioalsa.so|534d4dc07fecea0611273c745721b1ed2015a3a3
+
+# Audio - from pan_sprout T89571AA3-user 11 RKQ1.200928.002 00WW_3_240 release-keys
+vendor/lib/libqtigef.so|fbb307c0da385bf09cbdef714e8fc1ecfc7ba6fd
+vendor/lib/libsurround_3mic_proc.so|84a4d84fcf567554fb5174fc6d41310d864e5f8e
+vendor/lib/soundfx/libasphere.so|c5d774c899e30c8e14ff20b1790df553b34e41ec
+vendor/lib64/libqtigef.so|b3f1cb946809bfe20a4afced73b4fd24c5591421
+vendor/lib64/soundfx/libasphere.so|0074f7645a035955e35341f76aa414608ab569ba
 
 # Audio ACDB - from LA.UM.9.6.2.r1-04200-89xx.0
 vendor/etc/acdbdata/QRD/QRD_Bluetooth_cal.acdb|0364848ae2eb5505bdace46d6b8f1391a39095a8
@@ -988,6 +985,10 @@ system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml|563a585
 # Keystore - from LA.UM.9.6.2.r1-04200-89xx.0
 vendor/lib64/hw/keystore.msm8953.so|0a68ac29004f72237f48008cea188dd98d6c6560
 
+# libaudioparsers - from pan_sprout T89571AA3-user 11 RKQ1.200928.002 00WW_3_240 release-keys
+-vendor/lib/libaudioparsers.so|a39f1f6e789547f63b7e2369d73b29876763d68d
+-vendor/lib64/libaudioparsers.so|1463c5ee0f2f040835386d9ccb4a4b010c5bdf58
+
 # Listen - from LA.UM.9.6.3.r1-04400-89xx.0
 system_ext/lib/liblistensoundmodel2.qti.so|80bcda8ef520bd37865e66fed1417ea57606ab46
 system_ext/lib64/liblistensoundmodel2.qti.so|d222c69327e19265aeeec043d74bda6a8b24eb7f
@@ -1358,4 +1359,3 @@ vendor/bin/wcnss_service|48e4a96a9de69bd83791a3b0b2134f5ab1205adc
 
 # Wi-Fi - from sweet V13.0.2.0.SKFMIXM
 vendor/bin/nv_mac|207d44cfbced7d7ae2c9f8cb98779b89dfe5c16a
-
