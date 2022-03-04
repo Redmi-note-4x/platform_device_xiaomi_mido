@@ -685,4 +685,7 @@
 
     <!-- Whether device supports an gaming mode profiles -->
     <bool name="config_gamingmode_performance">true</bool>
+
+    <!-- Whether to cancel fingerprint operation if not idle -->
+    <bool name="config_fpCancelIfNotIdle">true</bool>
 </resources>
