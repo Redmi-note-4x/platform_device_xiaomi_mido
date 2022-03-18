@@ -30,9 +30,9 @@ vendor/lib/rfsa/adsp/libfastcvadsp_skel.so|1ff4a48009e88435d93fd2b9b0c5ea59cedbb
 vendor/lib/rfsa/adsp/libscveObjectSegmentation_skel.so|944169db3ac67056b92ef4f850f69346958370b5
 vendor/lib/rfsa/adsp/libscveT2T_skel.so|91b9200dbb982abf0d6b440668252d892a616f66
 
-# ANT+ - from LA.UM.9.6.2.r1-04200-89xx.0
-system_ext/lib64/com.qualcomm.qti.ant@1.0.so|7fffcdca309796183708d9e345d3cd97461d901d
-vendor/lib64/hw/com.dsi.ant@1.0-impl.so|b5c57fdf48447c68b6308fdcb167d0d21b5c56ed
+# ANT+ - from FP3-4.A.0008-preview
+system_ext/lib64/com.qualcomm.qti.ant@1.0.so|2bad2579ce576c46af6a50ee6687bd92fa7f76cd
+vendor/lib64/hw/com.dsi.ant@1.0-impl.so|6e2b594b44552b42000164c091af5cf7a4c508f5
 
 # Audio
 vendor/etc/drc/drc_cfg_5.1.txt
@@ -44,41 +44,39 @@ vendor/etc/surround_sound_3mic/surround_sound_rec_AZ.cfg
 vendor/lib/libhwdaphal.so
 vendor/lib64/libhwdaphal.so
 
-# Audio - from LA.UM.9.6.2.r1-04200-89xx.0
-vendor/lib/libacdb-fts.so|fee2b1f0b93c28f5ef0a4d65736cca01c4275975
-vendor/lib/libacdbloader.so|1f5867fbd9491eb3dda91d74ab2d8713da243c5a
-vendor/lib/libacdbrtac.so|50f9c46c1ed2758338db567b00e8eee1889ab21a
-vendor/lib/libadiertac.so|5c80bbb7ae8fb329ec4c2518c4e336b010bd57dc
-vendor/lib/libadm.so|a5e6c65b7133440b4550234db4454e4c81627f66
-vendor/lib/libaudcal.so|4fa1da9616f7470caa79f905740daff66922b584
-vendor/lib/libaudioalsa.so|58feb2c5cbc4ac6e23ef4896c87785bed8db3c80
-vendor/lib/libdrc.so|303d67b5bfea162ae994d3817de317258035c42a
-vendor/lib/soundfx/libqcbassboost.so|aee797870096234f1237c6b99819cfceb1a80ecc
-vendor/lib/soundfx/libqcreverb.so|cd884a46419329933c81096ad1eeba46bc0b8a70
-vendor/lib/soundfx/libqcvirt.so|3ed80ebc51ab6c2a56d4e9c29bf119d201a47e65
-vendor/lib64/libacdb-fts.so|ae8275322050d1bd5cebf2cee15864fcf3c87fdf
-vendor/lib64/libacdbloader.so|d32fcac74a11ae0f982b60af13aea0c061383e1b
-vendor/lib64/libacdbrtac.so|547a42e2ed54d13e780fab26134ec0fd90054d4c
-vendor/lib64/libadiertac.so|98a8c2702d4e203689e4a80c69c4b1cf93af1567
-vendor/lib64/libaudcal.so|213bdd87ec3339042796f62605e38690e2500fd6
-vendor/lib64/libaudioalsa.so|534d4dc07fecea0611273c745721b1ed2015a3a3
+# Audio - from FP3-4.A.0008-preview
+vendor/lib/libacdb-fts.so|458980ecf3ba88c4e6d4862af727ac8b52a8c943
+vendor/lib/libacdbloader.so|8e5758fbaa7a1c717d7ff15851972951697a0ee2
+vendor/lib/libacdbrtac.so|2bfe2d2c49833b37dee10d2776d97bb368d5a1a5
+vendor/lib/libadiertac.so|53b70da188c6aee0333a1f4d368f7ac8ffba3fae
+vendor/lib/libadm.so|0c12ba8a37d5c01f49d58c36b9fb84354ae568a9
+vendor/lib/libaudcal.so|ea9f62700c66d8dbaf4575e567fa67046ee66a49
+vendor/lib/libaudioalsa.so|50d2e0a9599e3a6c44345956d672cc5f222e3653
+vendor/lib/libdrc.so|7dbd6cef13d7e8ad18b1a49aa92a7d83da24c96a
+vendor/lib/libqtigef.so|b38ae7f8880f5dd90b306e1c96283da1d11f8862
+vendor/lib/libsurround_3mic_proc.so|98038406a407141f77fb7c81b512b8163261d958
+vendor/lib/soundfx/libasphere.so|9370608d3c52e46e966c4fb12232687647e9da4f
+vendor/lib/soundfx/libqcbassboost.so|fbeb7fc080f5fce028eb34e021367037483d1819
+vendor/lib/soundfx/libqcreverb.so|92a1d4491fb3213e96db1201a9846b40968059cf
+vendor/lib/soundfx/libqcvirt.so|8730643ba19de92fc1d4578a532cae8deb73059b
+vendor/lib64/libacdb-fts.so|05760bb66071dbe10c10f105901710c18e4b20ce
+vendor/lib64/libacdbloader.so|cf69f69f856ea26adfcee9b4a60d6c72bb9e4b2b
+vendor/lib64/libacdbrtac.so|7e3c1165cc2290446eb5fe198011e652f7ac6d29
+vendor/lib64/libadiertac.so|bf301460c27cb2f78bfb7f0821c1c103da321ff8
+vendor/lib64/libaudcal.so|82e7f821044492fa42dcad1e1ace91561cc8e463
+vendor/lib64/libaudioalsa.so|686766d57db36b00710973872e40f614bb2fe11f
+vendor/lib64/libqtigef.so|aca3c06bd05feaba5607af00ed06d91d29a1e865
+vendor/lib64/soundfx/libasphere.so|b9296f601776e631be0f347f8f10d26689103d12
 
-# Audio - from pan_sprout T89571AA3-user 11 RKQ1.200928.002 00WW_3_240 release-keys
-vendor/lib/libqtigef.so|fbb307c0da385bf09cbdef714e8fc1ecfc7ba6fd
-vendor/lib/libsurround_3mic_proc.so|84a4d84fcf567554fb5174fc6d41310d864e5f8e
-vendor/lib/soundfx/libasphere.so|c5d774c899e30c8e14ff20b1790df553b34e41ec
-vendor/lib64/libqtigef.so|b3f1cb946809bfe20a4afced73b4fd24c5591421
-vendor/lib64/soundfx/libasphere.so|0074f7645a035955e35341f76aa414608ab569ba
-
-# Audio ACDB - from LA.UM.9.6.2.r1-04200-89xx.0
-vendor/etc/acdbdata/QRD/QRD_Bluetooth_cal.acdb|0364848ae2eb5505bdace46d6b8f1391a39095a8
-vendor/etc/acdbdata/QRD/QRD_General_cal.acdb|6e8c873201410aa64eebf75819d8ea3bc11613cf
-vendor/etc/acdbdata/QRD/QRD_Global_cal.acdb|0ae1d3c0dfd9c27afd030584b233d2f4b454a743
-vendor/etc/acdbdata/QRD/QRD_Handset_cal.acdb|855422d5b156ed60f5f6bacb9458e85f6c67ed12
-vendor/etc/acdbdata/QRD/QRD_Hdmi_cal.acdb|457bd7d412d9359297b9923cee264214d013547a
-vendor/etc/acdbdata/QRD/QRD_Headset_cal.acdb|ba8ab21912dd9a8c41014f6c26f2dca6d4476fdf
-vendor/etc/acdbdata/QRD/QRD_Speaker_cal.acdb|b1a9a1497d1ecfab01e8a59d4c33410d409753a3
-vendor/etc/acdbdata/QRD/QRD_workspaceFile.qwsp|997da5dd12d92c6c803cf33c69b5a1a92dd2fe49
+# Audio ACDB - from FP3-4.A.0008-preview
+vendor/etc/acdbdata/QRD/QRD_Bluetooth_cal.acdb|e1ca01987bfef191dc31a122a43a710ed9d96fca
+vendor/etc/acdbdata/QRD/QRD_General_cal.acdb|6ad3b891e16474fb92268c21a2c36142904e28da
+vendor/etc/acdbdata/QRD/QRD_Global_cal.acdb|820eda14c35b5fb56797b53686ee6eae1527aaf1
+vendor/etc/acdbdata/QRD/QRD_Handset_cal.acdb|ccd76b45818cf74221e34772f0acd1a2e352ff7f
+vendor/etc/acdbdata/QRD/QRD_Hdmi_cal.acdb|6be245a441662ff6152d014d360d9854aff77ea5
+vendor/etc/acdbdata/QRD/QRD_Headset_cal.acdb|fde061e2d2cf67885dacc3d5d5ecff77f477b12d
+vendor/etc/acdbdata/QRD/QRD_Speaker_cal.acdb|3ec5e3d4988ce79d12a6862d706a4f2465a7ce6a
+vendor/etc/acdbdata/QRD/QRD_workspaceFile.qwsp|729a0beffb4db7f9f64d49e0cde61150d7ce2540
 
 # Bluetooth (aptX) - from Crosshatch - 11/RQ2A.210405.006/7214111
 system_ext/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
