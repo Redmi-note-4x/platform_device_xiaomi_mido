@@ -693,8 +693,8 @@ etc/camera/s5k5e8_sunny_chromatix.xml:vendor/etc/camera/s5k5e8_sunny_chromatix.x
 # Camera firmware - from LA.UM.9.6.2.r1-04200-89xx.0
 vendor/firmware/cpp_firmware_v1_5_0.fw|ac19cd179b7b118bb3ea01a35fdfc78dc58164a1
 
-# Charger - from LA.UM.9.6.2.r1-04200-89xx.0
-vendor/bin/hvdcp_opti|d160d2193640a21b7eff70425bcdbfc775063cd5
+# Charger - from FP3-4.A.0008-preview
+vendor/bin/hvdcp_opti|97711263a9477ed36bed0558cae10d9329c369d9
 
 # CNE - from LA.UM.9.6.3.r1-04400-89xx.0
 system_ext/lib64/com.quicinc.cne.api@1.0.so|76440d7953db0808e855eee393e116841b59c6d5
