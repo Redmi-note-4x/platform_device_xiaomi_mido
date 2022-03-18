@@ -771,43 +771,45 @@ vendor/etc/diracmobile.config|d781cd6798a7481a8f7128d144abfb2b8794212d
 vendor/lib/libDiracAPI_SHARED.so|42b49679d38eca93fead05ea06ddbdc8108fd4b1
 vendor/lib/soundfx/libdirac.so|f63826a905b520fa524e4c1b147be7cf65240953
 
-# DPM - from alioth qssi-user-12-SKQ1.211006.001-22.1.19-release-keys 
-system_ext/bin/dpmd|d4073d02594eb71dcc850b1120ac508d1e4350c8
+# DPM - from FP3-4.A.0008-preview
+system_ext/bin/dpmd|dc94ffe90c6658b0bc99c64f68517c4048d0321a
 system_ext/etc/dpm/dpm.conf|95e27da8c989e96c6faea6f0697bce11955b62a5
 system_ext/etc/init/dpmd.rc|738b638ff04cda368e22c03e16baf90ba157a6fc
 system_ext/etc/permissions/com.qti.dpmframework.xml|c4b7ad0879d00c1eba4f3fe3a88ddb8aa153629a
-system_ext/etc/permissions/dpmapi.xml|255903759a60a31c0876ec004e74554c753270fe
-system_ext/framework/com.qti.dpmframework.jar|065a1864f817cda3dc59a96c3f62b0f1df517129
-system_ext/framework/dpmapi.jar|005e8092687849615ce119b5d6c188f08e397d79
-system_ext/lib64/com.qualcomm.qti.dpm.api@1.0.so|10563c1f60c2e7cb80729c30dc131114e63ef2f3
-system_ext/lib64/libdpmctmgr.so|6c2ef69d4166802f60ec36b7229585c769bffdb1
-system_ext/lib64/libdpmfdmgr.so|3b7c5a6c652948fa86790478d4fcbd0df3172947
-system_ext/lib64/libdpmframework.so|89684b3e906ba879cfde173d8a6cc6e6d5e2c755
-system_ext/lib64/libdpmtcm.so|ac8bb063de43870f67e2aba15eee5baaa9864c84
--system_ext/priv-app/dpmserviceapp/dpmserviceapp.apk|da48644e3ae7f339f83fa1cc995abc11dd5ab973
-vendor/bin/dpmQmiMgr|df41c54776abef6edb12b1cd6d250abf5ea6c0a5
+system_ext/etc/permissions/dpmapi.xml|9158c9789cc7135a685b3fb27f8cc27108b51fef
+system_ext/framework/com.qti.dpmframework.jar|96a29e28b3abffb9223daadd67459e3f5a3271df
+system_ext/framework/dpmapi.jar|2e2fbe2257a697b96a644c774136da0554430d3f
+system_ext/lib64/com.qualcomm.qti.dpm.api@1.0.so|b992e1f565f7b8b814eac0c88517543e6d0de603
+system_ext/lib64/libdpmctmgr.so|8a687fce30df9483a96065e6cc4154f03562dfa9
+system_ext/lib64/libdpmfdmgr.so|bf3666db17e77da3a303c10579baec0bd018089f
+system_ext/lib64/libdpmframework.so|235fbb48b47baebd48dbe56f72c77d97ca12c07c
+system_ext/lib64/libdpmtcm.so|dff3d3dbacd18ed55b5758a174f5016ef9e7a896
+vendor/bin/dpmQmiMgr|61a421804559b0e461439c19088acc01b871982a
 vendor/etc/init/dpmQmiMgr.rc|1538743661a5c48c15cd105beaad20f72953885a
-vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so|ad06856903b163a28135d6c8fd354258e3f0292c
-vendor/lib64/libdpmqmihal.so|67a75d6bd39f4bc825e14d21fa5b61e26ac82b22
+vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so|d9f1aa7f93b928f42499d613d20ccbc60f279097
+vendor/lib64/libdpmqmihal.so|41eb89e66ba065c43a5eb79cd3c72cef0ee167aa
+
+# DRM - from FP3-4.A.0008-preview
+vendor/bin/qseecomd|5b40595c23a54d13fb611311a4ab9b22a9428e86
+vendor/lib/libQSEEComAPI.so|2ab0e804dfc482a60a8f02247a6adf2435a41e6d
+vendor/lib64/libcpion.so|dbeb95d8792600f9113ba24dfea10a9534eeb5fb
+vendor/lib64/libdrmfs.so|95da701370dd40644baab29d60a6613888ce1ea0
+vendor/lib64/libdrmtime.so|ca5000d5e7f7c16f197fc669f7a5170023d2e4c9
+vendor/lib64/libGPreqcancel.so|b9efbc8623981e1249ad0a0f8964b2b655d2b334
+vendor/lib64/libGPreqcancel_svc.so|d539a9c7368973264e71700824b21ce8e5339441
+vendor/lib64/libhdcpsrm.so|5d52991a622e7c975707bc564fa6bad89803e79d
+vendor/lib64/liboemcrypto.so|cff69ca64f9015e17cdcc2c45c992d262d864013
+vendor/lib64/libqisl.so|c79719eebc094c2af9561e8df2c158638b111b70
+vendor/lib64/libQSEEComAPI.so|c94db2c194c9edebe5e6c40d63bec1589432d62e
+vendor/lib64/librpmb.so|4ae66b5b5d27b0302bb1d0a5f2396958ed8209c9
+vendor/lib64/libsecureui.so|1cb5b3e219c31b6fe5e7ba5b27d434e045e085ed
+vendor/lib64/libsecureui_svcsock.so|ba9f7aa7605e54110afea5d9921381f6e6d71a19
+vendor/lib64/libSecureUILib.so|19e0cd0438cf94953722355357e1a42a3209216e
+vendor/lib64/libssd.so|5b9ac8a457118b1e1b80f87fdc0e78d916ee099a
+vendor/lib64/libStDrvInt.so|1161fc5b029125b2ac87a27e88555c14725f182f
 
 # DRM - from LA.UM.9.6.2.r1-04200-89xx.0
-vendor/bin/qseecomd|12fde638ad4528c06fe336342862fd0ffc033dd0
-vendor/lib/libQSEEComAPI.so|961b8c99bf5d2a53b607cebf399fbdafb48c9bc6
-vendor/lib64/libcpion.so|602ffa6e92be0f2a19c8de782e1601135c7dd2a8
-vendor/lib64/libdrmfs.so|1654e650448a464b9de765c9ce80ba5a29e8b9c1
-vendor/lib64/libdrmtime.so|b3f024dae4aaa62c4fc33965847d1627387c6b56
-vendor/lib64/libGPreqcancel.so|d851bcc3e1b982d8403dc86921c5dd9274f71dc5
-vendor/lib64/libGPreqcancel_svc.so|760427f2139aec09a74b50a80153e461fbc6b272
-vendor/lib64/libhdcpsrm.so|8822f0408bdcc11dfc661321bfd3c253f0306e0c
 vendor/lib64/liboemcrypto.so|cff69ca64f9015e17cdcc2c45c992d262d864013
-vendor/lib64/libqisl.so|e9c402aed643ee094daaf495f1a3a1f29542d602
-vendor/lib64/libQSEEComAPI.so|17cf281138050f87e29b2b71e63d131249b10f6f
-vendor/lib64/librpmb.so|a5ee7dfbbae868a253d7413c866800ea1146d7c8
-vendor/lib64/libsecureui.so|eef8db680df8e9b47d4725433cd0d3886cc8aa25
-vendor/lib64/libsecureui_svcsock.so|2232f56927964f10d41868919d94711930d50ed0
-vendor/lib64/libSecureUILib.so|e9dd8017f40691925c59a074705be7cf11130780
-vendor/lib64/libssd.so|6dcbfc531e69a3c7eeaf21e85ac0202b8fa82d55
-vendor/lib64/libStDrvInt.so|7c921ee6db896233f9ea03f1fb3a9b7d9434e7dc
 
 # DRM - from Lmi 11/RKQ1.200826.002/V12.2.4.0.RJKMIXM
 vendor/lib64/libops.so|b2223e64db9d8f84262da7a8621013d3c63b6c98
