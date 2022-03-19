@@ -982,56 +982,56 @@ product/etc/sysconfig/hotword-hiddenapi-package-whitelist.xml|a062041908164045e8
 system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml|563a58554d9c0dd0608552b644fbf74519a447bb
 -system_ext/framework/com.android.hotwordenrollment.common.util.jar|bef92589e75a6da6043f85f4b9b0e85866429624
 
-# Keystore - from LA.UM.9.6.2.r1-04200-89xx.0
-vendor/lib64/hw/keystore.msm8953.so|0a68ac29004f72237f48008cea188dd98d6c6560
+# Keystore - from FP3-4.A.0008-preview
+vendor/lib64/hw/keystore.msm8953.so|83a48633d4530c45e36cfb9cd7f3d63a8a5bc122
 
 # libaudioparsers - from pan_sprout T89571AA3-user 11 RKQ1.200928.002 00WW_3_240 release-keys
 -vendor/lib/libaudioparsers.so|a39f1f6e789547f63b7e2369d73b29876763d68d
 -vendor/lib64/libaudioparsers.so|1463c5ee0f2f040835386d9ccb4a4b010c5bdf58
 
-# Listen - from LA.UM.9.6.3.r1-04400-89xx.0
-system_ext/lib/liblistensoundmodel2.qti.so|80bcda8ef520bd37865e66fed1417ea57606ab46
-system_ext/lib64/liblistensoundmodel2.qti.so|d222c69327e19265aeeec043d74bda6a8b24eb7f
-vendor/lib/hw/sound_trigger.primary.msm8953.so|c01bf753e07b5e126bbfe0263e7a11bbd17b4b45
+# Listen - from FP3-4.A.0008-preview
+system_ext/lib/liblistensoundmodel2.qti.so|228e1483771a4789172a0047e7020c93ae5b29b3
+system_ext/lib64/liblistensoundmodel2.qti.so|420f57551cc097fa147302678595394d1cb283c3
+vendor/lib/hw/sound_trigger.primary.msm8953.so|7021d1370122ecb4fdf989756530535d770e4ff0
 vendor/lib/libadpcmdec.so|452d1123ab4e12c4444df33322f309e2ecc2e1e4
-vendor/lib/liblistensoundmodel2.so|1be16b762221f9805de77e5decb07cee0d4047df
+vendor/lib/liblistensoundmodel2.so|5a1be7c5c8b327ec443f63d45fb0bfc379c70876
 vendor/lib/libmulawdec.so|ca1045d8cef044ef722c323ea22ffa1e60ac8a92
-vendor/lib/libsmwrapper.so|bd5f722c74a85b9fa11f95950782559411d2fed7
-vendor/lib/vendor.qti.voiceprint@1.0.so|4f42d43a9cefd0599e960d0bb21ad75a0795d0d7
-vendor/lib64/liblistensoundmodel2.so|9969aee4ab4504fffabd5567fe1bfcd567b7edac
-vendor/lib64/vendor.qti.voiceprint@1.0.so|001a755ca7b6f95af152b63e0664eb5748cfb5fa
+vendor/lib/libsmwrapper.so|1376bf567a0a225d1ac8c623db4ace9a7e3804f7
+vendor/lib/vendor.qti.voiceprint@1.0.so|e44de985770eed2d83f94bfe99fbc9c1dc300902
+vendor/lib64/liblistensoundmodel2.so|9b74bdd6102be180e65f77f940ae4ba087d4608e
+vendor/lib64/vendor.qti.voiceprint@1.0.so|1a5620f9c3bc99ada462fe7af2a88f9e89473ab6
 
-# Media - from LA.UM.9.6.2.r1-04200-89xx.0
-lib/libFileMux.so|4e05cd5e9913311ad17543d204adcd6d60cc8754
-lib/libOmxMux.so|1f861cbf34f5e885fb4f9637b4aab53a3c59691b
-system_ext/lib/extractors/libmmparserextractor.so|5135a95473e887749100c7f84f5f659630c80193
-system_ext/lib/libavenhancements.so|248d6cf0db255fb2cf5e077e7127f510036f7ec0
-system_ext/lib/libmmosal.so|8c7f0a071f84ec2ac9522bf448cb902a3ece2405
-system_ext/lib/libmmparser_lite.so|18cf2b71e517e651e35b931261f0c63783813ff6
-system_ext/lib64/libavenhancements.so|642292eeef580a33fec54b4505c1b6cecffde5a3
-system_ext/lib64/libmmosal.so|ef19a38be8283c87eabe96f74bc8a71881ab1f0a
+# Media - from FP3-4.A.0008-preview
+lib/libFileMux.so|22005fb1595b2b76e199b82ff3790c1bc3d54a20
+lib/libOmxMux.so|e444f3b38f7d2469ff3965243f93180f8fc18329
+system_ext/lib/extractors/libmmparserextractor.so|2e4430f1fffdf458ca48f9b27b54edfa50e3bd65
+system_ext/lib/libavenhancements.so|9372b77cbd6667a2144c55da1adf3859ae37f849
+system_ext/lib/libmmosal.so|f35336597b2b78a9dbfd23aea3c25e3cb1074081
+system_ext/lib/libmmparser_lite.so|1662216531f8e5d298505d6bb6fb49c706df2c30
+system_ext/lib64/libavenhancements.so|884d8585fe7554ee332e6436241a82f27a098890
+system_ext/lib64/libmmosal.so|a489282820245af8a316993bc5b6a009dc3a817c
 vendor/etc/seccomp_policy/mediacodec.policy|3dec19ed56099a36b44cc72ad04ab23b9cc22ace
 vendor/etc/seccomp_policy/mediaextractor.policy|4234a844e9b1aef37397c8cfbd19566966ecd622
-vendor/lib/libFlacSwDec.so|7d661ac115de794bc6f6f7d20d4f93735b698c52
-vendor/lib/libmmosal.so|e23d6d1b2a035c08ffd7ac72d5241ebff37f0d14
-vendor/lib/libOmxAacDec.so|a91955e53b84f99ef9d19caf43d88b2b7fee9f27
-vendor/lib/libOmxAlacDec.so|b65c7dd2fa2870007dfc3d9bd0803420e31e3cc3
-vendor/lib/libOmxAlacDecSw.so|59055e1c00ed82f7c310dcf78d4104b9f803d12e
-vendor/lib/libOmxAmrDec.so|d2493a69c2f1d34ce7a423ca2b2fed6ad9f515e9
-vendor/lib/libOmxAmrwbplusDec.so|dcaa7e19311d33b9fc8467faa7af44047679a78c
-vendor/lib/libOmxApeDec.so|cc40c4aea3e07ee8c34d1b41060e223249f4112c
-vendor/lib/libOmxApeDecSw.so|076e4092433cf2422c71594c7f4a418f32408f56
-vendor/lib/libOmxDsdDec.so|b8697801e414e51ea488505bb4b94567e882585d
-vendor/lib/libOmxEvrcDec.so|9102aea245e0c151dd204a9bd9553b79f267f90d
-vendor/lib/libOmxG711Dec.so|87f75eb98982c47cb4995575e4f5f007fd6e7b69
-vendor/lib/libOmxQcelp13Dec.so|e05e83f66b0126040aa9a6145e78e7a51d053f21
-vendor/lib/libOmxVideoDSMode.so|c51fc2b34b6607f4238bfdf54e9c58da6ef8e2ce
-vendor/lib/libOmxVpp.so|74143b04b31c57e01c24a3da6cd4fd84d7da7829
-vendor/lib/libOmxWmaDec.so|bc2a4a87b538ccd6004d6269a42bbef9a84ad7c4
-vendor/lib/libvpplibrary.so|98c8bac6700901d35cd67fb06c63cd1ffdb0dcba
-vendor/lib/libvqzip.so|f85628ea634df1c31d69380d960ad7ea3396e7b2
-vendor/lib64/libmmosal.so|e9fdb48163e92b089cea0c397723a8416436c272
-vendor/lib64/libvpplibrary.so|30e8e7cf1495fb88162beeb65e6273f28563b43b
+vendor/lib/libFlacSwDec.so|cf635f2627fb277fce39d34d77986bc29ed56f43
+vendor/lib/libmmosal.so|be343c3fa025d9d7f3118830d50b35a67fdafe6c
+vendor/lib/libOmxAacDec.so|ce6447b7138f0e0cf365d97668a5ded072683234
+vendor/lib/libOmxAlacDec.so|5b1e5015b6408866f20d352244524c48e0ce17cf
+vendor/lib/libOmxAlacDecSw.so|407e1d197753140f686dbcb95ab191b21b38bcff
+vendor/lib/libOmxAmrDec.so|78ad175f009fe3fe3e316c9469184142ae813b24
+vendor/lib/libOmxAmrwbplusDec.so|087c71ccc858e4e5d048f5150c39b7f3619ccf02
+vendor/lib/libOmxApeDec.so|85bb0aa592b11111de73063d850c4afa4c9f00cd
+vendor/lib/libOmxApeDecSw.so|c36f7253818ee759988ba430896590fec4f0c570
+vendor/lib/libOmxDsdDec.so|e669191874ef80c9569f06b9827e8c4c1fc2f977
+vendor/lib/libOmxEvrcDec.so|3f58234a838bed1360ba80c2fe09c05173b1e623
+vendor/lib/libOmxG711Dec.so|e95941e80d00bf94944868750e1c55ef2aa601ba
+vendor/lib/libOmxQcelp13Dec.so|49291073551d311fde33f76eed6b420615bee382
+vendor/lib/libOmxVideoDSMode.so|58c76ededad030bf9fc89afd47eab863ddb184fb
+vendor/lib/libOmxVpp.so|76daeaf7b83dec5f55f2dc194cc8c47ead7ce511
+vendor/lib/libOmxWmaDec.so|f93ed022df05fbf6b7cbda0bd88eebfac47f47da
+vendor/lib/libvpplibrary.so|13c6073c9a84b5508cd2612e41a9d0336135afed
+vendor/lib/libvqzip.so|c56eaffef2066339493fa6810930e58556891027
+vendor/lib64/libmmosal.so|01e4c000581b0b3ba98d648a007f973c8087c68d
+vendor/lib64/libvpplibrary.so|89b49c112864bf0d33c07c78fb7750d4bd7eb663
 
 # Perf (irq_balance) - from LA.UM.9.6.2.r1-04200-89xx.0
 vendor/bin/msm_irqbalance|e5706bc0acab394b53fafdc1d7f342f69c6f5649
