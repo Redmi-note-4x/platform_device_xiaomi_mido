@@ -830,11 +830,11 @@ lib64/libfp_client.so:vendor/lib64/libfp_client.so
 lib64/libfpnav.so:vendor/lib64/libfpnav.so
 lib64/libfpservice.so:vendor/lib64/libfpservice.so
 
-# FM Radio - from LA.UM.9.6.2.r1-04200-89xx.0
-vendor/lib64/vendor.qti.hardware.fm@1.0.so|f7494923e84b136a44f02699082a7e0a380f94e9
+# FM Radio - from FP3-4.A.0008-preview
+vendor/lib64/vendor.qti.hardware.fm@1.0.so|a7c3fdcdfdf2d982b04baa89e0e4dc5f5d505bf7
 
-# Gatekeeper - from LA.UM.9.6.2.r1-04200-89xx.0
-vendor/lib64/hw/gatekeeper.msm8953.so|391b9ded894fb581fab3f5c742236b11e2e61a7b
+# Gatekeeper - from FP3-4.A.0008-preview
+vendor/lib64/hw/gatekeeper.msm8953.so|d760257a98254b9e87ae258e267b1a45a0ed7ecb
 
 # GPS - from LA.UM.9.6.2.r1-04200-89xx.0
 vendor/bin/hw/android.hardware.gnss@2.1-service-qti|d458a2aadc1d00df4696d6793e550f4a9422a2c9
@@ -1083,17 +1083,6 @@ vendor/lib64/vendor.qti.hardware.alarm@1.0.so|3c182fd3343942c431e1d27d87f8fe1146
 
 # Power-off charging daemon
 -sbin/charger:bin/chargeonlymode|664dfa548b81cac348f1699222160f8d2b4d247c
-
-# QC RIL - from LA.UM.9.6.3.r1-04400-89xx.0
-vendor/bin/hw/qcrild|77d0168fbad7db01eec8abd9df25f19c05411eb4
-vendor/etc/init/qcrild.rc|f9c32f5e7a8e7f4a0df1dcce174de169b8d7c060
-vendor/lib64/libqcrildatactl.so|716112f6bdbbe968f867b7ad73c7b0a12d1be6e1
-vendor/lib64/libqcrilFramework.so|dc62bd4f3685c420d43f4f5f4141d5908212df86
-vendor/lib64/libril-qc-hal-qmi.so|65b9c44406ca302facf87038b5b223f6977e0f79
-vendor/lib64/libril-qc-logger.so|307587cc7cca5d04aff8645e7d5932c5f46377bb
-vendor/lib64/qcrild_librilutils.so|f12ebc05420621d930ffe7f4b4859117e3c9fc35
-vendor/lib64/qtibus.so|cef56e2d40f69b6b6c60b93edb612744395f7359
-vendor/lib64/qtimutex.so|026d9acf29b23ab0419abfe3066bd4c9f13bf7ae
 
 # QC RIL - from LA.UM.9.6.3.r1-04400-89xx.0
 vendor/bin/hw/qcrild|77d0168fbad7db01eec8abd9df25f19c05411eb4
