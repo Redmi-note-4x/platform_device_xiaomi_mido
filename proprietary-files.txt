@@ -1078,9 +1078,9 @@ vendor/lib64/libqti-perfd.so|1f4ea13e878682f542a6608424d6a8a31dd21f7d
 vendor/lib64/libqti-util.so|a13bccc7cc29c84dfe9db0eae1f86417ff4d88bb
 vendor/lib64/libqti-utils.so|f80263667b64fef43ed35a0f7fdf9084281e0ebf
 
-# Peripheral manager - from LA.UM.9.6.3.r1-04400-89xx.0
-vendor/bin/pm-proxy|cfa016d416eb95949c76090bde8ccffcd5517159
-vendor/bin/pm-service|06608529b6125c5362dee26f459c52d9e51f3c92
+# Peripheral manager - from FP3-4.A.0008-preview
+vendor/bin/pm-proxy|910437c11108aa66e803bbc760ce3998d141a6b4
+vendor/bin/pm-service|98827a6bf6693033a7c767e3fb4f097b9075a0ef
 vendor/lib/libperipheral_client.so|7ace2f7c8c7ebd986db6c7796de7237e584e658b
 vendor/lib64/libperipheral_client.so|9bfd41e276e16b8f7c6808f3d87531fc5be4cdd5
 
@@ -1323,12 +1323,12 @@ vendor/lib64/libsensor_user_cal.so|9493f9495f170ab043b0ea9fec8d0bba0cd7b9d9
 vendor/lib64/sensor_calibrate.so|219ee0b1bdcc6a3f0b9261f6fc31838916856c99
 vendor/lib64/sensors.ssc.so|863de4d737c389c059670d8e1592bba58ae33de3
 
-# Service Tracker - from dpl_sprout T89626AA3-user-11-RKQ1.200928.002-00WW_3_140-release-keys
-vendor/bin/hw/vendor.qti.hardware.servicetracker@1.2-service|e9c628464a9979c52b473db0f747244255d338be
+# Service Tracker - from dpl_sprout FP3-4.A.0008-preview
+vendor/bin/hw/vendor.qti.hardware.servicetracker@1.2-service|46268253a28d60c28e7a8639accdbc49bc572f5f
 vendor/etc/init/vendor.qti.hardware.servicetracker@1.2-service.rc|7cf06148da895586c20aab7e6bd01b806d8128b6
 -vendor/etc/vintf/manifest/vendor.qti.hardware.servicetracker@1.2-service.xml|40b6abd9b4be99dc5722eb60d71ee36764bf4ef3
-vendor/lib/hw/vendor.qti.hardware.servicetracker@1.2-impl.so|f916f5da97778eb6fb0690d3165cbf2b91ab02bc
-vendor/lib64/hw/vendor.qti.hardware.servicetracker@1.2-impl.so|7984bc774f16c830f4f0539942f5bd9637e9c6dd
+vendor/lib/hw/vendor.qti.hardware.servicetracker@1.2-impl.so|b074db3da0823a1d0a103c43dd1167d62cbdf3bb
+vendor/lib64/hw/vendor.qti.hardware.servicetracker@1.2-impl.so|1745bf39413e1e867131eadff7417620c6daeb1c
 
 # Thermal - from Onclite PKQ1.181021.001/V10.2.5.0.PFLCNXM
 vendor/bin/thermal-engine|562035759ae60b3c5267a01293f1aeaa3f40c44b
@@ -1342,17 +1342,17 @@ vendor/bin/time_daemon|48401d7f85c87aa3e12ce7b4a969a50cbf59c293
 vendor/etc/init/init.time_daemon.rc|b253ca2a498757e14e1d7a051bf504ae09218f51
 vendor/lib64/libtime_genoff.so|8bb116ad297a5e4a94da2f10509509cb6e863a5f
 
-# TUI - from LA.UM.9.6.2.r1-04200-89xx.0
-vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti|e8d97981d09a4e34907d13bcbbd10f03572c9218
+# TUI - from FP3-4.A.0008-preview
+vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti|15378114c18fd1b1c8f9671f656396285ad1de48
 vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc|2cfc563d7e1579374f001c94588fae7835a12ffc
-vendor/lib/vendor.qti.hardware.tui_comm@1.0.so|933eb7026797f3dadad3d10fd69443b11f6563f3
-vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so|16baab27397ad493e845515c20ac0c0c063c775d
+vendor/lib/vendor.qti.hardware.tui_comm@1.0.so|ccdb6027a199d5549fc92de8ce2ddb006b4b486d
+vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so|f6b0e0e951394b609f0cb5c19e83a37447d9d292
 
-# Universal Bandwidth Compression (UBWC) - from pan_sprout T89571AA3-user 11 RKQ1.200928.002 00WW_3_240 release-keys
-vendor/lib/libstreamparser.so|5f6d72017b1aa1ae457f6de54b8c101568e22cb8
-vendor/lib/libUBWC.so|30dd8962cb8ab5bf5caeff2f74e3639691c0e6fe
-vendor/lib64/libstreamparser.so|8ccb6cfc28decef9b13b392713fd9e76ceb97764
-vendor/lib64/libUBWC.so|5b9ac103bde9ffc8384f34384d8552e5c44d5725
+# Universal Bandwidth Compression (UBWC) - from FP3-4.A.0008-preview
+vendor/lib/libstreamparser.so|69f6bb1df16ae77415247fd42f1386a43edc87af
+vendor/lib/libUBWC.so|be0b60ad8727284c12333dfd7282c7ae3a67f48c
+vendor/lib64/libstreamparser.so|4dec8f4a464c611d05d29656886689ac3385af39
+vendor/lib64/libUBWC.so|aa13199370122bacabc6ccd77d168372e545218f
 
 # Wi-Fi - from LA.UM.9.6.3.r1-04400-89xx.0
 vendor/bin/wcnss_service|48e4a96a9de69bd83791a3b0b2134f5ab1205adc
