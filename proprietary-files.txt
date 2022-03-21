@@ -85,12 +85,14 @@ system_ext/lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
 # Bluetooth - from FP3-4.A.0008-preview
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|73d7132773572d87bdac6b5e454573e79d35316c
 vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc|f4ee3b2da2b08647447869ade86ec63f7340accc
+vendor/lib/libsoc_helper.so|2536dc60e046ed527b767376cd43bc01fadcaa68
 vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so|1e238b1e84d889f424001f5134f0d2994d13251a
 vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so|68848631511ed0117adc540725d0e2fa57843bd9
 vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so|c3d2c441923730415eec24d7ad53c00a136acf8a
 vendor/lib64/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so|05e2d1fd44260cf603eb40a9f795d9ff4c43226f
 vendor/lib64/libbt-hidlclient.so|58caa4b8fac26ae5011c6439a1aff71f0a14a9a3
 vendor/lib64/libbtnv.so|82cc941c6a262e0965925b4955b1ea508b798bfa
+vendor/lib64/libsoc_helper.so|affbc1cc49d3df3a6e174a21bf3fe79c7130d1c0
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so|25b2ce43c28c274b15c3b683831c214e3efb531d
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so|117b74f1df4ee67297f431ae47d622bbb8f587ca
 
