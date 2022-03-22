@@ -925,6 +925,12 @@ vendor/lib64/libsdmextension.so|4428ff01496cc0c07f623fb813eb8e0047df1ecc
 vendor/lib64/libtinyxml2_1.so|ff32deb110acb02cb5def5f3404f9064c1276483
 
 # Graphics - from FP3-4.A.0008-preview
+vendor/lib/egl/eglSubDriverAndroid.so|72f727554575728006e8ac05b0ad714481259690
+vendor/lib/egl/libEGL_adreno.so|b27eabcb8a90912d915f2fa3061116642e16d300
+vendor/lib/egl/libGLESv1_CM_adreno.so|d7afdc835b962b30580eec884ede914a869ef9bc
+vendor/lib/egl/libGLESv2_adreno.so|fddfa911dd52c69c6c7b60f553c0795138696bd8
+vendor/lib/egl/libq3dtools_adreno.so|87e6c7ee189baa3f957b795ef05e95ca08276715
+vendor/lib/egl/libq3dtools_esx.so|3bef07d3e0c50ca1999949b11693ec68f4829fba
 vendor/lib/hw/vulkan.adreno.so|d8605174a447fe05976ed195318797f73a943ed5
 vendor/lib/hw/vulkan.msm8953.so|d8605174a447fe05976ed195318797f73a943ed5
 vendor/lib/libadreno_utils.so|f5f51b75191c09dd8c63e420e6f68a9f9d28348a
@@ -940,6 +946,12 @@ vendor/lib/libmm-hdcpmgr.so|4364ca206f8d7ffd87d6f552e4760196de62ad7b
 vendor/lib/libOpenCL.so|065575c14a735bff3ce30a266d8b622008b3c465
 vendor/lib/libpvr.so|2494a6cfc4ebd466565a77224cbe00cd2f4ea8da
 vendor/lib/libVkLayer_q3dtools.so|62207fd316b0c1cbe2e1cbee58d235e7afbf5070
+vendor/lib64/egl/eglSubDriverAndroid.so|d6dc70f08a0e68e897c2c8a956a8c2f3e036c540
+vendor/lib64/egl/libEGL_adreno.so|ca0184f73e4894a58cf1a53da9e025ddad9eb74d
+vendor/lib64/egl/libGLESv1_CM_adreno.so|b45486353fceb47ec419ef580fdf6d2305a842ff
+vendor/lib64/egl/libGLESv2_adreno.so|86d80c7f17b43d6f11e8731bd4fa481b2da31e0e
+vendor/lib64/egl/libq3dtools_adreno.so|189b9c3d400c6a98c87582b8df0910530cba6d44
+vendor/lib64/egl/libq3dtools_esx.so|40df59c64795bdc937c18e8398bdb7d96826aba3
 vendor/lib64/hw/vulkan.adreno.so|242ba0af54ad1467998c8df1345b85d568889a4a
 vendor/lib64/hw/vulkan.msm8953.so|242ba0af54ad1467998c8df1345b85d568889a4a
 vendor/lib64/libadreno_utils.so|2dc4b21766ab7947fba7f1c2c9b085e6d6129775
@@ -955,20 +967,6 @@ vendor/lib64/libmm-hdcpmgr.so|faf9491a8b15b9ca98a71e216ed94a61eca87540
 vendor/lib64/libOpenCL.so|d49daef4801942017b90faf2183f0643fca49ce7
 vendor/lib64/libpvr.so|c918ba2be10ed3a2f264728faa3d5d000106cb27
 vendor/lib64/libVkLayer_q3dtools.so|df2c4599240081c43dc27c5d3520e488991463a2
-
-# Graphics EGL configs - from LA.UM.9.6.2.r1-04200-89xx.0
-vendor/lib/egl/eglSubDriverAndroid.so|89f22710e92951bd45d7772dc9d882c582cb8c0e
-vendor/lib/egl/libEGL_adreno.so|cbc052526a10907b5dc0ca2e53a37570adc3a317
-vendor/lib/egl/libGLESv1_CM_adreno.so|6c63055e6ac76dc5c7cd7842e697a66a71571f4b
-vendor/lib/egl/libGLESv2_adreno.so|88037d2b42e951f71154f66f52e02e08cb1be113
-vendor/lib/egl/libq3dtools_adreno.so|e211af37469cafbb1fd814c6ba90ba9629097379
-vendor/lib/egl/libq3dtools_esx.so|2e02f5101131019ee97014f8d75e84fdf15770dc
-vendor/lib64/egl/eglSubDriverAndroid.so|d5bc7ac6e13e88fa7b58c2034b85fcba075581b2
-vendor/lib64/egl/libEGL_adreno.so|da4b09fc0bf7c82c267d227dda812b46db52deb7
-vendor/lib64/egl/libGLESv1_CM_adreno.so|ebafbd6ce0caf448a5bcfd604cdfe115e3af520a
-vendor/lib64/egl/libGLESv2_adreno.so|f5edf1d2439ec0793ea156d43cd006530105d786
-vendor/lib64/egl/libq3dtools_adreno.so|d8c8f25332d218a2dbd7cc5052e384b59d07c5a1
-vendor/lib64/egl/libq3dtools_esx.so|6ae4b945718fe7e1b6404d7b65d382c32b4fef54
 
 # Graphics firmware - from FP3-4.A.0008-preview
 vendor/firmware/a506_zap.b00|21d74ee137e4096c2ffcd6f2545b5b2f8f384efa
