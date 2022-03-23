@@ -3,6 +3,8 @@ vendor/etc/acdbdata/adsp_avs_config.acdb|ac0616af3b2d4f070c0e54c18126a877e528621
 vendor/lib/rfsa/adsp/libdirac-capiv2.so|e56031dfaee094d5267e3cc16625cfceaa07cc27
 
 # ADSP - from FP3-4.A.0008-preview
+system_ext/lib/vendor.qti.hardware.dsp@1.0.so|92d40f1fe6f31bbcedf92dd76d02808b950e2c4f
+system_ext/lib64/vendor.qti.hardware.dsp@1.0.so|05dea6ab02d69e9add927a1cb466ecf6090e0dd6
 vendor/bin/adsprpcd|5e246a6f5d2dca27e29b233a17e4673532191b95
 vendor/bin/dspservice|a7344fc3d27a49df30858ebc3f73ee5818e752d4
 vendor/etc/init/vendor.qti.adsprpc-guestos-service.rc|8f0eb84d3eb5fc0f683ef7b975b75044d56f513e
@@ -45,6 +47,8 @@ vendor/lib/libhwdaphal.so
 vendor/lib64/libhwdaphal.so
 
 # Audio - from FP3-4.A.0008-preview
+system_ext/etc/permissions/audiosphere.xml|015ad7be4921039238bfa3d34d052d752453e49c
+-system_ext/framework/audiosphere.jar|9c28317f12b93a6d881c80a991ff24716fce4a12
 vendor/lib/libacdb-fts.so|458980ecf3ba88c4e6d4862af727ac8b52a8c943
 vendor/lib/libacdbloader.so|8e5758fbaa7a1c717d7ff15851972951697a0ee2
 vendor/lib/libacdbrtac.so|2bfe2d2c49833b37dee10d2776d97bb368d5a1a5
@@ -1014,7 +1018,11 @@ system_ext/lib64/libavenhancements.so|884d8585fe7554ee332e6436241a82f27a098890
 system_ext/lib64/libmmosal.so|a489282820245af8a316993bc5b6a009dc3a817c
 vendor/etc/seccomp_policy/mediacodec.policy|3dec19ed56099a36b44cc72ad04ab23b9cc22ace
 vendor/etc/seccomp_policy/mediaextractor.policy|4234a844e9b1aef37397c8cfbd19566966ecd622
+vendor/lib/libAlacSwDec.so|be3d6e539f748742d3d28437bbcb498c1750f102
+vendor/lib/libApeSwDec.so|e25491a04de205238a53ec1727bdbd08c7875cf4
 vendor/lib/libFlacSwDec.so|cf635f2627fb277fce39d34d77986bc29ed56f43
+vendor/lib/libI420colorconvert.so|48bb7d2ec5d7f6fdca6618d2951b58e90b3362d7
+vendor/lib/libmm-color-convertor.so|c00e4ed48848b69b2093d4cca91ccbc869e92176
 vendor/lib/libmmosal.so|be343c3fa025d9d7f3118830d50b35a67fdafe6c
 vendor/lib/libOmxAacDec.so|ce6447b7138f0e0cf365d97668a5ded072683234
 vendor/lib/libOmxAlacDec.so|5b1e5015b6408866f20d352244524c48e0ce17cf
