@@ -17,22 +17,20 @@
 
     <!--app lauch boost-->
 
-        <!-- Type="1", main launch boost of 2sec -->
+        <!-- Type="1", main launch boost of 5sec -->
 
         <!-- SCHEDBOOST resource opcode, value-->
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value-->
         <!-- CPUBOOST_MIN_FREQ BIG resource opcode, value-->
         <Config
-            Id="0x00001081" Type="1" Enable="true" Timeout="2000"  Target="sdm632"
+            Id="0x00001081" Type="1" Enable="true" Timeout="5000"  Target="sdm632"
             Resources="0x40C00000, 0x1, 0x40800100, 0x40C, 0x40800000, 0x579" />
 
         <!-- SCHEDBOOST resource opcode, value-->
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value-->
-        <!-- SCHED_SPILL_NR_RUN resource opcode, value-->
-        <!-- SCHED_RESTRICT_CLUSTER_SPILL resource opcode, value-->
         <Config
-            Id="0x00001081" Type="1" Enable="true" Timeout="2000"
-            Resources="0x40C00000, 0x1, 0x40800100, 0x690, 0x40C2C000, 0x1, 0x40C34000, 0x0" />
+            Id="0x00001081" Type="1" Enable="true" Timeout="5000"
+            Resources="0x40C00000, 0x1, 0x40800100, 0xFFF" />
 
     <!--app lauch boost (disabling packing)-->
         <!-- DISABLE_POWER_COLLAPSE resource opcode, value-->
@@ -43,16 +41,16 @@
             Resources="0x40400000, 0x1" />
 
     <!-- config_enablePerfBoostForAnimation-->
-        <!-- Type="1", Animation boost of 0.6sec -->
+        <!-- Type="1", Animation boost of 1sec -->
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value-->
         <!-- CPUBOOST_MIN_FREQ BIG Core resource opcode, value-->
         <Config
-            Id="0x00001083" Enable="true" Timeout="600"  Target="sdm632"
+            Id="0x00001083" Enable="true" Timeout="1000"  Target="sdm632"
             Resources="0x40800100, 0x40C, 0x40800000, 0x446" />
 
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value-->
         <Config
-            Id="0x00001083" Enable="true" Timeout="600"
+            Id="0x00001083" Enable="true" Timeout="1000"
             Resources="0x40800100, 0x578" />
 
     <!--Vertical Scroll boost-->
@@ -65,9 +63,10 @@
             Resources="0x40800100, 0x40C, 0x40800000, 0x446,0x40C00000, 0x2" />
 
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value -->
+        <!-- SCHEDBOOST resource opcode, value-->
         <Config
             Id="0x00001080" Type="1" Enable="true"
-            Resources="0x40800100, 0x578" />
+            Resources="0x40800100, 0x578,0x40C00000, 0x2" />
 
     <!--Horizontal Scroll boost-->
         <!-- Type="2", Horizontal Scroll boost -->
@@ -79,9 +78,10 @@
             Resources="0x40800100, 0x40C, 0x40800000, 0x446,0x40C00000, 0x2" />
 
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value -->
+        <!-- SCHEDBOOST resource opcode, value-->
         <Config
             Id="0x00001080" Type="2" Enable="true"
-            Resources="0x40800100, 0x578" />
+            Resources="0x40800100, 0x578,0x40C00000, 0x2" />
     <!--Pre-Fling boost-->
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value -->
         <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
@@ -121,12 +121,12 @@
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value-->
         <!-- Type="", Rotation latency boost -->
         <Config
-            Id="0x00001089" Enable="true" Timeout="1500" Target="sdm632"
+            Id="0x00001089" Enable="true" Timeout="2000" Target="sdm632"
             Resources="0x40C00000, 0x1, 0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40800000, 0xFFF,
                        0x40800100,0xFFF" />
 
         <Config
-            Id="0x00001089" Enable="true" Timeout="1500"
+            Id="0x00001089" Enable="true" Timeout="2000"
             Resources="0x40C00000, 0x1, 0x40804100, 0xFFF, 0x40800100, 0xFFF" />
 
     <!--Rotation animation boost-->
@@ -134,11 +134,11 @@
         <!-- GPU MIN_FREQUENCY resource opcode,value-->
         <!-- Type="", Rotation animation boost -->
         <Config
-            Id="0x00001090" Enable="true" Timeout="1000" Target="sdm632"
+            Id="0x00001090" Enable="true" Timeout="2000" Target="sdm632"
             Resources="0x40800100, 1000, 0x4280C000, 596" />
 
         <Config
-            Id="0x00001090" Enable="true" Timeout="1000"
+            Id="0x00001090" Enable="true" Timeout="2000"
             Resources="0x40800100, 1000, 0x4280C000, 596" />
 
     <!--Display on Resource -->
