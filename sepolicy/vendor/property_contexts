@@ -6,6 +6,9 @@ persist.audio.dirac             u:object_r:dirac_prop:s0
 # Audio
 audio.dolby.ds2.hardbypass      u:object_r:vendor_audio_hal_prop:s0
 
+# Bluetooth
+persist.vendor.bt.address       u:object_r:vendor_bt_hal_prop:s0
+
 # Radio
 persist.ims.regmanager.mode     u:object_r:vendor_imsradio_prop:s0
 persist.radio.psensor.rawdata   u:object_r:persist_sensors_radio_prop:s0
@@ -35,6 +38,7 @@ ro.camera.req.fmq.size          u:object_r:vendor_camera_prop:s0
 
 # Fingerprint
 persist.sys.fp.                 u:object_r:gxfpd_prop:s0
+goodix.fp.						u:object_r:gxfpd_prop:s0
 sys.fp.vendor                   u:object_r:gxfpd_prop:s0
 sys.fp.goodix                   u:object_r:gxfpd_prop:s0
 sys.fp.onstart                  u:object_r:gxfpd_prop:s0

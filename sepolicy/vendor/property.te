@@ -1,6 +1,9 @@
 # Audio
 vendor_public_prop(vendor_audio_hal_prop)
 
+# Bluetooth
+vendor_public_prop(vendor_bt_hal_prop)
+
 # Camera
 vendor_internal_prop(vendor_camera_prop)
 
