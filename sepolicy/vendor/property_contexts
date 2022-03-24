@@ -7,7 +7,7 @@ persist.audio.dirac             u:object_r:dirac_prop:s0
 audio.dolby.ds2.hardbypass      u:object_r:vendor_audio_hal_prop:s0
 
 # Bluetooth
-persist.vendor.bt.address       u:object_r:vendor_bt_hal_prop:s0
+persist.vendor.bt.address		u:object_r:vendor_bt_hal_prop:s0
 
 # Radio
 persist.ims.regmanager.mode     u:object_r:vendor_imsradio_prop:s0
@@ -42,6 +42,7 @@ goodix.fp.						u:object_r:gxfpd_prop:s0
 sys.fp.vendor                   u:object_r:gxfpd_prop:s0
 sys.fp.goodix                   u:object_r:gxfpd_prop:s0
 sys.fp.onstart                  u:object_r:gxfpd_prop:s0
+ro.boot.fpsensor				u:object_r:gxfpd_prop:s0
 
 # Mwqem
 persist.vendor.mwqem.           u:object_r:vendor_mwqem_prop:s0
